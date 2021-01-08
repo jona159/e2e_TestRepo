@@ -10,3 +10,6 @@
 [submodule "GeoSoftII_DataServer"]
 	path = GeoSoftII_DataServer
 	url = https://github.com/FelixGI1516/GeoSoftII_DataServer.git
+[submodule "GeoSoftII_JobManagement"]
+	path = GeoSoftII_JobManagement
+	url = https://github.com/FelixGI1516/GeoSoftII_JobManagement.git
