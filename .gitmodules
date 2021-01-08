@@ -7,3 +7,6 @@
 [submodule "GeoSoftII_NDVI_Process"]
 	path = GeoSoftII_NDVI_Process
 	url = https://github.com/FelixGI1516/GeoSoftII_NDVI_Process.git
+[submodule "GeoSoftII_DataServer"]
+	path = GeoSoftII_DataServer
+	url = https://github.com/FelixGI1516/GeoSoftII_DataServer.git
