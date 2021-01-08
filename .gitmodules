@@ -4,3 +4,6 @@
 [submodule "GeoSoftII_SST_Process"]
 	path = GeoSoftII_SST_Process
 	url = https://github.com/FelixGI1516/GeoSoftII_SST_Process.git
+[submodule "GeoSoftII_NDVI_Process"]
+	path = GeoSoftII_NDVI_Process
+	url = https://github.com/FelixGI1516/GeoSoftII_NDVI_Process.git
