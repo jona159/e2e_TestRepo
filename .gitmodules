@@ -1,3 +1,6 @@
 [submodule "GeoSoftII_Frontend"]
 	path = GeoSoftII_Frontend
 	url = https://github.com/FelixGI1516/GeoSoftII_Frontend.git
+[submodule "GeoSoftII_SST_Process"]
+	path = GeoSoftII_SST_Process
+	url = https://github.com/FelixGI1516/GeoSoftII_SST_Process.git
