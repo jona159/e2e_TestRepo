@@ -7,6 +7,11 @@ on:
    pull_request:
      branches: 
       - main
+   schedule: 
+      - cron: '0 18 * * *' 
+      - cron: '0 6 * * *'
+      - cron: '0 12 * * *' 
+            
          
 jobs:
   build:
@@ -14,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.5, 3.6, 3.7, 3.8]
+        python-version: [3.7, 3.8]
 
     steps:
     - uses: actions/checkout@v2
