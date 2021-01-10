@@ -272,7 +272,7 @@ datashade(sst_x, precompute=True, cmap=plt.cm.RdBu_r)
 # In[170]:
 
 
-'''this still creates errors'''
+'''this still creates errors
 
 x = wrapper_mean_sst(ds, [1984-10-10, 1984-10-07], [0,-20,70,20])
 
@@ -293,6 +293,6 @@ x = wrapper_mean_sst(ds,['1984-10-07', '1984-10-07'], [0,z,70,20])
 
 
 x = wrapper_mean_sst(['1984-10-10', '1984-10-07'])
-
+'''
 
 # In[ ]:
