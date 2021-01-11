@@ -43,9 +43,8 @@ jobs:
          - name: Commit and Push Only if file updated
            if: env.changes_exist == 'true'
            run: |
-            git add -u
-            git commit -m "github-actions added date data"
-            git push       
+            git commit -m "Update NDVI_Process"
+            git push -u origin      
               
   build:
     needs: job1
