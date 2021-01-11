@@ -25,6 +25,13 @@ jobs:
          - run: |
              git submodule init  
              git submodule update
+             cd GeoSoftII_NDVI_Process
+             git checkout master
+             git pull
+             cd ..
+             git add GeoSoftII_NDVI_Process
+             git commit -m 'update GeoSoftII_NDVI_Process'
+             git push -u origin
               
   build:
     needs: job1
