@@ -59,7 +59,7 @@ jobs:
              git submodule init  
              git submodule update
              cd GeoSoftII_SST_Process
-             git checkout master
+             git checkout main
              git config pull.rebase true
              git pull
              cd ..
