@@ -1,0 +1,27 @@
+name: Update_Submodules
+
+on:
+  push
+    branches:
+      - main
+
+jobs:
+   runs-on: ubuntu-latest
+if: github.event.pull_request.merged
+if: github.event.push
+
+    steps:
+      - name: checkout
+        if: github.event.pull_request.merged
+        if: github.event.push
+        uses: actions/checkout@v2
+with:
+ref: main
+
+steps: 
+ -uses: actions/checkout@v2
+ 
+ name: Update Submodules
+ run: |
+       
+   
