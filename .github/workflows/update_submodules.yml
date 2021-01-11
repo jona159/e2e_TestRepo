@@ -6,6 +6,8 @@ on:
       - main
 
 jobs:
+  event_1:
+     
    runs-on: ubuntu-latest
 if: github.event.pull_request.merged
 if: github.event.push
