@@ -1,7 +1,7 @@
 name: Update_Submodules
 
 on:
-  push
+  push:
     branches:
       - main
 
