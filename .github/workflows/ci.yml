@@ -14,8 +14,19 @@ on:
             
          
 jobs:
+  job1:
+     name: Update Submodules
+     runs-on: ubuntu-latest
+     steps:
+         - name: Checkout reposistory
+           uses: actions/checkout@master
+         - name: Checkout submodules
+           uses: srt32/git-actions@v0.0.3 # erlaubt Nutzung von git commands unter args
+           with:
+            args: git submodule update --init --recursive 
+       
   build:
-
+    needs: job1
     runs-on: ubuntu-latest
     strategy:
       matrix:
