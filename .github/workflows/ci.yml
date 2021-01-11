@@ -27,6 +27,7 @@ jobs:
              git submodule update
              cd GeoSoftII_NDVI_Process
              git checkout master
+             git config pull.rebase true
              git pull
              cd ..
              git add GeoSoftII_NDVI_Process
