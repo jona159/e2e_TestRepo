@@ -37,7 +37,9 @@ jobs:
       run:  ls && pwd 
        
     - name: Change direcotory 
-      run: cd /home/runner/work/e2e_TestRepo/e2e_TestRepo/openeo-backend-validator/openeoct 
+      run: |
+       cd /home/runner/work/e2e_TestRepo/e2e_TestRepo/openeo-backend-validator/openeoct 
+       ls && pwd
         
        
     - name: Install dependencies 
