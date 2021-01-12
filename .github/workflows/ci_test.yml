@@ -37,26 +37,26 @@ jobs:
              git push -u origin
  
 
-  job2:
-     name: Update Submodule SST
-     runs-on: ubuntu-latest
-     steps:
-         - name: Checkout reposistory
-           uses: actions/checkout@master
-         - name: Checkout submodules
-           uses: srt32/git-actions@v0.0.3 # erlaubt Nutzung von git commands 
-         - run: |
-             git config --global user.email "raabejonas@yahoo.de"
-             git config --global user.name "jona159"
-             git submodule init  
-             git submodule update
-             cd GeoSoftII_SST_Process
-             git checkout master
-             git config pull.rebase true
-             git pull
-             cd ..
-             git add GeoSoftII_SST_Process
-             git commit -m "Update SST_Process"
-             git push -u origin
+  #job2:
+   #  name: Update Submodule SST
+    # runs-on: ubuntu-latest
+     #steps:
+      #   - name: Checkout reposistory
+       #    uses: actions/checkout@master
+        # - name: Checkout submodules
+         #  uses: srt32/git-actions@v0.0.3 # erlaubt Nutzung von git commands 
+         #- run: |
+           #  git config --global user.email "raabejonas@yahoo.de"
+            # git config --global user.name "jona159"
+          #   git submodule init  
+           #  git submodule update
+            # cd GeoSoftII_SST_Process
+             #git checkout master
+             #git config pull.rebase true
+             #git pull
+             #cd ..
+             #git add GeoSoftII_SST_Process
+             #git commit -m "Update SST_Process"
+             #git push -u origin
              
              
