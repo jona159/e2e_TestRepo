@@ -49,7 +49,7 @@ jobs:
         go get github.com/mcuadros/go-version
     
     - name: Build exe
-      run: go build openeoct.go
+      run: go build openeoct.exe
     
     - name: List Files
       run: ls && pwd
