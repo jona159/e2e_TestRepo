@@ -46,7 +46,7 @@ jobs:
        go get github.com/BurntSushi/toml
        go get github.com/mcuadros/go-version
        go build openeoct.go
-       ./openeoct config config.json
+       ./openeoct config /home/runner/work/e2e_TestRepo/e2e_TestRepo/config.json
         
        
     #- name: Install dependencies 
