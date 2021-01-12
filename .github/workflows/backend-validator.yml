@@ -37,7 +37,7 @@ jobs:
       run: |
        ls && pwd 
        cd openeo-backend-validator  
-       
+       ls && pwd 
        
     - name: Install dependencies 
       run: |
