@@ -1,7 +1,7 @@
 name: Pytest Workflow_test2
 
 on: 
-   #push:
+   push:
      branches: 
        - main
    pull_request:
@@ -48,7 +48,7 @@ jobs:
                                   
               
   build:
-    needs: [job1,job2,job3,job4,job5]
+    needs: [job1]
     runs-on: ubuntu-latest
     strategy:
       matrix:
