@@ -40,8 +40,8 @@ jobs:
              else
              echo "changes_exist=true" >> $GITHUB_ENV
              fi
-             echo env.changes_exist
          - name: Commit and Push Only if file updated
+            $changes_exist
            if: env.changes_exist == 'true' 
            run: |
               git commit -m "Update NDVI_Process"
