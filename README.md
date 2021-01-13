@@ -4,7 +4,7 @@
 
 **Todo's:**
 
- * *Testdaten und -größen
+ * *Testdaten und -größen*
  * *Kommunikation und Benachrichtigung der Entwicklerteams*
  * *Links hinzufügen*
  
