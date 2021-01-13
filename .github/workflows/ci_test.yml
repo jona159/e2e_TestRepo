@@ -36,7 +36,7 @@ jobs:
          - name: Check for changes
            run: |
              echo "changes_exist" >> $GITHUB_ENV
-             if git diff --exit-code; then
+             if git diff --cached --exit-code; then
              echo "changes_exist=false" >> $GITHUB_ENV
              else
              echo "changes_exist=true" >> $GITHUB_ENV
