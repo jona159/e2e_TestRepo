@@ -1,7 +1,7 @@
 name: Pytest Workflow
 
 on: 
-   #push:
+   push:
      branches: 
        - main
    pull_request:
@@ -35,7 +35,7 @@ jobs:
              git add GeoSoftII_NDVI_Process
          - name: Check for changes
            run: |
-            if git diff --exit-code; then
+            if git diff --cached --exit-code; then
              echo "changes_exist=false" >> $GITHUB_ENV
             else
              echo "changes_exist=true" >> $GITHUB_ENV
@@ -66,7 +66,7 @@ jobs:
              git add GeoSoftII_SST_Process
          - name: Check for changes
            run: |
-             if git diff --exit-code; then
+             if git diff --cached --exit-code; then
              echo "changes_exist=false" >> $GITHUB_ENV
              else
              echo "changes_exist=true" >> $GITHUB_ENV
@@ -97,7 +97,7 @@ jobs:
              git add GeoSoftII_DataServer
          - name: Check for changes
            run: |
-             if git diff --exit-code; then
+             if git diff --cached --exit-code; then
              echo "changes_exist=false" >> $GITHUB_ENV
              else
              echo "changes_exist=true" >> $GITHUB_ENV
@@ -128,7 +128,7 @@ jobs:
              git add GeoSoftII_Frontend
          - name: Check for changes
            run: |
-             if git diff --exit-code; then
+             if git diff --cached --exit-code; then
              echo "changes_exist=false" >> $GITHUB_ENV
              else
              echo "changes_exist=true" >> $GITHUB_ENV
@@ -159,7 +159,7 @@ jobs:
              git add GeoSoftII_JobManagement
          - name: Check for changes
            run: |
-             if git diff --exit-code; then
+             if git diff --chached --exit-code; then
              echo "changes_exist=false" >> $GITHUB_ENV
              else
              echo "changes_exist=true" >> $GITHUB_ENV
