@@ -35,11 +35,11 @@ jobs:
              git add GeoSoftII_NDVI_Process
          - name: Check for changes
            run: |
-            if git diff --exit-code; then
-             echo "changes_exist==false" >> $GITHUB_ENV
-            else
-             echo "changes_exist==true" >> $GITHUB_ENV
-            fi
+             if git diff --exit-code; then
+               echo "::set-env name=changes_exist::false"
+             else
+               echo "::set-env name=changes_exist::true"
+             fi
          - name: Commit and Push Only if file updated
            if: env.changes_exist == 'true'
            run: |
