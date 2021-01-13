@@ -40,6 +40,7 @@ jobs:
              else
              echo "changes_exist=true" >> $GITHUB_ENV
              fi
+             echo changes_exist
          - name: Commit and Push Only if file updated
            if: env.changes_exist == 'true' 
            run: |
