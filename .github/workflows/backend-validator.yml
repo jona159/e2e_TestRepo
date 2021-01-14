@@ -27,17 +27,12 @@ jobs:
        registry: ghcr.io
        username: ${{ github.repository_owner }}
        password: ${{ secrets.CR_PAT }}
-       run: | 
-        docker push ghcr.io/felixgi1516/geosoft2_frontend:latest
-        docker inspect ghcr.io/felixgi1516/geosoft2_frontend
      # https://github.community/t/error-response-from-daemon-get-https-ghcr-io-v2-denied/134675/2  
      # https://docs.github.com/en/free-pro-team@latest/packages/guides/pushing-and-pulling-docker-images
         
     - name: Docker Pull and Run
       run: |
-        docker push ghcr.io/felixgi1516/geosoft2_frontend:latest
-        docker inspect ghcr.io/felixgi1516/geosoft2_frontend
-        docker pull ghcr.io/felixgi1516/geosoft2_frontend@sha256:c8D+NzHKGPEOPLBKvDc1X05eWuCt+RAs4y24tk7qi0Q
+        docker pull ghcr.io/felixgi1516/geosoft2_frontend@sha256:eb7b465b02676fed17777a74f8dcb2dfe82e3f5a277a20a510d5c490584dc399
         docker run -p 80:80 -d felixgi1516/geosoft2_frontend
     # https://stackoverflow.com/questions/32046334/where-can-i-find-the-sha256-code-of-a-docker-image 
     
