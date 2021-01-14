@@ -32,7 +32,7 @@ jobs:
         
     - name: Docker Pull and Run
       run: |
-        docker inspect ghcr.io/felixgi1516/geosoft2_frontend
+        docker pull ghcr.io/felixgi1516/geosoft2_frontend
         docker pull ghcr.io/felixgi1516/geosoft2_frontend@sha256:c8D+NzHKGPEOPLBKvDc1X05eWuCt+RAs4y24tk7qi0Q
         docker run -p 80:80 -d felixgi1516/geosoft2_frontend
     # https://stackoverflow.com/questions/32046334/where-can-i-find-the-sha256-code-of-a-docker-image 
