@@ -32,8 +32,7 @@ jobs:
         
     - name: Docker Pull and Run
       run: |
-        export sha256 = docker inspect --format='{{index .RepoDigests 0}}
-        docker pull ghcr.io/felixgi1516/geosoft2_frontend@+'$sha256'
+        docker pull ghcr.io/felixgi1516/geosoft2_frontend@sha256:394d8929dc6704477f5b2e6873b7d48b59f7182dac65eaba89fd5945c3779d3a
         docker run -p 80:80 -d felixgi1516/geosoft2_frontend
     # https://stackoverflow.com/questions/32046334/where-can-i-find-the-sha256-code-of-a-docker-image 
     
