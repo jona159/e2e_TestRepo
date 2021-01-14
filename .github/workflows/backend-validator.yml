@@ -27,6 +27,9 @@ jobs:
        registry: ghcr.io
        username: ${{ github.repository_owner }}
        password: ${{ secrets.CR_PAT }}
+       run: | 
+        docker push ghcr.io/felixgi1516/geosoft2_frontend:latest
+        docker inspect ghcr.io/felixgi1516/geosoft2_frontend
      # https://github.community/t/error-response-from-daemon-get-https-ghcr-io-v2-denied/134675/2  
      # https://docs.github.com/en/free-pro-team@latest/packages/guides/pushing-and-pulling-docker-images
         
