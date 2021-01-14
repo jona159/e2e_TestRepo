@@ -25,9 +25,9 @@ jobs:
       uses: docker/login-action@v1
       with:
        registry: ghcr.io
-       username: ${{ github.repository_owner }}
-       password: ${{ secrets.CR_PAT }}
-        
+       username: a2beckj
+       password: f019023aec253b5d1d67511dcdb0c65edb9f051b
+     #  https://github.community/t/error-response-from-daemon-get-https-ghcr-io-v2-denied/134675/2  
         
     - name: Docker Pull and Run
       run: |
