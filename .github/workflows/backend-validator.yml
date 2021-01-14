@@ -22,8 +22,9 @@ jobs:
     steps:
     - name: Docker Pull and Run
       run: |
-        echo 'CR_PAT=2029607bb461b9a153329bdf711d70b7645b3ee0' >> $GITHUB_ENV
-        echo $CR_PAT | winpty docker login ghcr.io -u a2beckj --password-stdin
+        export CR_PAT=2029607bb461b9a153329bdf711d70b7645b3ee0
+        CR_PAT
+        echo $CR_PAT | docker login ghcr.io -u a2beckj --password-stdin
         docker pull ghcr.io/felixgi1516/geosoft2_frontend@YOUR_SHA_VALUE
         docker run -p 80:80 -d felixgi1516/geosoft2_frontend
     # sets up go based on the version
