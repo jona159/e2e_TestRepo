@@ -14,4 +14,4 @@ EXPOSE 80
 COPY src/ .
 
 #Ausführen beim Starten
-CMD ["python3", "./Server.py"]
+#CMD ["python3", "./Server.py"]
