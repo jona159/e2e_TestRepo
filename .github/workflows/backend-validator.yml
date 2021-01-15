@@ -36,26 +36,30 @@ jobs:
     - name: Images
       run: docker images 
       
-    - name: Tag
-      run:  docker tag felixgi1516/geosoft2_frontend ghcr.io/felixgi1516/geosoft2_frontend
+    #- name: Tag
+     # run:  docker tag felixgi1516/geosoft2_frontend ghcr.io/felixgi1516/geosoft2_frontend
       
     #- name: Docker Pull 
      # uses: docker://felixgi1516/geosoft2_frontend:latest
         
-    - name: Push 
-      run: docker push ghcr.io/felixgi1516/geosoft2_frontend:latest
+    #- name: Push 
+     # run: docker push ghcr.io/felixgi1516/geosoft2_frontend:latest
              
-    - name: Show running containers  
-      run:  docker ps -a  
+    #- name: Show running containers  
+     # run:  docker ps -a  
     
      
     # https://docs.github.com/en/free-pro-team@latest/packages/guides/pushing-and-pulling-docker-images
     # https://github.com/marketplace/actions/docker-run-action
     
     
-    #- name: Docker Run
-      #run: docker run -p 127.0.0.1:80:8080/tcp felixgi1516/geosoft2_frontend
-
+    - name: Docker Run
+      run: |
+       docker run -p 127.0.0.1:80:8080/tcp felixgi1516/geosoft2_frontend
+       docker ps 
+       
+    #- name: Show running containers  
+     # run:  docker ps -a  
     # sets up go based on the version
      
         
