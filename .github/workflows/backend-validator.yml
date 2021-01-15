@@ -30,6 +30,15 @@ jobs:
        password: ${{ secrets.CR_PAT }}
          
    
+    - uses: mr-smithers-excellent/docker-build-push@v4
+      name: Build & push Docker image
+      with:
+          image: felixgi1516/geosoft2_frontend
+          tag: latest
+          registry: ghcr.io
+          dockerfile: Dockerfile
+          username: jona159
+          password: ${{ secrets.GHCR_TOKEN }}
 
             
     - name: List
