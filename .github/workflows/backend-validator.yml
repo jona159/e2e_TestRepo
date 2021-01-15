@@ -57,7 +57,7 @@ jobs:
       run: |
        docker run -d -p 127.0.0.1:80:8080/tcp felixgi1516/geosoft2_frontend
        docker ps 
-       docker stop felixgi1516/geosoft2_frontend
+       docker stop $(docker ps -q --filter ancestor=<image-name> )
        
     #- name: Show running containers  
      # run:  docker ps -a  
