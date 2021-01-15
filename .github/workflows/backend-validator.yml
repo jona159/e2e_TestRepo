@@ -20,8 +20,8 @@ jobs:
     # the steps that will be run through for each version and platform
     # combination
     steps:
-    - name: Docker Pull 
-      uses: docker://felixgi1516/geosoft2_frontend:latest  
+    #- name: Docker Pull 
+      #uses: docker://felixgi1516/geosoft2_frontend:latest  
     
     - name: Login to GitHub Container Registry
       uses: docker/login-action@v1
