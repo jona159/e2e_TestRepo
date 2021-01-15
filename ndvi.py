@@ -1,7 +1,7 @@
 import os
 import xarray as xr
 import dask
-from dask.distributed import Client, LocalCluster
+from dask.distributed import Client, LocalCluster, Scheduler
 
 # cluster= LocalCluster()
 # client = Client (cluster)
