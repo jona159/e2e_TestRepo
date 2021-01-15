@@ -32,11 +32,15 @@ jobs:
       run:  docker ps -a
        
         
-    - name: Docker Pull and Run
+    - name: Docker Pull 
       uses: docker://felixgi1516/geosoft2_frontend:latest  
     # https://docs.github.com/en/free-pro-team@latest/packages/guides/pushing-and-pulling-docker-images
     # https://github.com/marketplace/actions/docker-run-action
-    
+    - name: Docker Run
+      uses: addnab/docker-run-action@v1
+      with:
+        image: docker:latest
+        run: echo "hello world"
     # sets up go based on the version
      
     - name: Install Go
