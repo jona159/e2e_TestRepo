@@ -37,10 +37,7 @@ jobs:
     # https://docs.github.com/en/free-pro-team@latest/packages/guides/pushing-and-pulling-docker-images
     # https://github.com/marketplace/actions/docker-run-action
     - name: Docker Run
-      uses: addnab/docker-run-action@v1
-      with:
-        image: docker:latest
-        run: echo "hello world"
+      run: docker run -p 127.0.0.1:80:8080/tcp ubuntu 
     # sets up go based on the version
      
     - name: Install Go
