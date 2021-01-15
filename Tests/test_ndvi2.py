@@ -8,6 +8,7 @@ from ndvi import calculate, prepareData, calculate_with_dask
 import xarray as xr
 import os
 import pytest
+import netCDF4
 
 
 def test_calculate():
