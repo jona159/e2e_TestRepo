@@ -36,7 +36,10 @@ jobs:
       run: ls && pwd  
        
     - name: Docker Pull 
-      uses: docker://felixgi1516/geosoft2_frontend:latest       
+      uses: docker://felixgi1516/geosoft2_frontend:latest   
+    
+    - name: Images
+      run: docker images
    
     # https://docs.github.com/en/free-pro-team@latest/packages/guides/pushing-and-pulling-docker-images
     # https://github.com/marketplace/actions/docker-run-action
