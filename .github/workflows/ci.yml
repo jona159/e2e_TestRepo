@@ -195,8 +195,10 @@ jobs:
         pip install -r req.txt
     - name: Install plugin
       run: pip install pytest-github-actions-annotate-failures 
-    - name: Intall and Upgrade dask.distributed
-      run: python -m pip install "dask[distributed]" --upgrade   
+    - name: Install and upgrade dask.distributed
+      run: python -m pip install "dask[distributed]" --upgrade 
+    - name: Install netCDF4
+      run: pip install netCDF4 
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
