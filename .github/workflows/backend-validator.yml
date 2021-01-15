@@ -30,20 +30,17 @@ jobs:
        password: ${{ secrets.CR_PAT }}
          
    
-    - name: Hello world action step
-      id: hello
-      uses: actions/hello-world-docker-action@v1
-      with:
-        who-to-greet: 'Mona the Octocat'
-    # Use the output from the `hello` step
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"  
-      
-    - name: List
-      run: ls && pwd  
+
+  docker_job:
+     container: 
+      image: felixgi1516/geosoft2_frontend
+ 
+            
+       #- name: List
+        # run: ls && pwd  
        
-    - name: Docker Pull 
-      uses: docker://felixgi1516/geosoft2_frontend:latest       
+    #- name: Docker Pull 
+     # uses: docker://felixgi1516/geosoft2_frontend:latest       
    
     # https://docs.github.com/en/free-pro-team@latest/packages/guides/pushing-and-pulling-docker-images
     # https://github.com/marketplace/actions/docker-run-action
