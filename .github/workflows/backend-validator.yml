@@ -27,10 +27,12 @@ jobs:
        registry: ghcr.io
        username: ${{ github.repository_owner }}
        password: ${{ secrets.CR_PAT }}
+         
+    - name: Show running containers  
+      run:  docker ps -a
        
         
     - name: Docker Pull and Run
-      run: docker ps -a
       uses: docker://felixgi1516/geosoft2_frontend:latest  
     # https://docs.github.com/en/free-pro-team@latest/packages/guides/pushing-and-pulling-docker-images
     # https://github.com/marketplace/actions/docker-run-action
