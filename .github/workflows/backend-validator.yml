@@ -31,7 +31,7 @@ jobs:
         
     - name: Docker Pull and Run
       run: |
-        docker pull ghcr.io/felixgi1516/geosoft2_frontend:latest
+        docker pull ghcr.io/docker/getting-started
         docker run -p 80:80 -d felixgi1516/geosoft2_frontend
     # https://docs.github.com/en/free-pro-team@latest/packages/guides/pushing-and-pulling-docker-images
     # https://github.com/marketplace/actions/docker-run-action
