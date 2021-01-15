@@ -38,6 +38,9 @@ jobs:
     - name: Images
       run: docker images 
       
+    - name: Tag
+      run:  docker tag felixgi1516/geosoft2_frontend ghcr.io/felixgi1516/geosoft2_frontend
+      
     - name: Push 
       run: docker push ghcr.io/felixgi1516/geosoft2_frontend:latest
        
