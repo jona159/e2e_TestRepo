@@ -28,13 +28,8 @@ jobs:
        username: ${{ github.repository_owner }}
        password: ${{ secrets.CR_PAT }}
        
-    - name: Build and Push   
-      uses: docker/build-push-action@v2
-      with:
-          context: .
-          push: true
-          tags: latest  
-          
+    - name: Build
+      run: docker build -t frontend
         
     - name: Docker Pull and Run
       run: |
