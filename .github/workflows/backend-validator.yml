@@ -56,7 +56,7 @@ jobs:
     
     - name: Docker Run
       run: |
-       docker run --name frontend -d -p 127.0.0.1:80:8080/tcp felixgi1516/geosoft2_frontend /bin/sh 
+       docker run --name frontend -d -p 127.0.0.1:80:8080/tcp felixgi1516/geosoft2_frontend  
        docker ps
        docker container exec -u root frontend /bin/sh
        docker exec frontend echo "I'm inside the container!"
