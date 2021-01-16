@@ -60,7 +60,7 @@ jobs:
        docker ps
        docker container exec -u root frontend /bin/sh
        docker exec frontend echo "I'm inside the container!"
-       docker exec frontend git clone https://github.com/Open-EO/openeo-backend-validator.git
+       docker exec frontend bash -c 'git clone https://github.com/Open-EO/openeo-backend-validator.git && dir'
        docker exec frontend bash -c 'dir' 
        
        
