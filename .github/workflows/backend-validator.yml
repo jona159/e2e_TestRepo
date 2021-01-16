@@ -92,7 +92,7 @@ jobs:
        
     - name: Change direcotory 
       run: |
-       cd /home/runner/work/e2e_TestRepo/e2e_TestRepo/openeo-backend-validator/openeoct 
+       cd /home/runner/work/TestRepo/TestRepo/openeo-backend-validator/openeoct 
        ls && pwd
        go get github.com/Open-EO/openeo-backend-validator/openeoct/kin-openapi/openapi3
        go get github.com/Open-EO/openeo-backend-validator/openeoct/kin-openapi/openapi3filter
@@ -100,7 +100,7 @@ jobs:
        go get github.com/BurntSushi/toml
        go get github.com/mcuadros/go-version
        go build openeoct.go
-       ./openeoct config /home/runner/work/e2e_TestRepo/e2e_TestRepo/config.json
+       ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json
         
        
     #- name: Install dependencies 
