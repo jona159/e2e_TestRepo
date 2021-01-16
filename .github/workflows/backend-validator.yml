@@ -61,7 +61,7 @@ jobs:
        docker container exec frontend /bin/bash
        docker exec frontend echo "I'm inside the container!"
        docker exec frontend git clone https://github.com/Open-EO/openeo-backend-validator.git
-       docker exec frontend go get github.com/Open-EO/openeo-backend-validator/openeoct/kin-openapi/openapi3
+       docker exec frontend cd /home/runner/work/TestRepo/TestRepo/openeo-backend-validator/openeoct 
        
        
     #- name: Docker Stop   
