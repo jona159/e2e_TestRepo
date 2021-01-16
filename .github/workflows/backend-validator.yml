@@ -64,7 +64,7 @@ jobs:
        docker exec frontend git clone https://github.com/Open-EO/openeo-backend-validator.git
        sudo apt-get update
        sudo apt-get install golang
-       docker exec frontend go -v
+       docker exec -i frontend go -a
        
        
        
