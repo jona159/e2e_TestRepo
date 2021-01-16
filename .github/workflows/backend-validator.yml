@@ -62,7 +62,8 @@ jobs:
        docker exec -i frontend bash 
        docker exec frontend echo "I'm inside the container!"
        docker exec frontend git clone https://github.com/Open-EO/openeo-backend-validator.git
-       apt-get update
+       sudo apt-get update
+       sudo apt-get install go
        
        
        
