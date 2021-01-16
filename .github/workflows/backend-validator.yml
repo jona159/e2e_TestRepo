@@ -56,12 +56,13 @@ jobs:
     
     - name: Docker Run
       run: |
-       docker run --name frontend -it -d -p 127.0.0.1:80:8080/tcp felixgi1516/geosoft2_frontend /bin/bash 
+       docker run --name frontend -d -p 127.0.0.1:80:8080/tcp felixgi1516/geosoft2_frontend /bin/bash 
        docker ps
-       docker container exec -it -u root frontend /bin/bash
-       docker exec -it frontend bash 
+       docker container exec -u root frontend /bin/bash
+       docker exec frontend bash 
        docker exec frontend echo "I'm inside the container!"
        docker exec frontend git clone https://github.com/Open-EO/openeo-backend-validator.git
+       docker exec frontend pwd
        
        
        
