@@ -59,7 +59,7 @@ jobs:
        docker run -it --name frontend -d -p 127.0.0.1:80:8080/tcp felixgi1516/geosoft2_frontend bash 
        echo $(pwd) 
        docker ps
-       docker container exec -u root frontend /bin/sh
+       docker container exec -it -u root frontend /bin/bash -c 'dir'
        docker exec frontend echo "I'm inside the container!"
        docker exec frontend bash -c 'git clone https://github.com/Open-EO/openeo-backend-validator.git backend-validator && cd backend-validator '
        docker exec frontend bash -c 'curl https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh'
