@@ -40,6 +40,7 @@ jobs:
       - name: Install devtools
         run: |
           R -e 'install.packages("devtools")'
+          R -e 'library(devtools)'
        
       - name: Install R-Client module
         run: |
