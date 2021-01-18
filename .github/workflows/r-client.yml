@@ -6,7 +6,7 @@ on:
 name: Check R-Client
 
 jobs: 
-  Check R-Client:
+  Check-R-Client:
     runs-on:  ${{ matrix.config.os }}
     
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
