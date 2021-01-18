@@ -39,4 +39,6 @@ jobs:
        
       - name: Install devtools
         run: |
-          R -e 'install.packages("devtools")'     
+          R -e 'install.packages("devtools")'
+          R -e 'devtools::install_github(repo="Open-EO/openeo-r-client",dependencies=TRUE)'
+     
