@@ -59,7 +59,8 @@ jobs:
        go get github.com/BurntSushi/toml
        go get github.com/mcuadros/go-version
        go build openeoct.go
-       gron './openeoct config /home/runner/work/TestRepo/TestRepo/config.json' | fgrep "Error"
+       echo './openeoct config /home/runner/work/TestRepo/TestRepo/config.json' | grep -v "home"
+       echo $?
 
        
     - name: Docker Stop   
