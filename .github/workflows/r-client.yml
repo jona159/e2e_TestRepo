@@ -40,6 +40,7 @@ jobs:
       - name: Install devtools
         run: |
           R -e 'install.packages("devtools")'
+          sudo apt-get install libcurl4-openssl-dev libssl-dev
           R -e 'library(devtools)'
        
       - name: Install R-Client module
