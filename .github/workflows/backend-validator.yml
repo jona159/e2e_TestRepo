@@ -44,12 +44,9 @@ jobs:
     - name: List Files
       run:  ls && pwd
      
-    - name: Docker Stop   
-      run: |
-       docker stop $(docker ps -q --filter ancestor="felixgi1516/geosoft2_frontend")
-       docker ps 
+    
        
-    - name: Change direcotory 
+    - name: Change directory, install dependencies and execute Validator
       run: |
        cd /home/runner/work/TestRepo/TestRepo/openeo-backend-validator/openeoct 
        ls && pwd
@@ -60,20 +57,13 @@ jobs:
        go get github.com/mcuadros/go-version
        go build openeoct.go
        ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json
+       
+    - name: Docker Stop   
+      run: |
+         docker stop $(docker ps -q --filter ancestor="felixgi1516/geosoft2_frontend")
+         docker ps   
         
        
-    #- name: Install dependencies 
-     # run: |
-      #  go get github.com/Open-EO/openeo-backend-validator/openeoct/kin-openapi/openapi3
-       # go get github.com/Open-EO/openeo-backend-validator/openeoct/kin-openapi/openapi3filter
-        #go get github.com/urfave/cli
-        #go get github.com/BurntSushi/toml
-        #go get github.com/mcuadros/go-version
     
-    #- name: Build exe
-     # run: go build openeoct.exe
-    
-    #- name: List Files
-     # run: ls && pwd
 
     
