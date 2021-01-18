@@ -57,7 +57,7 @@ jobs:
        go get github.com/mcuadros/go-version
        go build openeoct.go
        ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json 
-       | grep -v "Error"
+       grep -v "Error"
        echo $? 
     #exit 1
        
