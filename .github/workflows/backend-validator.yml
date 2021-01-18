@@ -56,7 +56,8 @@ jobs:
        go get github.com/BurntSushi/toml
        go get github.com/mcuadros/go-version
        go build openeoct.go
-       ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json | grep -v "Error"
+        
+       echo "::set-output name=validator_json::./openeoct config /home/runner/work/TestRepo/TestRepo/config.json"
        
     - name: Docker Stop   
       run: |
