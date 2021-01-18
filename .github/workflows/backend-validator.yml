@@ -57,6 +57,7 @@ jobs:
        go get github.com/mcuadros/go-version
        go build openeoct.go
        echo './openeoct config /home/runner/work/TestRepo/TestRepo/config.json' | grep -v "Error"
+       echo $? 
        
     - name: Docker Stop   
       run: |
