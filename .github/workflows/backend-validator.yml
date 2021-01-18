@@ -25,7 +25,7 @@ jobs:
     
     - name: Docker Run
       run: |
-       docker run --name frontend -d -p 127.0.0.1:80:8080/tcp felixgi1516/geosoft2_frontend  
+       docker run --name frontend -p 127.0.0.1:80:8080/tcp felixgi1516/geosoft2_frontend  
        
     #- name: Docker Stop   
      # run: |
