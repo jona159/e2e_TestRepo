@@ -58,7 +58,7 @@ jobs:
        go build openeoct.go
        ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json
        echo '"endpoints": {"group_summary": "Invalid"}' | grep -v Error
-       if: ($? = 1)  
+       if: (echo $? = 1)  
        exit 1
        
     - name: Docker Stop   
