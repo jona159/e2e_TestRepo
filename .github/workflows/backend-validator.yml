@@ -62,7 +62,7 @@ jobs:
        ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json
        content=`cat ./validator_output.json`
        echo "::result=packageJson::$content" 
-       echo result
+       echo $result
        
     - name: Docker Stop   
       run: |
