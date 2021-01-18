@@ -61,8 +61,8 @@ jobs:
        go build openeoct.go
        ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json
        content=`cat ./validator_output.json`
-       echo "::result=packageJson::$content" | grep -v "Error"
-       echo $?
+       if:  ${{"Error" in content}} 
+       exit 1
        
     - name: Docker Stop   
       run: |
