@@ -38,4 +38,4 @@ jobs:
           r-version: ${{ matrix.config.r }}
        
       - name: Install devtools
-        run: install.packages("devtools")    
+        run: install.packages('devtools')    
