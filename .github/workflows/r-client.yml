@@ -39,7 +39,7 @@ jobs:
        
       - name: Install devtools
         run: |
-          sudo apt install r-cran-devtools
+          sudo apt install -f r-cran-devtools
           R -e 'install.packages("devtools")'
           R -e 'library(devtools)'
        
