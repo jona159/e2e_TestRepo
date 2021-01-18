@@ -61,13 +61,7 @@ jobs:
        go build openeoct.go
        ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json
        content=`cat ./validator_output.json`
-          # the following lines are only required for multi line json
-          content="${content//'%'/'%25'}"
-          content="${content//$'\n'/'%0A'}"
-          content="${content//$'\r'/'%0D'}"
-          # end of optional handling for multi line json
-          echo "::set-output name=packageJson::$content" | grep -v "Error"
-          echo $?
+       echo "::result=packageJson::$content" 
        
     - name: Docker Stop   
       run: |
