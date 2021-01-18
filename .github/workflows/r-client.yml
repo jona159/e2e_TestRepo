@@ -38,4 +38,4 @@ jobs:
           r-version: ${{ matrix.config.r }}
        
       - name: Install devtools
-        run: remotes::install.packages('devtools')    
+        run: devtools::install_github(repo="Open-EO/openeo-r-client",dependencies=TRUE)    
