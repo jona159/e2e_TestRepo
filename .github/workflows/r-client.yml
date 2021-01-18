@@ -39,7 +39,8 @@ jobs:
        
       - name: Install devtools
         run: |
-          Rscript -e 'install.packages("curl")' -e 'install.packages("rversions")' -e 'install.packages("credentials")' -e 'install.packages("httr")' -e 'install.packages("gert")' -e 'install.packages("gh")' -e 'install.packages("covr")' -e 'install.packages("usethis")' -e 'install.packages("devtools")' -e 'library(devtools)'
+          R -e 'install.packages("devtools")'
+          R -e 'library(devtools)'
        
       - name: Install R-Client module
         run: |
