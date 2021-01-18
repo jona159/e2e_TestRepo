@@ -61,9 +61,8 @@ jobs:
        docker ps
        docker container exec -t -u root frontend /bin/bash -c 'dir'
        docker exec frontend echo "I'm inside the container!"
+       docker exec frontend bash -c 'git clone https://github.com/Open-EO/openeo-backend-validator.git backend-validator && cd backend-validator '
        docker exec frontend bash -c 'curl https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh'
-       docker exec frontend bash -c 'git clone https://github.com/Open-EO/openeo-backend-validator.git backend-validator && cd openeoct'
-       docker exec frontend bash -c 'go get github.com/Open-EO/openeo-backend-validator/openeoct/kin-openapi/openapi3'
        docker exec frontend bash -c 'dir' 
        
        
