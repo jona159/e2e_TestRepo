@@ -32,9 +32,9 @@ jobs:
          docker run --name frontend -d -p 80:80 felixgi1516/geosoft2_frontend 
           
       - name: Checkout Code     
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
     
       - name: Install R
-      - uses: r-lib/actions/setup-r@master
+        uses: r-lib/actions/setup-r@master
         with:
           r-version: ${{ matrix.config.r }}  
