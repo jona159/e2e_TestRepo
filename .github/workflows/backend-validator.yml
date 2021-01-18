@@ -56,8 +56,8 @@ jobs:
        go get github.com/BurntSushi/toml
        go get github.com/mcuadros/go-version
        go build openeoct.go
-       echo './openeoct config /home/runner/work/TestRepo/TestRepo/config.json' | grep -v "Invalid"
-       echo $? 
+       result=  './openeoct config /home/runner/work/TestRepo/TestRepo/config.json'
+       echo $result | gron 
        
     - name: Docker Stop   
       run: |
