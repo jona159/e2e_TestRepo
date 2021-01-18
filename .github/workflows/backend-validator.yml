@@ -58,7 +58,7 @@ jobs:
        go build openeoct.go
        ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json | grep -v "Invalid"
        echo $? 
-       #exit 1
+    #exit 1
        
        #echo '"endpoints": {"group_summary": "Invalid"}'
        
