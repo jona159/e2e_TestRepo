@@ -42,8 +42,7 @@ jobs:
       run: go get -u github.com/tomnomnom/gron
 
     # checks out our code locally so we can work with the files
-    - name: Checkout code
-      uses: actions/checkout@v2
+    
     
     - name: Clone repository
       run: | 
@@ -64,8 +63,7 @@ jobs:
        go get github.com/mcuadros/go-version
        go build openeoct.go
        ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json
-       content=`cat ./validator_output.json` >> $GITHUB_ENV
-       echo $content | jq -r '.result[0].nogroup[0].group_summary'
+       
        
     - name: Docker Stop   
       run: |
