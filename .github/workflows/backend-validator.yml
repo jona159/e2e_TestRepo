@@ -64,7 +64,7 @@ jobs:
        go build openeoct.go
        ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json
        ls -al 2>&1 | tee log_output.txt
-       cat ./log_output.txt | grep -v "Error"
+       cat log_output.txt | grep -v "Error"
      # content=cat ./validator_output.json
      # echo "::result=packageJson::$content"
        
