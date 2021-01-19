@@ -61,7 +61,7 @@ jobs:
        go build openeoct.go
        ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json
        content=`cat ./validator_output.json`
-       echo "::result=packageJson::$content" | jq -r '.result[0].nogroup[0].group_summary'
+       echo $content | jq -r '.result[0].nogroup[0].group_summary'
        
     - name: Docker Stop   
       run: |
