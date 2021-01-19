@@ -25,6 +25,7 @@ jobs:
     
     - name: Docker Run
       run: |
+       dir
        docker-compose up -d
        #docker run --name frontend -d -p 80:80 felixgi1516/geosoft2_frontend  
        
