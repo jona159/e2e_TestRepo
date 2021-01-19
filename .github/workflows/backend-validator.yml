@@ -26,7 +26,7 @@ jobs:
     - name: Docker Run
       run: |
        ls && pwd
-       cd /home/runner/work/TestRepo/TestRepo/
+       cd /home/runner/work/TestRepo/TestRepo/docker-compose.yml
        docker-compose up -d
    #   docker run --name frontend -d -p 80:80 felixgi1516/geosoft2_frontend  
        
