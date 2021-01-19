@@ -60,7 +60,7 @@ jobs:
        go get github.com/mcuadros/go-version
        go build openeoct.go
        ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json
-       content=`cat ./validator_output.json`
+       content=`cat ./validator_output.json` >> $GITHUB_ENV
        echo $content | jq -r '.result[0].nogroup[0].group_summary'
        
     - name: Docker Stop   
