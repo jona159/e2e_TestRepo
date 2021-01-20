@@ -12,6 +12,9 @@ jobs:
       matrix:
         operating-system: [ubuntu-latest, windows-latest, macos-latest]
     steps:
+      - name: Docker Run
+        run: |
+         docker run --name frontend -d -p 80:80 felixgi1516/geosoft2_frontend 
       - uses: actions/checkout@v2
       - name: Setup node 
         uses: actions/setup-node@v2
@@ -19,5 +22,5 @@ jobs:
           node-version: 14.x
       - run: |
           npm install @openeo/js-client
-          const { OpenEO } = require('@openeo/js-client');
+          
 
