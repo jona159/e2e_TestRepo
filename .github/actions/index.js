@@ -6,5 +6,13 @@ OpenEO.connect("https://earthengine.openeo.org").then(function(con) {
   // Error
 });
 
+try {
+  var con = await OpenEO.connect("https://earthengine.openeo.org");
+  // Success
+} catch (error) {
+  // Error
+}
+
+
 
 var info = con.capabilities();
