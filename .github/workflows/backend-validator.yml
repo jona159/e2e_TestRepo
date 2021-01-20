@@ -65,6 +65,7 @@ jobs:
        ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json 
        ls -al
        cat ./validator_output.json | grep -v "Error"
+       echo $?
      # log_output.txt | grep -v "Error"
      # content=cat ./validator_output.json
      # echo "::result=packageJson::$content"
