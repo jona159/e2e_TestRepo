@@ -9,6 +9,7 @@ OpenEO.connect("https://earthengine.openeo.org").then(function(con) {
 async function tryConnect(){
 try {
   var con = await OpenEO.connect("https://earthengine.openeo.org");
+  console.log('con');
   // Success
 } catch (error) {
   // Error
