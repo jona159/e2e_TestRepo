@@ -1,6 +1,6 @@
 const { OpenEO } = require('@openeo/js-client');
 
-var con = OpenEO.connect("https://earthengine.openeo.org").then(function(con) {
+OpenEO.connect("https://earthengine.openeo.org").then(function(con) {
   // Success
 }).catch(function(error) {
   // Error
@@ -14,6 +14,6 @@ try {
   // Error
 }}
 
-tryConnect();
+var con = tryConnect();
 
 var info = con.capabilities();
