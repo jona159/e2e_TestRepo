@@ -7,10 +7,9 @@ on:
            
 jobs:
   build:
-    runs-on: ${{ matrix.operating-system }}
-    strategy:
-      matrix:
-        operating-system: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ubuntu-latest
+    
+      
     steps:
       - name: Docker Run
         run: |
