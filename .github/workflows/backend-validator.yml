@@ -62,14 +62,14 @@ jobs:
        go get github.com/BurntSushi/toml
        go get github.com/mcuadros/go-version
        go build openeoct.go
-       ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json ls -al | validator_log.txt
+       ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json ls -al | tee validator_log.json
        
-    - name: Read validator_log.txt
+    - name: Read validator_log.json
       uses: juliangruber/read-file-action@v1
       with:
-       path: validator_log.txt
+       path: validator_log.json
 
-    - name: Echo validator_log.txt
+    - name: Echo validator_log.json
       run: echo ${{ steps.validator_log.outputs.content }}    
        
 
