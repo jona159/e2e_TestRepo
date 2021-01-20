@@ -62,10 +62,9 @@ jobs:
        go get github.com/BurntSushi/toml
        go get github.com/mcuadros/go-version
        go build openeoct.go
-       ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json 2>&1 | tee log_output.txt
-       ls -al
-       cat log_output.txt
-       < log_output.txt | grep -v "Error"
+       ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json ls -al 2>&1 | tee log_output.txt
+       echo log_output.txt
+     # log_output.txt | grep -v "Error"
      # content=cat ./validator_output.json
      # echo "::result=packageJson::$content"
        
