@@ -68,7 +68,7 @@ jobs:
     - name: Read validator_output.json
       uses: juliangruber/read-file-action@v1
       with:
-       path: ./validator_output.json
+       path: validator_output.json
 
     - name: Echo package.json
       run: echo ${{ steps.validator_output.outputs.content }}    
