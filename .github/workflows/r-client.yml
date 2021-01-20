@@ -39,8 +39,8 @@ jobs:
        
       - name: Install devtools
         run: |
-          apt-get install libcurl4-openssl-dev
-          apt-get install curl
+          sudo apt-get install libcurl4-openssl-dev
+          sudo apt-get install curl
           R -e 'install.packages("devtools")'
           R -e 'library(devtools)'
        
