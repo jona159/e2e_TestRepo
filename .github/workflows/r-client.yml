@@ -41,11 +41,11 @@ jobs:
         run: |
           sudo apt-get install libcurl4-openssl-dev
           sudo apt-get install curl
-          R -e 'install.packages("devtools")'
-          R -e 'library(devtools)'
+          R -e 'install.packages("remotes")'
+          R -e 'library(remotes)'
        
       - name: Install R-Client module
         run: |
-         R -e 'devtools::install_github(repo="Open-EO/openeo-r-client",dependencies=TRUE, force=TRUE)'
+         R -e 'remotes::install_github(repo="Open-EO/openeo-r-client",dependencies=TRUE, force=TRUE)'
  
      
