@@ -64,7 +64,7 @@ jobs:
        go build openeoct.go
        ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json 2>&1 | tee log_output.json
        ls -al
-       cat log_output.json grep -v "Error"
+       cat log_output.json | grep "Error"
        echo $?
      # < log_output.txt | grep -v "Geosoft"
      # ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json | tee validator_log.txt
