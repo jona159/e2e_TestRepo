@@ -65,20 +65,11 @@ jobs:
        ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json 2>&1 | tee log_output.json
        ls -al
        cat log_output.json 
-     #< log_output.json | grep "Error"
-      #echo $?
+       < log_output.json | grep -v "Error"
+       echo $?
      # < log_output.txt | grep -v "Geosoft"
      # ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json | tee validator_log.txt
-      
-      
-    - name: Read validator_output.json
-      uses: juliangruber/read-file-action@v1
-      with:
-       path: ./validator_output.json
-      
-    - name: Echo validator_output.json
-      run: echo ${{ steps.validator_output.outputs.content }} 
-       
+
     - name: Docker Stop   
       run: |
          docker stop $(docker ps -q --filter ancestor="felixgi1516/geosoft2_frontend")
