@@ -64,8 +64,16 @@ jobs:
        go build openeoct.go
        ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json 
        ls -al
-       cat ./validator_output.json | grep -v "Error"
-       echo $?
+       
+    - name: Read validator_output.json
+      uses: juliangruber/read-file-action@v1
+      with:
+       path: ./validator_output.json
+
+    - name: Echo package.json
+      run: echo ${{ steps.validator_output.outputs.content }}    
+       
+
      # log_output.txt | grep -v "Error"
      # content=cat ./validator_output.json
      # echo "::result=packageJson::$content"
