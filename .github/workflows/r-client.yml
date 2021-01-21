@@ -45,10 +45,13 @@ jobs:
           R -e 'library(remotes)'
        
       - name: Install R-Client module
-        run: |
-         R -e 'remotes::install_github(repo="Open-EO/openeo-r-client",dependencies=TRUE,ref="develop",force=TRUE)'
-         R -e 'library(openeo)'
-      #  R -e 'gee = connect(host = "https://earthengine.openeo.org")'
+        run:  R -e 'remotes::install_github(repo="Open-EO/openeo-r-client",dependencies=TRUE,ref="develop",force=TRUE)'
+        
+      - name: Load openEO package
+        run:  R -e 'library(openeo)'
+        
+      - name: Connect to Backend
+        run:  R -e 'gee = connect(host = "https://earthengine.openeo.org")'
 
  
      
