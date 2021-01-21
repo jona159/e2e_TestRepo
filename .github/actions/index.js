@@ -23,7 +23,7 @@ OpenEO.connect(url)
 	})
 	.then(processes => {
 		if (processes.processes.length = 66){
-			core.setFailed(exit 1)}
+			core.setFailed('Nicht die korrekte Anzahl der Prozesse', 1)}
 		console.log('Number of supported processes: ' + processes.processes.length);
 	})
 	.catch(err => console.error(err.message));
