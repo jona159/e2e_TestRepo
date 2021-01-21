@@ -1,5 +1,5 @@
 on:
-# push:
+ push:
     branches:
       - main
       
@@ -48,7 +48,7 @@ jobs:
         run: |
          R -e 'remotes::install_github(repo="Open-EO/openeo-r-client",dependencies=TRUE,ref="develop",force=TRUE)'
          R -e 'library(openeo)'
-         R -e 'gee = connect(host = "https://earthengine.openeo.org")'
+      #  R -e 'gee = connect(host = "https://earthengine.openeo.org")'
 
  
      
