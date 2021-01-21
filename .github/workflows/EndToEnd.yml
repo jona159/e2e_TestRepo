@@ -58,6 +58,7 @@ jobs:
      
      - name: send json to job endpoint
        run: |
-         requests.post("http://localhost/api/v1/jobs", json=testjob.json, headers={"Content-Type":"application/json"})
+         testjob=`cat ./testjob.json'
+         requests.post('http://localhost/api/v1/jobs', json=testjob, headers={"Content-Type":"application/json"})
 
 
