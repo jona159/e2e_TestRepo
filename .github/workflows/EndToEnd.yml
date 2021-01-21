@@ -8,22 +8,9 @@ on:
      branches: 
       - main
 
-jobs:
-  build:         
-   runs-on: ubuntu-latest
-        
-   steps:           
-    - name: Checkout code
-      uses: actions/checkout@v2 
-      
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-    
+jobs:    
        
   job1: 
-   needs: [build]
    name: Trigger Job Endpoint
    runs-on: ubuntu-latest
    
@@ -34,7 +21,7 @@ jobs:
      - name: Set up Python ${{ matrix.python-version }}
        uses: actions/setup-python@v2
        with:
-        python-version: ${{ matrix.python-version }}
+        python-version: 3.8
      
      - name: install xarray
        run: pip install xarray
@@ -61,6 +48,6 @@ jobs:
        run:  |
         docker ps -a
         ls -a
-        requests.post("http://127.0.0.1/api/v1/job", data=/home/runner/work/TestRepo/TestRepo/testjob.json, headers={"Content-Type":"application/json"})
+        requests.post("http://localhost:80/api/v1/jobs", data=/home/runner/work/TestRepo/TestRepo/testjob.json, headers={"Content-Type":"application/json"})
 
 
