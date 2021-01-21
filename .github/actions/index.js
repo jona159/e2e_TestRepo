@@ -22,7 +22,7 @@ OpenEO.connect(url)
 		return connection.listProcesses();
 	})
 	.then(processes => {
-		if (processes.processes.length = 67){
+		if (processes.processes.length = 1){
 			core.setFailed('Nicht die korrekte Anzahl der Prozesse', 1)}
 		console.log('Number of supported processes: ' + processes.processes.length);
 	})
