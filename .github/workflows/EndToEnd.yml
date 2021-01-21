@@ -34,7 +34,7 @@ jobs:
    name: Trigger Job Endpoint
    runs-on: ubuntu-latest
    
-  steps:
+   steps:
      
      - name: Set up Python ${{ matrix.python-version }}
        uses: actions/setup-python@v2
