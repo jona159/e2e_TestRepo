@@ -31,6 +31,7 @@ jobs:
        docker-compose up -d
        
   job1: 
+   needs: [build]
    name: Trigger Job Endpoint
    runs-on: ubuntu-latest
    
