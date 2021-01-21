@@ -45,7 +45,7 @@ jobs:
           R -e 'library(remotes)'
        
       - name: Install R-Client module
-        run:  R -e 'remotes::install_github(repo="Open-EO/openeo-r-client",dependencies=TRUE,ref="develop",force=TRUE)'
+        run:  R -e 'remotes::install_github(repo="Open-EO/openeo-r-client",dependencies=TRUE,force=TRUE)'
         
       - name: Load openEO package
         run:  R -e 'library(openeo)'
