@@ -47,5 +47,5 @@ jobs:
      - name: send json to job endpoint
        run:  |
         docker ps -a
-        curl https://0.0.0.0:80/api/v1
+        curl -L http://0.0.0.0:80/api/v1
 
