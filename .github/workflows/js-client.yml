@@ -15,6 +15,9 @@ jobs:
         run: |
          docker run --name frontend -d -p 80:80 felixgi1516/geosoft2_frontend 
       - uses: actions/checkout@v2
+      
+      - name: Install actions/core
+        run: npm install @actions/core
        
       - name: Setup node 
         uses: actions/setup-node@v2
