@@ -47,6 +47,6 @@ jobs:
      - name: send json to job endpoint
        run:  |
         docker ps -a
-        requests.get('http://0.0.0.0:80/api/v1')
+        requests.get('0.0.0.0:80/api/v1')
 
 
