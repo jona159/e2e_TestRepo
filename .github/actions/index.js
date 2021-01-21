@@ -1,5 +1,6 @@
 // Import the JS client
 const { OpenEO } = require('@openeo/js-client');
+const core = require('@actions/core')
 
 const url = "https://earthengine.openeo.org"; // Insert the openEO server URL here
 let connection = null;
@@ -21,6 +22,8 @@ OpenEO.connect(url)
 		return connection.listProcesses();
 	})
 	.then(processes => {
+		if (processes.processes.length = 66){
+			core.setFailed(error.message)}
 		console.log('Number of supported processes: ' + processes.processes.length);
 	})
 	.catch(err => console.error(err.message));
