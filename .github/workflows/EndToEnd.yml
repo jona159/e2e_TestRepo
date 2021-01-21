@@ -54,6 +54,6 @@ jobs:
          path: ./testjob.json
      
      - name: send json to job endpoint
-       run: rq.post("http://localhost:80/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
+       run: rq.post("http://localhost:80/api/v1/jobs", json=testjob, headers={"Content-Type":"application/json"})
 
 
