@@ -57,6 +57,9 @@ jobs:
          path: /home/runner/work/TestRepo/TestRepo/testjob.json
      
      - name: send json to job endpoint
-       run:  requests.post("http://localhost/api/v1/jobs", headers={"Content-Type":"application/json"})
+       run:  |
+        docker ps -a
+        ls -a
+        requests.post('http://localhost/api/v1/jobs', json=testjob, headers={"Content-Type":"application/json"})
 
 
