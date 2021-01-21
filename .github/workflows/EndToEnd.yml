@@ -21,11 +21,6 @@ jobs:
       with:
         python-version: 3.8
     
-    - name: Docker Run
-      run: |
-       ls && pwd
-       cd /home/runner/work/TestRepo/TestRepo/
-       docker-compose up -d
        
   job1: 
    needs: [build]
@@ -55,7 +50,13 @@ jobs:
        uses: juliangruber/read-file-action@v1
        with:
          path: /home/runner/work/TestRepo/TestRepo/testjob.json
-     
+   
+     - name: Docker Run
+       run: |
+          ls && pwd
+          cd /home/runner/work/TestRepo/TestRepo/
+          docker-compose up -d
+          
      - name: send json to job endpoint
        run:  |
         docker ps -a
