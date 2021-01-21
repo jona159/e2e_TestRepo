@@ -47,6 +47,6 @@ jobs:
      - name: send json to job endpoint
        run:  |
         docker ps -a
-        requests.get('http://localhost:80/api/v1/jobs', headers={"Content-Type": "application/json"})
+        requests.get("0.0.0.0:80/api/v1/jobs", headers={"Content-Type": "application/json"})
      #curl http://0.0.0.0:80/api/v1
 
