@@ -46,6 +46,7 @@ jobs:
           
      - name: send json to job endpoint
        run:  |
+        pip install requests  
         docker ps -a
         requests.get(f"0.0.0.0:80/api/v1/jobs")
      #curl http://0.0.0.0:80/api/v1
