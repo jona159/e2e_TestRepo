@@ -4,8 +4,8 @@ _test19
 
 **Todo's:**
 
+ * *Noch R- und JS-Client Tests in der Readme ergänzen
  * *Testdaten und -größen*
- * *Kommunikation und Benachrichtigung der Entwicklerteams*
  * *Links hinzufügen*
  
 ## Testumgebung:
