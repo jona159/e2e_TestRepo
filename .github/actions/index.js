@@ -1,20 +1,26 @@
+// Import the JS client
 const { OpenEO } = require('@openeo/js-client');
 
-OpenEO.connect("https://earthengine.openeo.org").then(function(con) {
-  // Success
-}).catch(function(error) {
-  // Error
-});
+const url = "https://earthengine.openeo.org"; // Insert the openEO server URL here
+let connection = null;
 
-async function tryConnect(){
-try {
-  const con = await OpenEO.connect("https://earthengine.openeo.org");
-  console.log('con');
-  // Success
-} catch (error) {
-  // Error
-}}
+console.log('URL: ' + url);
+console.log('Client Version: ' + OpenEO.clientVersion());
 
-var con = tryConnect();
-
-var info = con.capabilities();
+OpenEO.connect(url)
+	.then(c => {
+		connection = c;
+		return connection.capabilities();
+	})
+	.then(capabilities => {
+		console.log('Server Version: ' + capabilities.apiVersion());
+		return connection.listCollections();
+	})
+	.then(collections => {
+		console.log('Number of supported collections: ' + collections.collections.length);
+		return connection.listProcesses();
+	})
+	.then(processes => {
+		console.log('Number of supported processes: ' + processes.processes.length);
+	})
+	.catch(err => console.error(err.message));
