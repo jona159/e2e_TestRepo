@@ -46,7 +46,7 @@ jobs:
           
      - name: send json to job endpoint
        run:  |
-        docker ps -a
+        docker ps -a -expose
         ls -a
         requests.post('http://0.0.0.0/api/v1/jobs', data=/home/runner/work/TestRepo/TestRepo/testjob.json, headers={"Content-Type":"application/json"})
 
