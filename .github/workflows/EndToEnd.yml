@@ -45,7 +45,9 @@ jobs:
        run: pip install xarray
         
      - name: install requests
-       run: pip install requests
+       run: |
+          pip install requests
+          ls && pwd
         
      - name: read json
        id: package
