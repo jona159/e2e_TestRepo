@@ -48,7 +48,7 @@ jobs:
        run:  |
         docker ps -a
         ls -a
-        curl http://localhost:80:80/api/v1/jobs/
+        curl http://0.0.0.0:80/api/v1/jobs/
        # requests.post('http://localhost:80/api/v1/jobs/', data=/home/runner/work/TestRepo/TestRepo/testjob.json, headers={"Content-Type":"application/json"})
 
 
