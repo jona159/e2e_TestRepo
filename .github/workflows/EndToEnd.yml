@@ -51,7 +51,7 @@ jobs:
        id: package
        uses: juliangruber/read-file-action@v1
        with:
-         path: ./testjob.json
+         path: /home/runner/work/TestRepo/TestRepo/testjob.json
      
      - name: send json to job endpoint
        run: rq.post("http://localhost:80/api/v1/jobs", json=testjob, headers={"Content-Type":"application/json"})
