@@ -48,6 +48,6 @@ jobs:
        run:  |
         pip install requests  
         docker ps -a
-        requests.get(f"0.0.0.0:80/api/v1/jobs")
+        requests.get("http://google.de/")
      #curl http://0.0.0.0:80/api/v1
 
