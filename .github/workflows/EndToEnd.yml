@@ -1,0 +1,59 @@
+name: End to End Workflow
+
+on: 
+   push:
+     branches: 
+       - main
+   pull_request:
+     branches: 
+      - main
+
+jobs:
+  build:         
+   runs-on: ubuntu-latest
+   strategy:
+      matrix:
+        python-version: [3.7, 3.8]
+        
+   steps:           
+    - name: Checkout code
+      uses: actions/checkout@v2 
+      
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Docker Run
+      run: |
+       ls && pwd
+       cd /home/runner/work/TestRepo/TestRepo/
+       docker-compose up -d
+       
+  job1: 
+   name: Trigger Job Endpoint
+   runs-on: ubuntu-latest
+   
+     steps:
+     
+     - name: Set up Python ${{ matrix.python-version }}
+       uses: actions/setup-python@v2
+       with:
+        python-version: ${{ matrix.python-version }}
+     
+     - name: install xarray
+        run: pip install xarray
+        
+     - name: install requests
+        run: pip install requests
+        
+     - name: read json
+       id: package
+       uses: juliangruber/read-file-action@v1
+       with:
+         path: ./testjob.json
+     
+     - name: send json to job endpoint
+       run: rq.post("http://localhost:80/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
+
+
