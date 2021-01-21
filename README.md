@@ -4,7 +4,7 @@ _test19
 
 **Todo's:**
 
- * *Noch R- und JS-Client Tests in der Readme ergänzen
+ * *Noch R- und JS-Client Tests in der Readme ergänzen*
  * *Testdaten und -größen*
  * *Links hinzufügen*
  
