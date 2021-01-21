@@ -3,7 +3,7 @@ services:
   frontend:
     image: felixgi1516/geosoft2_frontend:latest
     depends_on:
-      - processManager
+   #   - processManager
       - database
       - ndvi_0
       - sst_0
