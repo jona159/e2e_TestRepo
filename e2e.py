@@ -1,3 +1,8 @@
 import requests
+import time
 
-requests.get("http://0.0.0.0:8080/api/v1/jobs", timeout=2)
+def getData():
+    time.sleep(0.01)
+    requests.get("http://0.0.0.0:8080/api/v1/jobs")
+    
+getData()    
