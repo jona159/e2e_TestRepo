@@ -48,7 +48,7 @@ jobs:
         run:  R -e 'remotes::install_github(repo="Open-EO/openeo-r-client",dependencies=TRUE,force=TRUE)'
         
       - name: Load openEO package
-        run:  R -e 'library(openeo); host_url="http://127.0.0.1/"; api_versions(host_url); gee = connect(host = host_url, version="1.0.0"); processes=list_processes(); print(names(processes))'
+        run:  R -e 'library(openeo); host_url="http://0.0.0.0:8080/"; api_versions(host_url); gee = connect(host = host_url, version="1.0.0"); processes=list_processes(); print(names(processes))'
         
      
 
