@@ -9,8 +9,8 @@ on:
       - main
    schedule: 
       - cron: '0 18 * * *' 
-      - cron: '0 6 * * *'
-      - cron: '0 12 * * *' 
+   #   - cron: '0 6 * * *'
+    #  - cron: '0 12 * * *' 
             
          
 jobs:
@@ -226,6 +226,6 @@ jobs:
     # email body as text
          body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
     #   comma-separated string, send email to
-    #   to: j_beck60@wwu.de, raabejonas@yahoo.de
+         to: m_busc15@uni-muenster.de , s_bus01@uni-muenster.de, m_fisc39@uni-muenster.de, a_page03@uni-muenster.de, adrian.spork@uni-muenster.de, m_ster15@uni-muenster.de, t_walt08@uni-muenster.de, czerwas@uni-muenster.de, j_raab02@uni-muenster.de
     # from email name
          from: Github Action             
