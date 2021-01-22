@@ -50,7 +50,7 @@ jobs:
       - name: Load openEO package
         run:  R -e 'library(openeo); gee = connect(host = "https://earthengine.openeo.org")'
         
-     '
+     
 
  
      
