@@ -173,9 +173,7 @@ jobs:
   build:
     needs: [job1,job2,job3,job4,job5]
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.7, 3.8]
+    
 
     steps:
     - uses: actions/checkout@v2
@@ -184,7 +182,7 @@ jobs:
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: 3.8
         
     #- name: Checkout submodules
     # run: git submodule update --init --recursive  
