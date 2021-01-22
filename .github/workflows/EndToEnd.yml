@@ -25,6 +25,9 @@ jobs:
      
      - name: install xarray
        run: pip install xarray
+       
+     - name: install urllib2
+       run: pip install urllib2  
         
      - name: install requests
        run: |
