@@ -49,6 +49,7 @@ jobs:
         docker ps -a
         docker-compose -f docker-compose.yml logs
         python e2e.py
+        curl -vv http://0.0.0.0:80/api/v1
      #   requests.get("http://0.0.0.0:80/api/v1/jobs")
      #curl -vv http://0.0.0.0:80/api/v1
 
