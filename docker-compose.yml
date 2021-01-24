@@ -52,7 +52,7 @@ services:
     environment:
       - DOCKER=True
     depends-on:
-      - frontend
+      - ndvi_0
   #  ports:
    #   - 80
     volumes:
