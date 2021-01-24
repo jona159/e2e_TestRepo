@@ -54,10 +54,10 @@ jobs:
         curl -vv http://0.0.0.0:8080/api/v1
         python e2e.py 
        
-     - name: Curl
-       run: |
-         curl -vv http://0.0.0.0:8080/api/v1
-         python e2e.py 
+     #- name: Curl
+      # run: |
+        # curl -vv http://0.0.0.0:8080/api/v1
+        # python e2e.py 
          
  #docker exec -t `docker ps -q --filter ancestor=felixgi1516/geosoft2_frontend` curl http://0.0.0.0:8080/api/v1         
         
