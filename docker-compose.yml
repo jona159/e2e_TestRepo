@@ -41,6 +41,8 @@ services:
     image: felixgi1516/geosoft2_ndvi_process:latest
     environment:
       - DOCKER=True
+    depends_on: 
+      - frontend
   #   ports:
   #    - 80
     volumes:
@@ -49,6 +51,8 @@ services:
     image: felixgi1516/geosoft2_sst_process:latest
     environment:
       - DOCKER=True
+    depends_on:
+      - frontend
   #    ports:
  #     - 80
     volumes:
