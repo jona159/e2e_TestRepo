@@ -47,3 +47,6 @@ testjob = {
 
 x = requests.post("http://0.0.0.0:8080/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
 print(x.text)
+
+res_1 = requests.get("http://0.0.0.0:8080/api/v1/jobs")
+print(res_1)
