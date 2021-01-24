@@ -45,8 +45,8 @@ jobs:
        run: |
           ls && pwd
           cd /home/runner/work/TestRepo/TestRepo/
-          docker-compose up -d
-          docker-compose -f docker-compose.yml logs
+          docker-compose up -d logs
+     #  docker-compose -f docker-compose.yml logs
           
      - name: send json to job endpoint
        run:  |
