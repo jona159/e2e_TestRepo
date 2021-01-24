@@ -44,3 +44,6 @@ testjob = {
     }   
 
 # print(testjob)
+
+x = rq.post("http://localhost/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
+print(x.text)
