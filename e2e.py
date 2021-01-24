@@ -3,7 +3,8 @@ import json
 #import testjob.json
 
 def getData():
-    requests.get("http://0.0.0.0:8080/api/v1/jobs")
+    res = requests.get("http://0.0.0.0:8080/api/v1/jobs")
+    print(res)
    # requests.post("http://0.0.0.0:8080/api/v1/jobs", json=testjob.json, headers={"Content-Type": "application/json"})
     
     
@@ -42,4 +43,4 @@ testjob = {
       }
     }   
 
-print(testjob)
+# print(testjob)
