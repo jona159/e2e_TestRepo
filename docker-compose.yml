@@ -52,7 +52,8 @@ services:
     environment:
       - DOCKER=True
     depends_on:
-      - frontend
+      frontend
+      condition: service_started
   #    ports:
  #     - 80
     volumes:
