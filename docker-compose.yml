@@ -24,53 +24,39 @@ services:
       - database
       - ndvi_0
       - sst_0
+    command: ["./wait-for-it.sh", "frontend:8080", "--", "python", "app.py"]
    # ports:
     #  - 80
     volumes:
       - data-volume:/data
-    healthcheck:
-        test: ["CMD", "curl", "-f", "http://0.0.0.0:8080"]
-        interval: 30s
-        timeout: 10s
-        retries: 5
   database:
     image: felixgi1516/geosoft2_dataserver:latest
     environment:
       - DOCKER=True
+    command: ["./wait-for-it.sh", "frontend:8080", "--", "python", "app.py"]
   #  ports:
   #    - 80
     volumes:
       - data-volume:/data
-    healthcheck:
-        test: ["CMD", "curl", "-f", "http://0.0.0.0:8080"]
-        interval: 30s
-        timeout: 10s
-        retries: 5
   ndvi_0:
     image: felixgi1516/geosoft2_ndvi_process:latest
     environment:
       - DOCKER=True
+    command: ["./wait-for-it.sh", "frontend:8080", "--", "python", "app.py"]
   #  ports:
    #   - 80
     volumes:
       - data-volume:/data
     healthcheck:
-        test: ["CMD", "curl", "-f", "http://0.0.0.0:8080"]
-        interval: 30s
-        timeout: 10s
-        retries: 5
   sst_0:
     image: felixgi1516/geosoft2_sst_process:latest
     environment:
       - DOCKER=True
+    command: ["./wait-for-it.sh", "frontend:8080", "--", "python", "app.py"]
   #  ports:
    #   - 80
     volumes:
       - data-volume:/data
-    healthcheck:
-        test: ["CMD", "curl", "-f", "http://0.0.0.0:8080"]
-        interval: 30s
-        timeout: 10s
-        retries: 5
+
 volumes:
   data-volume:
