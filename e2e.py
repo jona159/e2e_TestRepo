@@ -49,4 +49,4 @@ x = requests.post("http://0.0.0.0:8080/api/v1/jobs", json=testjob, headers={"Con
 print(x.text)
 
 res_1 = requests.get("http://0.0.0.0:8080/api/v1/jobs")
-print(res_1)
+print(res_1.text)
