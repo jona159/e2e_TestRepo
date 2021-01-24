@@ -3,10 +3,10 @@ services:
   frontend:
     image: felixgi1516/geosoft2_frontend:latest
     depends_on:
-      - processManager
+#      - processManager
       - database
-      - ndvi_0
-      - sst_0
+#      - ndvi_0
+#      - sst_0
     ports:
       - 8080:8080
     environment:
@@ -41,8 +41,7 @@ services:
     image: felixgi1516/geosoft2_ndvi_process:latest
     environment:
       - DOCKER=True
-    command: ["./wait-for-it.sh", "frontend:8080"]  
- #   ports:
+  #   ports:
   #    - 80
     volumes:
       - data-volume:/data
@@ -50,8 +49,7 @@ services:
     image: felixgi1516/geosoft2_sst_process:latest
     environment:
       - DOCKER=True
-    command: ["./wait-for-it.sh", "frontend:8080"]  
-#    ports:
+  #    ports:
  #     - 80
     volumes:
       - data-volume:/data
