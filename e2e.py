@@ -4,6 +4,7 @@ import json
 
 res = requests.get("http://0.0.0.0:8080/api/v1/jobs")
 print(res)
+print(res.text)
    # requests.post("http://0.0.0.0:8080/api/v1/jobs", json=testjob.json, headers={"Content-Type": "application/json"})
     
     
