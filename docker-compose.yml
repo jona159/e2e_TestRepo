@@ -51,8 +51,7 @@ services:
     image: felixgi1516/geosoft2_sst_process:latest
     environment:
       - DOCKER=True
-    depends-on:
-      - ndvi_0
+   
   #  ports:
    #   - 80
     volumes:
