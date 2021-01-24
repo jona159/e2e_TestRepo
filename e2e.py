@@ -45,5 +45,5 @@ testjob = {
 
 # print(testjob)
 
-x = requests.post("http://localhost/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
+x = requests.post("http://0.0.0.0:8080/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
 print(x.text)
