@@ -2,6 +2,8 @@ import requests
 import json
 #import testjob.json
 
+print("Hello World")
+
 def getData():
     requests.get("http://0.0.0.0:8080/api/v1/jobs")
    # requests.post("http://0.0.0.0:8080/api/v1/jobs", json=testjob.json, headers={"Content-Type": "application/json"})
