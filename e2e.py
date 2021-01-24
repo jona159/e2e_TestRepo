@@ -50,3 +50,8 @@ print(x.text)
 
 res_1 = requests.get("http://0.0.0.0:8080/api/v1/jobs")
 print(res_1.text)
+
+print("\n ID DES JOBS ERFRAGEN \n")
+
+j = requests.get("http://0.0.0.0:8080/api/v1/jobs")
+rjson = j.json()
