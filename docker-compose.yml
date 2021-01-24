@@ -24,7 +24,7 @@ services:
       - database
       - ndvi_0
       - sst_0
-    command: ["./wait-for-it.sh", "frontend:8080", "--", "python", "app.py"]
+    command: ["wait-for-it.sh", "frontend:8080"]
    # ports:
     #  - 80
     volumes:
@@ -33,7 +33,7 @@ services:
     image: felixgi1516/geosoft2_dataserver:latest
     environment:
       - DOCKER=True
-    command: ["./wait-for-it.sh", "frontend:8080", "--", "python", "app.py"]
+    command: ["wait-for-it.sh", "frontend:8080"]
   #  ports:
   #    - 80
     volumes:
@@ -42,7 +42,7 @@ services:
     image: felixgi1516/geosoft2_ndvi_process:latest
     environment:
       - DOCKER=True
-    command: ["./wait-for-it.sh", "frontend:8080", "--", "python", "app.py"]
+    command: ["wait-for-it.sh", "frontend:8080"]
   #  ports:
    #   - 80
     volumes:
@@ -51,7 +51,7 @@ services:
     image: felixgi1516/geosoft2_sst_process:latest
     environment:
       - DOCKER=True
-    command: ["./wait-for-it.sh", "frontend:8080", "--", "python", "app.py"]
+    command: ["wait-for-it.sh", "frontend:8080"]
   #  ports:
    #   - 80
     volumes:
