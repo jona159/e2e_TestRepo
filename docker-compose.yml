@@ -2,7 +2,7 @@ version: "3.9"
 services:
   frontend:
     image: felixgi1516/geosoft2_frontend:latest
-    depends_on:
+#    depends_on:
 #      - processManager
 #      - database
 #      - ndvi_0
