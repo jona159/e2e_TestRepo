@@ -67,4 +67,4 @@ x1 = requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , js
 res_2 = requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results")
 #d1 = res_2.json()
 #print(d1)
-print(res_2)
+print(res_2.text)
