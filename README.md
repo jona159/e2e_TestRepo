@@ -49,9 +49,26 @@ als Testframework wird **pytest** verwendet
    * Über Pytest werden Unit- und Integrationtests ausgeführt und ein Coverage-Report zurückgegeben 
 
 
+# Test manuell lokal ausführen
 
+```bash
+docker-compose up
+```
 
+Neue Konsole:
 
+```bash
+# start a virtual environment, e.g., mkvirtualenv geosoft
+pip install -r req.txt
 
-  
+pytest
+```
+
+[currently fails with xarray not found]
+
+Now let's see if the API is up:
+
+```bash
+curl http://localhost:8080/api/va/jobs
+```
 
