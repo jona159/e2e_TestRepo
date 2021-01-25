@@ -3,8 +3,8 @@ import json
 #import testjob.json
 
 res = requests.get("http://0.0.0.0:8080/api/v1/jobs")
-print(res)
-print(res.text)
+#print(res)
+#print(res.text)
    # requests.post("http://0.0.0.0:8080/api/v1/jobs", json=testjob.json, headers={"Content-Type": "application/json"})
     
     
@@ -49,19 +49,20 @@ x = requests.post("http://0.0.0.0:8080/api/v1/jobs", json=testjob, headers={"Con
 print(x.text)
 
 res_1 = requests.get("http://0.0.0.0:8080/api/v1/jobs")
-print(res_1.text)
+#print(res_1.text)
 
 print("\n ID DES JOBS ERFRAGEN \n")
 
 j = requests.get("http://0.0.0.0:8080/api/v1/jobs")
 rjson = j.json()
 job_id = rjson['jobs'][-1]['id']
-rjson
+print(rjson)
+print(job_id)
 
 print("\n DEN JOB AUSFÜHREN ÜBER EINE POST ANFRAGE AN DEN RESULTS ENDPOINT DES JOBS: \n")
 
 x1 = requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , json=None, headers={"Content-Type": "application/json"})
-print(x1.text)
+#print(x1.text)
 
 res_2 = requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results")
-print(res_2.text)
+#print(res_2.text)
