@@ -74,7 +74,7 @@ print(" \n Post an Database /doJob Endpoint \n ")
 
 while True:
   try:
-    x3 = requests.post("http://0.0.0.0:80/doJob/" + job_id)
+    x3 = requests.post("http://0.0.0.0:8080/doJob/" + job_id)
     print(x3.text)
   except requests.exceptions.RequestException as e:
     pass
