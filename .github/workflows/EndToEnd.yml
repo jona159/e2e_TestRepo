@@ -45,7 +45,7 @@ jobs:
        run: |
           ls && pwd
           cd /home/runner/work/TestRepo/TestRepo/
-          docker-compose up -d 
+          docker-compose up  
           
           
      - name: send json to job endpoint
