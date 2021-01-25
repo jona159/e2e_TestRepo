@@ -64,7 +64,7 @@ print("\n DEN JOB AUSFÜHREN ÜBER EINE POST ANFRAGE AN DEN RESULTS ENDPOINT DES
 x1 = requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , json=None, headers={"Content-Type": "application/json"})
 #print(x1.text)
 
-res_2 = requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results")
+res_2 = requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results").json()
 #d1 = res_2.json()
 #print(d1)
-print(res_2.text)
+print(res_2)
