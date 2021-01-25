@@ -11,10 +11,14 @@ jobs:
     
       
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2 
+      
       - name: Docker Run
         run: |
-         ls && pwd 
-      - uses: actions/checkout@v2
+          ls && pwd
+          cd /home/runner/work/TestRepo/TestRepo/
+          docker-compose up -d
       
       - name: Install actions/core
         run: npm install @actions/core
