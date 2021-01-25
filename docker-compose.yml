@@ -1,4 +1,4 @@
-version: "3.9"
+version: "3.8"
 services:
   frontend:
     image: felixgi1516/geosoft2_frontend:latest
@@ -42,8 +42,8 @@ services:
     environment:
       - DOCKER=True
     depends_on: 
-      frontend:
-        condition: service_started
+      - frontend
+        
   #   ports:
   #    - 80
     volumes:
@@ -53,8 +53,8 @@ services:
     environment:
       - DOCKER=True
     depends_on:
-      frontend:
-        condition: service_started
+      - frontend:
+        
   #    ports:
  #     - 80
     volumes:
