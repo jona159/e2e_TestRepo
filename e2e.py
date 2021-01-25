@@ -65,8 +65,15 @@ print("\n DEN JOB AUSFÜHREN ÜBER EINE POST ANFRAGE AN DEN RESULTS ENDPOINT DES
 x1 = requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , json=None, headers={"Content-Type": "application/json"})
 #print(x1.text)
 
+print(" \n GET Anfrage an Frontend /jobRunning Endpoint \n ")
+
 x2 = requests.get("http://0.0.0.0:8080/jobRunning/" + job_id)
 print(x2.text)
+
+print(" \n Post an Database /doJob Endpoint \n ")
+
+x3 = requests.post("http://0.0.0.0:8080/doJob/" + job_id)
+print(x3.text)
 
 #print(" \n Warte bis Job Fertig ist.. \n")
 #while True:
@@ -81,4 +88,4 @@ print(x2.text)
 #res_2 = requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results").json()
 #d1 = res_2.json()
 #print(d1)
-print(res_2)
+#print(res_2)
