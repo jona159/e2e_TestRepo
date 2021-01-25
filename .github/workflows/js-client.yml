@@ -29,6 +29,9 @@ jobs:
           node-version: 14.x
       - run: |
           npm install @openeo/js-client
-      - uses: ./.github/actions/    
+      - uses: ./.github/actions/
+      
+      - name: check docker containers
+        run: docker ps -a
           
 
