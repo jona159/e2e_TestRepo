@@ -72,9 +72,12 @@ print(x2.text)
 
 print(" \n Post an Database /doJob Endpoint \n ")
 
-x3 = requests.post("http://0.0.0.0/doJob/" + job_id)
-print(x3.text)
-
+while True:
+  try:
+    x3 = requests.post("http://0.0.0.0:80/doJob/" + job_id)
+    print(x3.text)
+  except requests.exceptions.RequestException as e
+    pass
 #print(" \n Warte bis Job Fertig ist.. \n")
 #while True:
  
