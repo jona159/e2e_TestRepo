@@ -1,12 +1,12 @@
 name: Pytest Workflow
 
 on: 
-   push:
-     branches: 
-       - main
-   pull_request:
-     branches: 
-      - main
+  # push:
+    # branches: 
+    #   - main
+ #  pull_request:
+  #   branches: 
+  #    - main
   # schedule: 
    #   - cron: '0 18 * * *' 
    #   - cron: '0 6 * * *'
