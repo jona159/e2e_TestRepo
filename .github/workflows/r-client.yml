@@ -28,6 +28,8 @@ jobs:
       - name: Docker Run
         run: |
           ls && pwd
+          cd /home/runner/work/
+          ls && pwd  
           docker-compose up -d
           docker ps -a
       #  cd /home/runner/work/TestRepo/TestRepo/  
