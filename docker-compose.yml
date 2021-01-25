@@ -53,7 +53,7 @@ services:
     environment:
       - DOCKER=True
     depends_on:
-      - frontend:
+      - frontend
         
   #    ports:
  #     - 80
