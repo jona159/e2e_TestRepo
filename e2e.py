@@ -65,6 +65,6 @@ x1 = requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , js
 #print(x1.text)
 
 res_2 = requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results")
-d1 = res.json()["assets"]
+d1 = res.json()
 print(d1)
 #print(res_2.text)
