@@ -72,7 +72,7 @@ print(x2.text)
 
 print(" \n Post an Database /doJob Endpoint \n ")
 
-x3 = requests.post("http://0.0.0.0:8080/doJob/" + job_id)
+x3 = requests.post("http://0.0.0.0:80/doJob/" + job_id)
 print(x3.text)
 
 #print(" \n Warte bis Job Fertig ist.. \n")
