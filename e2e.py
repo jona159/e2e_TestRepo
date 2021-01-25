@@ -57,7 +57,7 @@ j = requests.get("http://0.0.0.0:8080/api/v1/jobs")
 rjson = j.json()
 job_id = rjson['jobs'][-1]['id']
 #print(rjson)
-#print(job_id)
+print(job_id)
 
 print("\n DEN JOB AUSFÜHREN ÜBER EINE POST ANFRAGE AN DEN RESULTS ENDPOINT DES JOBS: \n")
 
