@@ -2,8 +2,8 @@
 const { OpenEO } = require('@openeo/js-client');
 const core = require('@actions/core')
 
-const url = "https://earthengine.openeo.org"; // Insert the openEO server URL here
-//const url = "http://0.0.0.0:8080/api/v1"
+//const url = "https://earthengine.openeo.org"; // Insert the openEO server URL here
+const url = "http://localhost:8080/api/v1"
 let connection = null;
 
 console.log('URL: ' + url);
