@@ -1,5 +1,6 @@
 import requests
 import json
+import time
 #import testjob.json
 
 res = requests.get("http://0.0.0.0:8080/api/v1/jobs")
@@ -63,6 +64,21 @@ print("\n DEN JOB AUSFÜHREN ÜBER EINE POST ANFRAGE AN DEN RESULTS ENDPOINT DES
 
 x1 = requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , json=None, headers={"Content-Type": "application/json"})
 #print(x1.text)
+
+print(" \n Warte bis Job Fertig ist.. \n")
+while True:
+
+    status = requests.get("http://0.0.0.0:8080/api/v1/jobs"+ job_id + "/results") #Checken wie der Job Status ist
+    status = status.json()
+    if status["jobs"][0]["status"] == "error": #Job gescheitert, was unser problem ist
+        print("Job Gescheitert. Siehe Docker Compose Log!")
+        break
+    if status["jobs"][0]["status"] == "done": #Job erfolgreich.
+        print("Job Erfolgreich. Siehe Docker Compose Log!")
+        break
+    print("Job noch nicht Fertig..")
+    time.sleep(5) #Warte um server nicht zu überlasten
+print("\n Job Fertig! \n")
 
 res_2 = requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results").json()
 #d1 = res_2.json()
