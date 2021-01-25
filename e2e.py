@@ -69,6 +69,7 @@ print(" \n Warte bis Job Fertig ist.. \n")
 while True:
 
     status = requests.get("http://0.0.0.0:8080/api/v1/jobs"+ job_id + "/results") #Checken wie der Job Status ist
+    logger.info(type(status))
     status = status.json()
     if status["jobs"][0]["status"] == "error": #Job gescheitert, was unser problem ist
         print("Job Gescheitert. Siehe Docker Compose Log!")
