@@ -65,17 +65,20 @@ print("\n DEN JOB AUSFÜHREN ÜBER EINE POST ANFRAGE AN DEN RESULTS ENDPOINT DES
 x1 = requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , json=None, headers={"Content-Type": "application/json"})
 #print(x1.text)
 
-print(" \n Warte bis Job Fertig ist.. \n")
-while True:
+x2 = requests.get("http://0.0.0.0:8080/jobRunning/" + job_id)
+print(x2.text)
 
-    time.sleep(300) 
-    try:
-      requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results")
-      break
-    except Error:
-        print ("not ready, trying again in one minute")
+#print(" \n Warte bis Job Fertig ist.. \n")
+#while True:
+ 
+#   time.sleep(300) 
+ #   try:
+  #    requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results")
+   #   break
+  #  except Error:
+   #     print ("not ready, trying again in one minute")
          
-res_2 = requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results").json()
+#res_2 = requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results").json()
 #d1 = res_2.json()
 #print(d1)
 print(res_2)
