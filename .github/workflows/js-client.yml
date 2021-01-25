@@ -13,8 +13,7 @@ jobs:
     steps:
       - name: Docker Run
         run: |
-         cd /home/runner/work/TestRepo/TestRepo/
-         docker-compose up -d  
+         ls && pwd 
       - uses: actions/checkout@v2
       
       - name: Install actions/core
