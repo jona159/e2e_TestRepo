@@ -28,10 +28,9 @@ jobs:
       - name: Docker Run
         run: |
           ls && pwd
-          cd /home/runner/work/TestRepo/TestRepo/
           docker-compose up -d
           docker ps -a
-          
+      #  cd /home/runner/work/TestRepo/TestRepo/  
       - name: Checkout Code     
         uses: actions/checkout@v2
     
