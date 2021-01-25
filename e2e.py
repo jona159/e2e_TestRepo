@@ -68,18 +68,13 @@ x1 = requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , js
 print(" \n Warte bis Job Fertig ist.. \n")
 while True:
 
-    status = requests.get("http://0.0.0.0:8080/api/v1/jobs"+ job_id + "/results") #Checken wie der Job Status ist
-    status = status.json()
-    if status["jobs"][0]["status"] == "error": #Job gescheitert, was unser problem ist
-        print("Job Gescheitert. Siehe Docker Compose Log!")
-        break
-    if status["jobs"][0]["status"] == "done": #Job erfolgreich.
-        print("Job Erfolgreich. Siehe Docker Compose Log!")
-        break
-    print("Job noch nicht Fertig..")
-    time.sleep(5) #Warte um server nicht zu überlasten
-print("\n Job Fertig! \n")
-
+    time.sleep(60) # sixty second delay
+    try:
+      requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results")
+      break
+    except Error:
+        print ("not ready, trying again in one minute")
+         
 res_2 = requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results").json()
 #d1 = res_2.json()
 #print(d1)
