@@ -68,7 +68,7 @@ x1 = requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , js
 print(" \n Warte bis Job Fertig ist.. \n")
 while True:
 
-    time.sleep(60) # sixty second delay
+    time.sleep(180) # sixty second delay
     try:
       requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results")
       break
