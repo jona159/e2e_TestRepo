@@ -28,7 +28,7 @@ jobs:
       - name: Docker Run
         run: |
           ls && pwd
-          docker run --name frontend -d -p 8080:80 felixgi1516/geosoft2_frontend 
+          docker run --name frontend -d -p 8080:8080 felixgi1516/geosoft2_frontend 
           docker ps -a
       #  cd /home/runner/work/TestRepo/TestRepo/  
       - name: Checkout Code     
