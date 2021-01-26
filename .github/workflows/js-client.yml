@@ -28,6 +28,7 @@ jobs:
         with:
           node-version: 14.x
       - run: npm install @openeo/js-client
+      - run:  git update-index --chmod +x ./.github/actions/index.js
       - run: ./.github/actions/index.js
       #- uses: ./.github/actions/index.js
       #- name: run script
