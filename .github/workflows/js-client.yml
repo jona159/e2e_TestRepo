@@ -20,8 +20,8 @@ jobs:
           cd /home/runner/work/TestRepo/TestRepo/
           docker-compose up -d
       
-      #- name: Install actions/core
-       # run: npm install @actions/core
+      - name: Install actions/core
+        run: npm install @actions/core
        
       - name: Setup node 
         uses: actions/setup-node@v2
@@ -29,10 +29,7 @@ jobs:
           node-version: 14.x
       - run: |
           npm install @openeo/js-client
-      - uses: ./.github/actions/          
-                   
-          
+      - uses: ./.github/actions/
+      
       - name: check docker containers
         run: docker ps -a
-          
-
