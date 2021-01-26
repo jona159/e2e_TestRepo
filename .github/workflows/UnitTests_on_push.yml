@@ -1,4 +1,4 @@
-name: Pytest Workflow
+name: Pytest Workflow on push
 
 on: 
    push:
