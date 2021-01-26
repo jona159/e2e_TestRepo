@@ -1,5 +1,5 @@
 {
-  "url": "http://localhost/api/v1",
+  "url": "http://0.0.0.0:8080/api/v1",
   "openapi": "https://raw.githubusercontent.com/Open-EO/openeo-api/1.0.0/openapi.yaml",
   "variables": {
   },
