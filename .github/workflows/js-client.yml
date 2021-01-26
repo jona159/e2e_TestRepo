@@ -30,10 +30,11 @@ jobs:
       - run: npm install @openeo/js-client
       
       - name: Update paths
-        run: git update-index --chmod +x ./.github/actions/index.js
-      
-      - name: run script
-        run: ./.github/actions/index.js
+        run: |
+          ls -l ./.github/actions/index.js
+          chmod +x ./.github/actions/index.js
+          ./.github/actions/index.js
+        
       #- uses: ./.github/actions/index.js
       #- name: run script
         #run: |
