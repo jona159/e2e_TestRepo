@@ -54,8 +54,8 @@ jobs:
         docker-compose -f docker-compose.yml logs
         curl -vv http://0.0.0.0:8080/api/v1
         docker ps -a
-       
-        
+        docker images
+         
       
      - name: Run script
        run: python e2e.py
