@@ -78,7 +78,7 @@ def checkData():
       sys.exit('unable to download data within 15 Minutes')
   elif(data['level'] == 'error'):
       print ("Daten noch nicht geladen")
-      counter ++
+      counter += 1
       time.sleep(300)
       callCheckData()
   else: 
