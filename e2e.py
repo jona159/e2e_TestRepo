@@ -67,14 +67,18 @@ requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , json=No
 print("\n JSON, dass leer ist: \n")
 print(requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json())
 
+def callCheckData():
+   checkData();
+
 def checkData():
   data = requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json()
   if(data['level'] == 'error'):
       print ("Daten noch nicht geladen")
       time.sleep(300)
-      checkData()
+      callCeckData()
   else: 
       print ("Datensatz geladen")
+      print(requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json())
       #res = requests.get("http://localhost/api/v1/jobs/" + job_id + "/results" )
       #dl = res.json()["assets"]
       #print(dl)
