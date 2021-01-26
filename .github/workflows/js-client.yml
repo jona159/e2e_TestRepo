@@ -27,20 +27,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14.x
-      - run: npm install @openeo/js-client
-      
-      - name: Update paths
-        run: |
-          ls -l ./.github/actions/index.js
-          chmod +x ./.github/actions/index.js
-          ./.github/actions/index.js
-        
-      #- uses: ./.github/actions/index.js
-      #- name: run script
-        #run: |
-         # using: node12
-         # main: ./.github/actions/index.js
-          
+      - run: |
+          npm install @openeo/js-client
+      - uses: ./.github/actions/          
                    
           
       - name: check docker containers
