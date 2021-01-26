@@ -64,8 +64,7 @@ print("\n DEN JOB AUSFÜHREN ÜBER EINE POST ANFRAGE AN DEN RESULTS ENDPOINT DES
 
 requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , json=None, headers={"Content-Type": "application/json"})
 
-print("\n WARTEN BIS DATENSATZ GELADEN IST: \n")
-checkData()
+
 
 def checkData():
   if(requests.get("http://0.0.0.0:8080/api/v1/takeData/" + job_id) is None):
@@ -77,6 +76,9 @@ def checkData():
       res = requests.get("http://localhost/api/v1/jobs/" + job_id + "/results" )
       dl = res.json()["assets"]
       print(dl)
+
+print("\n WARTEN BIS DATENSATZ GELADEN IST: \n")
+checkData()
    
 
 #print(" \n GET Anfrage an Frontend /jobRunning Endpoint \n ")
