@@ -68,7 +68,7 @@ requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , json=No
 
 def checkData():
   data = requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json()
-  if(len(data["assets"]) == 0):
+  if(len(data) == 0):
       print ("Daten noch nicht geladen")
       time.sleep(300)
       checkData()
