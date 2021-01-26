@@ -67,7 +67,7 @@ requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , json=No
 print("\n JSON, dass leer ist: \n")
 print(requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json())
 
-const counter = 0
+counter = 0
 
 def callCheckData():
    checkData();
