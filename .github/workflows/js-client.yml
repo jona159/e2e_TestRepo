@@ -28,7 +28,7 @@ jobs:
         with:
           node-version: 14.x
       - run: npm install @openeo/js-client
-      - run: ./.github/actions/index.js
+      - run: index.js
       #- uses: ./.github/actions/index.js
       #- name: run script
         #run: |
