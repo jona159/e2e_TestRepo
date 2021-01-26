@@ -75,7 +75,7 @@ def checkData():
   if(data['level'] == 'error'):
       print ("Daten noch nicht geladen")
       time.sleep(300)
-      callCeckData()
+      callCheckData()
   else: 
       print ("Datensatz geladen")
       print(requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json())
