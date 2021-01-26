@@ -2,11 +2,11 @@ version: "3.9"
 services:
   frontend:
     image: gaffko/demo_frontend:demo_iv
- #   depends_on:
-  #    - processManager
-  #    - database
-   #   - ndvi_0
-   #   - sst_0
+    depends_on:
+      - processManager
+      - database
+      - ndvi_0
+      - sst_0
     ports:
       - 80:80
     environment:
@@ -40,8 +40,8 @@ services:
     image: gaffko/demo_ndvi:demo_iv
     environment:
       - DOCKER=True
-    depends_on:
-      - frontend
+ #   depends_on:
+  #    - frontend
 #    ports:
  #     - 80
     volumes:
@@ -50,8 +50,8 @@ services:
     image: gaffko/demo_sst:demo_iv
     environment:
       - DOCKER=True
-    depends_on:
-      - frontend
+ #   depends_on:
+  #    - frontend
 #    ports:
  #     - 80
     volumes:
