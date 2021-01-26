@@ -66,7 +66,7 @@ requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , json=No
 
 def checkData():
   if(requests.get("http://0.0.0.0:8080/api/v1/takeData/" + job_id) is None):
-      print ("Daten noch nicht geladen)
+      print ("Daten noch nicht geladen")
       time.sleep(300)
       checkData()
   else: 
