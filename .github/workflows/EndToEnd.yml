@@ -1,7 +1,7 @@
 name: End to End Workflow
 
 on: 
-   push:
+   #push:
      branches: 
        - main
    pull_request:
