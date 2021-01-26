@@ -69,7 +69,7 @@ print(requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).js
 
 def checkData():
   data = requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json()
-  if(len(data) == 0):
+  if(data['level'] == 'error'):
       print ("Daten noch nicht geladen")
       time.sleep(300)
       checkData()
