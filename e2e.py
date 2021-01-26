@@ -45,11 +45,11 @@ testjob = {
     }   
 
 # print(testjob)
-
+print("\n JSON AN FRONTEND ÜBERGEBEN \n")
 x = requests.post("http://0.0.0.0:8080/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
-print(x.text)
+print(x)
 
-res_1 = requests.get("http://0.0.0.0:8080/api/v1/jobs")
+#res_1 = requests.get("http://0.0.0.0:8080/api/v1/jobs")
 #print(res_1.text)
 
 print("\n ID DES JOBS ERFRAGEN \n")
@@ -60,17 +60,17 @@ job_id = rjson['jobs'][-1]['id']
 #print(rjson)
 print(job_id)
 
-print("\n DEN JOB AUSFÜHREN ÜBER EINE POST ANFRAGE AN DEN RESULTS ENDPOINT DES JOBS: \n")
+print("\n DEN JOB AUSFÜHREN ÜBER EINE POST ANFRAGE AN DEN RESULTS ENDPOINT DES JOBS. WARTEN BIS DATENSATZ GELADEN IST: \n")
 
 x1 = requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , json=None, headers={"Content-Type": "application/json"})
-#print(x1.text)
+print(x1.text)
 
-print(" \n GET Anfrage an Frontend /jobRunning Endpoint \n ")
+#print(" \n GET Anfrage an Frontend /jobRunning Endpoint \n ")
 
-x2 = requests.get("http://0.0.0.0:8080/jobRunning/" + job_id)
-print(x2.text)
+#x2 = requests.get("http://0.0.0.0:8080/jobRunning/" + job_id)
+#print(x2.text)
 
-print(" \n Post an Database /doJob Endpoint \n ")
+#print(" \n Post an Database /doJob Endpoint \n ")
 
 #while True:
  # try:
