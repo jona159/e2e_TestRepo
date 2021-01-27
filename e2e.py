@@ -66,14 +66,11 @@ print("\n DEN JOB AUSFÜHREN ÜBER EINE POST ANFRAGE AN DEN RESULTS ENDPOINT DES
 requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , json=None, headers={"Content-Type": "application/json"})
 
 print("\n WARTEN BIS DER SERVER BEREIT IST \n")
-time.sleep(600)
+time.sleep(300)
 
 print("\n JSON, leer?: \n")
-# print(requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json())
+print(requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json())
 
-while requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json()['status']=='running' :
-      print("running")
-      time.sleep(10)
 #print("\n Downloadlink: \n")
 #res = requests.get("http://localhost/api/v1/jobs/" + job_id + "/results" )
 #dl = res.json()["assets"]
