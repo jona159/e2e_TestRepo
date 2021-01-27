@@ -65,11 +65,14 @@ print("\n DEN JOB AUSFÜHREN ÜBER EINE POST ANFRAGE AN DEN RESULTS ENDPOINT DES
 
 requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , json=None, headers={"Content-Type": "application/json"})
 
+print("\n 5 MINUTEN WAREN BIS DER SERVER BEREIT IST \n")
+time.sleep(300)
+
 print("\n JSON, dass leer ist: \n")
 print(requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json())
 
-counter = 0
-
+#counter = 0
+'''
 def callCheckData():
    checkData();
 
@@ -121,3 +124,4 @@ checkData()
 #d1 = res_2.json()
 #print(d1)
 #print(res_2)
+'''
