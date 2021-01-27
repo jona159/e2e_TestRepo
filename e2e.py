@@ -66,7 +66,7 @@ print("\n DEN JOB AUSFÜHREN ÜBER EINE POST ANFRAGE AN DEN RESULTS ENDPOINT DES
 requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , json=None, headers={"Content-Type": "application/json"})
 
 print("\n 5 MINUTEN WAREN BIS DER SERVER BEREIT IST \n")
-time.sleep(300)
+time.sleep(500)
 
 print("\n JSON, leer?: \n")
 print(requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json())
