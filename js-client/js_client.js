@@ -80,7 +80,7 @@ QUnit.test( "OpenEO JS Client - Collections", function (assert) {
 
 // QUnit Tests Processes
 QUnit.test( "OpenEO JS Client - Processes", function (assert) {
-	assert.equal((checkProc()), 4, 'correct number of collections (4)');
+	assert.equal((checkProc()), 4, 'correct number of processes (4)');
 	assert.notEqual((checkProc()), 'hi', 'should be integer but string given');
-	assert.notEqual((checkColl()), -5, 'wrong number of collections given');
+	assert.notEqual((checkColl()), -5, 'wrong number of processes given');
 })
