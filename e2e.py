@@ -68,8 +68,13 @@ requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , json=No
 print("\n 5 MINUTEN WAREN BIS DER SERVER BEREIT IST \n")
 time.sleep(300)
 
-print("\n JSON, dass leer ist: \n")
+print("\n JSON, leer?: \n")
 print(requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json())
+
+print("\n Downloadlink: \n")
+res = requests.get("http://localhost/api/v1/jobs/" + job_id + "/results" )
+dl = res.json()["assets"]
+print(dl)
 
 #counter = 0
 '''
