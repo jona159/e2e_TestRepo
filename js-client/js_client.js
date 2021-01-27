@@ -73,7 +73,6 @@ window.onload = function wait(){
 
 // QUnit Tests Collections
 QUnit.test( "OpenEO JS Client - Collections", function (assert) {
-	//assert.equal((hallo()), 1, 'stimmt');
 	assert.notEqual((checkColl()), 0, 'number of collections should be greater that 0');
 	assert.notEqual((checkColl()), 'hi', 'should be integer but string given');
 	assert.notEqual((checkColl()), -5, 'number of collections can not be nagative');
@@ -81,7 +80,6 @@ QUnit.test( "OpenEO JS Client - Collections", function (assert) {
 
 // QUnit Tests Processes
 QUnit.test( "OpenEO JS Client - Processes", function (assert) {
-	//assert.equal((hallo()), 1, 'stimmt');
 	assert.equal((checkProc()), 4, 'correct number of collections (4)');
 	assert.notEqual((checkProc()), 'hi', 'should be integer but string given');
 	assert.notEqual((checkColl()), -5, 'wrong number of collections given');
