@@ -77,7 +77,6 @@ def checkData():
   global counter
   data = requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json()
   if (counter == 3):
-      error;
       sys.exit('unable to download data within 15 Minutes')
   elif(data['level'] == 'error'):
       print ("Daten noch nicht geladen")
