@@ -91,6 +91,7 @@ def e2e():
    print(href)
    replacement = re.sub('localhost',  '0.0.0.0', href)
    print(replacement) 
+   os.system('wget %s' %replacement)
 
    return replacement
   
