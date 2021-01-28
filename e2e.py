@@ -4,12 +4,7 @@ import time
 import sys
 #import testjob.json
 
-res = requests.get("http://0.0.0.0:8080/api/v1/jobs")
-#print(res)
-#print(res.text)
-   # requests.post("http://0.0.0.0:8080/api/v1/jobs", json=testjob.json, headers={"Content-Type": "application/json"})
-    
-    
+# Test Data
 testjob = {
   "title": "Example Title",
   "description": "Example Description",
@@ -43,38 +38,62 @@ testjob = {
         }
       }
       }
-    }   
+    }  
+
+def e2e():
+   res = requests.get("http://0.0.0.0:8080/api/v1/jobs")
+#print(res)
+#print(res.text)
+   # requests.post("http://0.0.0.0:8080/api/v1/jobs", json=testjob.json, headers={"Content-Type": "application/json"})
+    
+    
+ 
 
 # print(testjob)
-print("\n JSON AN FRONTEND ÜBERGEBEN \n")
-x = requests.post("http://0.0.0.0:8080/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
-print(x)
+   print("\n JSON AN FRONTEND ÜBERGEBEN \n")
+   x = requests.post("http://0.0.0.0:8080/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
+   print(x)
 
 #res_1 = requests.get("http://0.0.0.0:8080/api/v1/jobs")
 #print(res_1.text)
 
-print("\n ID DES JOBS ERFRAGEN \n")
+   print("\n ID DES JOBS ERFRAGEN \n")
 
-j = requests.get("http://0.0.0.0:8080/api/v1/jobs")
-rjson = j.json()
-job_id = rjson['jobs'][-1]['id']
-print(rjson)
-print(job_id)
+   j = requests.get("http://0.0.0.0:8080/api/v1/jobs")
+   rjson = j.json()
+   job_id = rjson['jobs'][-1]['id']
+   print(rjson)
+   print(job_id)
 
-print("\n DEN JOB AUSFÜHREN ÜBER EINE POST ANFRAGE AN DEN RESULTS ENDPOINT DES JOBS. \n")
+   print("\n DEN JOB AUSFÜHREN ÜBER EINE POST ANFRAGE AN DEN RESULTS ENDPOINT DES JOBS. \n")
 
-requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , json=None, headers={"Content-Type": "application/json"})
+   requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , json=None, headers={"Content-Type": "application/json"})
 
-print("\n WARTEN BIS DER SERVER BEREIT IST \n")
-time.sleep(300)
+   print("\n WARTEN BIS DER SERVER BEREIT IST \n")
+   time.sleep(300)
 
-print("\n JSON, leer?: \n")
-print(requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json())
+   print("\n JSON, leer?: \n")
+   print(requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json())
 
-print("\n Downloadlink: \n")
-res = requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" )
-dl = res.json()["assets"]
-print(dl)
+   print("\n Downloadlink: \n")
+   json = requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json()
+   newjson = json["assets"]
+   print(newjson)
+   key = list(newjson.items())[0]
+   key_new= key[0]
+   
+   link = newjson.get(key_new)
+   print(link)
+   href = link.pop('href')
+   print(href)
+
+   return href
+
+test()
+   
+   
+   
+   
 
 #counter = 0
 '''
