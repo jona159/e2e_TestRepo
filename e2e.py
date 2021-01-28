@@ -93,7 +93,7 @@ def e2e():
 
    return replacement
   
-   webUrl = urllib.request.urlopen(replacement)
+   webUrl = urllib.request.urlretrieve(replacement, netCDF_File)
 
 e2e()
    
