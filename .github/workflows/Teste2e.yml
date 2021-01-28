@@ -37,3 +37,4 @@ jobs:
        with:
         url: $(python e2e_test.py v2.17)
         target: public/
+        auto-match: true
