@@ -13,7 +13,7 @@ jobs:
   job1: 
    name: Trigger Job Endpoint
    runs-on: ubuntu-latest
-   
+
    steps:
      - name: Checkout code
        uses: actions/checkout@v2 
@@ -60,5 +60,5 @@ jobs:
      - name: Run script
        run: python e2e.py
         
-   #     requests.get("http://0.0.0.0:80/api/v1/jobs")
+   #    requests.get("http://0.0.0.0:80/api/v1/jobs")
     # curl -vv http://0.0.0.0:80/api/v1
