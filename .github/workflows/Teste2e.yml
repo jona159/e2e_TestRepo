@@ -35,6 +35,6 @@ jobs:
        uses: suisei-cn/actions-download-file@v1
        id: downloadfile  # Remember to give an ID if you need the output
        with:
-        url: $(python e2e_test.py v2.17)
+        url: 'http://localhost:8080/download/846668b0-6144-11eb-a2b4-0242ac120004/8d615358-6144-11eb-ab20-0242ac120006'
         target: public/
         auto-match: true
