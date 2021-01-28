@@ -30,3 +30,10 @@ jobs:
        run: |
           href=$(python e2e_test.py v2.17)
           echo "::set-output name=href::$href"
+       
+     - name: Download the file   
+       uses: suisei-cn/actions-download-file@v1
+       id: downloadfile  # Remember to give an ID if you need the output
+       with:
+        url: $href
+        target: public/
