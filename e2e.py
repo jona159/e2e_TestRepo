@@ -2,6 +2,7 @@ import requests
 import json
 import time
 import sys
+import re
 #import testjob.json
 
 # Test Data
@@ -86,6 +87,7 @@ def e2e():
    print(link)
    href = link.pop('href')
    print(href)
+   replacement = re.sub('localhost',  '0.0.0.0', href) 
 
    return href
 
