@@ -89,7 +89,7 @@ def e2e():
 
    return href
 
-test()
+e2e()
    
    
    
