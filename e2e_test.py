@@ -1,8 +1,5 @@
-import requests
 import json
-import time
-import sys
-#import testjob.json
+
 
 #example
 rjson = {'jobs': [{'created': '2021-01-28T08:40:47.19Z', 'description': 'Example Description', 'id': '846668b0-6144-11eb-a2b4-0242ac120004', 'process': {'process_graph': {'SST': {'arguments': {'bbox': [-999, -999, -999, -999], 'data': {'from_node': 'loadcollection1'}, 'timeframe': ['1981-12-01', '1981-12-17']}, 'process_id': 'mean_sst'}, 'loadcollection1': {'arguments': {'DataType': 'SST', 'timeframe': ['01-12-1981 00:00:00', '30-12-1981 00:00:00', '%d-%m-%Y %H:%M:%S']}, 'process_id': 'load_collection'}, 'save': {'arguments': {'Format': 'netcdf', 'SaveData': {'from_node': 'SST'}}, 'process_id': 'save_result'}}}, 'status': 'created', 'title': 'Example Title'}], 'links': [{'href': 'https://example.openeo.org', 'rel': 'related', 'title': 'openEO', 'type': 'text/html'}]}
