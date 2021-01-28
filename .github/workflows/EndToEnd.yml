@@ -70,3 +70,6 @@ jobs:
        with:
         url: "http://0.0.0.0:8080/download/846668b0-6144-11eb-a2b4-0242ac120004/8d615358-6144-11eb-ab20-0242ac120006"
         target: /home/runner/work/TestRepo/TestRepo/
+    
+     - name: Check if file is in repo
+       run: ls && pwd  
