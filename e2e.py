@@ -97,7 +97,7 @@ def e2e():
 e2e()
    
 #webUrl = urllib.request.urlretrieve("http://0.0.0.0:8080/download/4be92668-6166-11eb-8f6b-0242ac120004/555369fc-6166-11eb-9729-0242ac120006", "netCDF_File")   
-os.system('wget %s' %replacement)   
+#os.system('wget %s' %replacement)   
    
 
 #counter = 0
