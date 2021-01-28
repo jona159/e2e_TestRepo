@@ -3,6 +3,7 @@ import json
 import time
 import sys
 import re
+import urllib.request
 #import testjob.json
 
 # Test Data
@@ -91,6 +92,8 @@ def e2e():
    print(replacement) 
 
    return replacement
+  
+   webUrl = urllib.request.urlopen(replacement)
 
 e2e()
    
