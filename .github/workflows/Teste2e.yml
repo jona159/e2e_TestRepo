@@ -29,11 +29,11 @@ jobs:
      - name: import link
        run: |
           href=$(python e2e_test.py v2.17)
-          echo "::set-output name=href::$href"
-       
+          echo "link=::set-output name=href::$href" >> $GITHUB_ENV
+          
      - name: Download the file   
        uses: suisei-cn/actions-download-file@v1
        id: downloadfile  # Remember to give an ID if you need the output
        with:
-        url: $href
+        url: $link
         target: public/
