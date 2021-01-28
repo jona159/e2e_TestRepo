@@ -58,7 +58,8 @@ jobs:
          
       
      - name: Run script
-       run: python e2e.py
-        
+       run: | 
+        python e2e.py
+        ls && pwd
    #    requests.get("http://0.0.0.0:80/api/v1/jobs")
     # curl -vv http://0.0.0.0:80/api/v1
