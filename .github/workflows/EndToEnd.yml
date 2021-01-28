@@ -63,3 +63,10 @@ jobs:
         ls && pwd
    #    requests.get("http://0.0.0.0:80/api/v1/jobs")
     # curl -vv http://0.0.0.0:80/api/v1
+
+     - name: Download the file   
+       uses: suisei-cn/actions-download-file@v1
+       id: downloadfile  # Remember to give an ID if you need the output
+       with:
+        url: "http://0.0.0.0:8080/download/846668b0-6144-11eb-a2b4-0242ac120004/8d615358-6144-11eb-ab20-0242ac120006"
+        target: public/
