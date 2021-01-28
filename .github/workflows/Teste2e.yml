@@ -23,5 +23,10 @@ jobs:
        with:
         python-version: 3.8         
       
-     - name: Run script
-       run: python e2e_test.py
+    # - name: Run script
+    #   run: python e2e_test.py
+       
+     - name: import link
+       run: |
+          href=$(python e2e_test.py v2.17)
+          echo href
