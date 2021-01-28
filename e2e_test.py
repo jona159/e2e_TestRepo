@@ -7,7 +7,7 @@ def test():
   key = list(newjson.items())[0]
   key_new= key[0]
 
-  link_json = {'0bbe1d06-613d-11eb-b3a4-0242ac120006.nc': {'href': 'http://localhost:8080/download/027b4660-613d-11eb-b581-0242ac120004/0bbe1d06-613d-11eb-b3a4-0242ac120006'}}
+  link_json = {'8d615358-6144-11eb-ab20-0242ac120006.nc': {'href': 'http://localhost:8080/download/846668b0-6144-11eb-a2b4-0242ac120004/8d615358-6144-11eb-ab20-0242ac120006'}}
   link = link_json.get(key_new)
   print(link)
   href = link.pop('href')
