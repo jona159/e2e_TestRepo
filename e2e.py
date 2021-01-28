@@ -87,7 +87,8 @@ def e2e():
    print(link)
    href = link.pop('href')
    print(href)
-   replacement = re.sub('localhost',  '0.0.0.0', href) 
+   replacement = re.sub('localhost',  '0.0.0.0', href)
+   print(replacement) 
 
    return href
 
