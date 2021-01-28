@@ -29,4 +29,4 @@ jobs:
      - name: import link
        run: |
           href=$(python e2e_test.py v2.17)
-          echo href
+          echo "::set-output name=href::$href"
