@@ -90,7 +90,7 @@ def e2e():
    replacement = re.sub('localhost',  '0.0.0.0', href)
    print(replacement) 
 
-   return href
+   return replacement
 
 e2e()
    
