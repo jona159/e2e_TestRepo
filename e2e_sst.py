@@ -101,14 +101,14 @@ print(fin)
 #sst_values = fin['sst'][0]
 #print(sst_values)
 
-print(" \n EMPTY LINE \n ")
+#print(" \n EMPTY LINE \n ")
 
-print(fin['sst'][:])
+#print(fin['sst'][:])
 
 print(" \n END OF SST NETCDF FILE \n")
 
 def test_length_fin():
-  assert len(fin) == 1036800
+  assert fin.count() == 1036800
 
 #time.sleep(180)
 #stats = os.stat('netCDF_sst.nc')
