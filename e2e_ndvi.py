@@ -5,7 +5,9 @@ import sys
 import re
 import urllib.request
 import os
-#import testjob.json
+from passwords import username, password
+
+pw = password
 
 # Test Data
 testjob = {
