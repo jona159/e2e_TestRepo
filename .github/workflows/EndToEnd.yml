@@ -62,6 +62,7 @@ jobs:
        run: | 
         python e2e_sst.py
         ls && pwd
+        cat netCDF_sst.nc
         
      - name: Run NDVI script
        env:
