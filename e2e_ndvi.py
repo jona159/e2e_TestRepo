@@ -16,25 +16,25 @@ testjob = {
       "loadcollection1": {
         "process_id": "load_collection",
         "arguments": {
-          "timeframe" : ["01-12-1981 00:00:00","30-12-1981 00:00:00","%d-%m-%Y %H:%M:%S"],
-          "DataType": "SST"
+          "timeframe" : ["01-06-2020 00:00:00","10-06-2020 00:00:00","%d-%m-%Y %H:%M:%S"],
+          "DataType": "Sentinel2",
+          "cloudcoverage":[0,30],
+          "Login":[username, pw]
         }
         },
-        "SST": {
-        "process_id": "mean_sst",
+        "ndvi": {
+        "process_id": "ndvi",
         "arguments": {
           "data":{
               "from_node": "loadcollection1"
-          },
-          "timeframe":["1981-12-01","1981-12-17"],
-          "bbox":[-999,-999,-999,-999]
           }
+        }
         },
         "save":{
             "process_id": "save_result",
             "arguments":{
                 "SaveData":{
-                    "from_node":"SST"
+                    "from_node":"ndvi"
                 },
                 "Format": "netcdf"
             }
