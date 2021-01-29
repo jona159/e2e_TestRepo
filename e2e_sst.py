@@ -90,8 +90,12 @@ def e2e_sst():
   
 e2e_sst()
 
+print("\n CONTENT OF SST NETCDF FILE \n")
+
 fin = xr.open_dataset('netCDF_sst.nc')
 print(fin)
+
+print(" \n END OF SST NETCDF FILE \n")
 
 #time.sleep(180)
 #stats = os.stat('netCDF_sst.nc')
