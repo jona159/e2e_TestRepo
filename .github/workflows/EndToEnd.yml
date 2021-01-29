@@ -34,6 +34,9 @@ jobs:
           pip install requests
           ls && pwd
           ls -a
+    
+     - name: install netcdf
+       run: pip install netcdf
      
              
      - name: read json
