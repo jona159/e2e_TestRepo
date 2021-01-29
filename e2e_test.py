@@ -1,4 +1,7 @@
 import json
+imoort os
+
+print(os.environ.items())
 
 
 def test():
@@ -16,5 +19,6 @@ def test():
 
   return href
 
-test()
+#test()
+
 
