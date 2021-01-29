@@ -39,6 +39,9 @@ jobs:
        run: |
           pip install netCDF4
           pip install scipy     
+          
+     - name: install pytest
+       run: pip install pytest
     
                   
      - name: read json
@@ -67,6 +70,7 @@ jobs:
        run: | 
         python e2e_sst.py
         ls && pwd
+        pytest e2e_sst.py -k 'test_length_fin'
         
         
      - name: Run NDVI script
