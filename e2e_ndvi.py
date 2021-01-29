@@ -5,6 +5,9 @@ import sys
 import re
 import urllib.request
 import os
+import xarray as xr
+import netCDF4
+import scipy.io.netcdf
 
 
 username = os.getenv('username')
@@ -86,10 +89,16 @@ def e2e_ndvi():
    replacement = re.sub('localhost',  '0.0.0.0', href)
    print(replacement) 
    os.system('wget %s -O netcdf_ndvi.nc' %replacement)
-   time.sleep(180)
-   print(os.stat('netcdf_ndvi.nc').st_size)
+   
    
 
    return replacement
   
 e2e_ndvi()
+
+print("\n CONTENT OF NDVI NETCDF FILE \n")
+
+fin = xr.open_dataset('netcdf_ndvi.nc')
+print(fin)
+
+print(" \n END OF NDVI NETCDF FILE \n")
