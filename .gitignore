@@ -139,3 +139,4 @@ cython_debug/
 
 # other
 e2e_test.py
+passwords.py
