@@ -43,7 +43,7 @@ testjob = {
       }
     }  
 
-def e2e():
+def e2e_sst():
    res = requests.get("http://0.0.0.0:8080/api/v1/jobs") 
     
    print("\n JSON AN FRONTEND ÜBERGEBEN \n")
