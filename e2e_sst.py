@@ -97,7 +97,12 @@ print(fin)
 
 print("\n DIMENSIONS \n")
 
-print(fin['sst'])
+sst_values = fin['sst'][:]
+print(sst_values)
+
+print(" \n EMPTY LINE \n ")
+
+print(fin['sst'][:])
 
 print(" \n END OF SST NETCDF FILE \n")
 
