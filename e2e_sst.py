@@ -90,7 +90,7 @@ def e2e_sst():
   
 e2e_sst()
 
-fin = xr.open_dataset('netCDF_sst.nc.nc')
+fin = xr.open_dataset('netCDF_sst.nc')
 print(fin)
 
 #time.sleep(180)
