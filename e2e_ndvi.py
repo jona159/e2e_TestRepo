@@ -5,9 +5,10 @@ import sys
 import re
 import urllib.request
 import os
-from passwords import username, password
 
-pw = password
+username = os.getenv('username')
+pw = os.getenv('pw')
+
 
 # Test Data
 testjob = {
