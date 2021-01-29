@@ -89,4 +89,4 @@ e2e_sst()
 
 time.sleep(180)
 stats = os.stat('netCDF_sst.nc')
-prinst(stats)
+print(stats)
