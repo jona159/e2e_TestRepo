@@ -85,7 +85,9 @@ def e2e_ndvi():
    print(href)
    replacement = re.sub('localhost',  '0.0.0.0', href)
    print(replacement) 
-   os.system('wget %s' %replacement)
+   os.system('wget %s -O netcdf_ndvi.nc' %replacement)
+   time.sleep(180)
+   os.stat('netcdf_ndvi.nc').st_size
    
 
    return replacement
