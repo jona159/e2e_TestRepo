@@ -87,7 +87,7 @@ def e2e_ndvi():
    print(replacement) 
    os.system('wget %s -O netcdf_ndvi.nc' %replacement)
    time.sleep(180)
-   os.stat('netcdf_ndvi.nc').st_size
+   print(os.stat('netcdf_ndvi.nc').st_size)
    
 
    return replacement
