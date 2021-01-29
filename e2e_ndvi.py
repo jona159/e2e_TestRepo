@@ -8,6 +8,7 @@ import os
 import xarray as xr
 import netCDF4
 import scipy.io.netcdf
+import pytest
 
 
 username = os.getenv('username')
@@ -104,3 +105,6 @@ print(fin)
 print(fin['__xarray_dataarray_variable__'][:])
 
 print(" \n END OF NDVI NETCDF FILE \n")
+
+def test_count_fin():
+  assert fin.count() == 2303604
