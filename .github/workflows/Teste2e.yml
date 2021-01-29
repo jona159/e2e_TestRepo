@@ -23,18 +23,12 @@ jobs:
        with:
         python-version: 3.8         
       
-    # - name: Run script
-    #   run: python e2e_test.py
+     - name: Run script
+       run: python e2e_test.py
        
     # - name: import link
      #  run: |
          # href=$(python e2e_test.py v2.17)
           #echo "link=::set-output name=href::$href" >> $GITHUB_ENV
           
-     - name: Download the file   
-       uses: suisei-cn/actions-download-file@v1
-       id: downloadfile  # Remember to give an ID if you need the output
-       with:
-        url: "http://localhost:8080/download/846668b0-6144-11eb-a2b4-0242ac120004/8d615358-6144-11eb-ab20-0242ac120006"
-        target: public/
-
+   
