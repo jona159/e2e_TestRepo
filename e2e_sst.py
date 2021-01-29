@@ -5,6 +5,7 @@ import sys
 import re
 import urllib.request
 import os
+import xarray as xr
 #import testjob.json
 
 # Test Data
@@ -86,6 +87,9 @@ def e2e_sst():
    return replacement
   
 e2e_sst()
+
+fin = xr.open_dataset('netCDF_sst.nc.nc')
+print(fin)
 
 #time.sleep(180)
 #stats = os.stat('netCDF_sst.nc')
