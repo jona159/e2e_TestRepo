@@ -1,5 +1,5 @@
 import json
-imoort os
+import os
 
 print(os.environ.items())
 
