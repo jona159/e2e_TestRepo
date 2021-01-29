@@ -6,6 +6,8 @@ import re
 import urllib.request
 import os
 import xarray as xr
+import netCDF4
+import scipy.io.netcdf
 #import testjob.json
 
 # Test Data
