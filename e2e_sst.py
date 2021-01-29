@@ -95,7 +95,9 @@ print("\n CONTENT OF SST NETCDF FILE \n")
 fin = xr.open_dataset('netCDF_sst.nc')
 print(fin)
 
-print(fin.keys())
+print("\n DIMENSIONS \n")
+
+print(fin['Dimensions'])
 
 print(" \n END OF SST NETCDF FILE \n")
 
