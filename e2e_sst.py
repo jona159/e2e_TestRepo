@@ -85,4 +85,4 @@ def e2e_sst():
 
    return replacement
   
-e2e()
+e2e_sst()
