@@ -8,6 +8,7 @@ import os
 import xarray as xr
 import netCDF4
 import scipy.io.netcdf
+import pytest
 #import testjob.json
 
 # Test Data
@@ -95,10 +96,10 @@ print("\n CONTENT OF SST NETCDF FILE \n")
 fin = xr.open_dataset('netCDF_sst.nc')
 print(fin)
 
-print("\n DIMENSIONS \n")
+#print("\n DIMENSIONS \n")
 
-sst_values = fin['sst'][0]
-print(sst_values)
+#sst_values = fin['sst'][0]
+#print(sst_values)
 
 print(" \n EMPTY LINE \n ")
 
@@ -106,7 +107,8 @@ print(fin['sst'][:])
 
 print(" \n END OF SST NETCDF FILE \n")
 
-
+def test_length_fin():
+  assert len(fin) == 1036800
 
 #time.sleep(180)
 #stats = os.stat('netCDF_sst.nc')
