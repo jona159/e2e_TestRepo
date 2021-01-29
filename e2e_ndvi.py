@@ -101,4 +101,6 @@ print("\n CONTENT OF NDVI NETCDF FILE \n")
 fin = xr.open_dataset('netcdf_ndvi.nc')
 print(fin)
 
+print(fin['__xarray_dataarray_variable__'][:])
+
 print(" \n END OF NDVI NETCDF FILE \n")
