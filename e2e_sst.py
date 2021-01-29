@@ -87,6 +87,7 @@ def e2e_sst():
   
 e2e_sst()
 
-time.sleep(180)
-stats = os.stat('netCDF_sst.nc')
-print(stats)
+#time.sleep(180)
+#stats = os.stat('netCDF_sst.nc')
+#print(stats)
+
