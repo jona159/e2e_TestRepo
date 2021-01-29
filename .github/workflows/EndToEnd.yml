@@ -63,6 +63,9 @@ jobs:
         ls && pwd
         
      - name: Run NDVI script
+       env:
+        username: ${{ secrets.SCIHUB_USERNAME }}
+        pw: ${{ secrets.SCIHUB_PASSWORD }}
        run: | 
         python e2e_ndvi.py
         ls && pwd
