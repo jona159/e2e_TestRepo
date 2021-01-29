@@ -82,7 +82,10 @@ def e2e_sst():
    replacement = re.sub('localhost',  '0.0.0.0', href)
    print(replacement) 
    os.system('wget %s -O netCDF_sst.nc' %replacement)
-
+  
    return replacement
   
 e2e_sst()
+
+time.sleep(180)
+print(os.stat('netcdf_ndvi.nc').st_size)
