@@ -5,6 +5,8 @@ import sys
 import re
 import urllib.request
 import os
+import xarray as xr
+import dask
 
 username = os.getenv('username')
 pw = os.getenv('pw')
@@ -85,6 +87,8 @@ def e2e_ndvi():
    replacement = re.sub('localhost',  '0.0.0.0', href)
    print(replacement) 
    os.system('wget %s' %replacement)
+   time.sleep(60)
+   xr.open_mfdataset('/home/runner/work/TestRepo/TestRepo/*.nc', parallel=True) 
 
    return replacement
   
