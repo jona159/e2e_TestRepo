@@ -97,7 +97,7 @@ print(fin)
 
 print("\n DIMENSIONS \n")
 
-sst_values = fin['sst'][:]
+sst_values = fin['sst'][0]
 print(sst_values)
 
 print(" \n EMPTY LINE \n ")
