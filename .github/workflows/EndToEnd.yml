@@ -57,9 +57,14 @@ jobs:
         docker images
          
       
-     - name: Run script
+     - name: Run SST script
        run: | 
-        python e2e.py
+        python e2e_sst.py
+        ls && pwd
+        
+     - name: Run NDVI script
+       run: | 
+        python e2e_ndvi.py
         ls && pwd
         
 
