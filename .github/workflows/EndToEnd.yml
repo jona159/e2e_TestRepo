@@ -35,10 +35,7 @@ jobs:
           ls && pwd
           ls -a
     
-     - name: install netcdf
-       run: pip install netcdf
-     
-             
+                  
      - name: read json
        id: package
        uses: juliangruber/read-file-action@v1
@@ -65,7 +62,7 @@ jobs:
        run: | 
         python e2e_sst.py
         ls && pwd
-        ncdump -h netCDF_sst.nc
+        
         
      - name: Run NDVI script
        env:
