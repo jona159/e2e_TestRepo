@@ -88,4 +88,4 @@ def e2e_sst():
 e2e_sst()
 
 time.sleep(180)
-print(os.stat('netCDF_sst.nc').st_size)
+os.stat('netCDF_sst.nc').st_size
