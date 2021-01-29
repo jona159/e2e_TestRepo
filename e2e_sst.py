@@ -81,7 +81,7 @@ def e2e_sst():
    print(href)
    replacement = re.sub('localhost',  '0.0.0.0', href)
    print(replacement) 
-   os.system('wget %s' %replacement)
+   os.system('wget %s -O netCDF_sst.nc' %replacement)
 
    return replacement
   
