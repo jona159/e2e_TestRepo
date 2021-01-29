@@ -70,7 +70,7 @@ jobs:
        run: | 
         python e2e_sst.py
         ls && pwd
-        pytest e2e_sst.py -k 'test_length_fin'
+        pytest -v e2e_sst.py -k 'test_length_fin'
         
         
      - name: Run NDVI script
