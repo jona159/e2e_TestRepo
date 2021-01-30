@@ -80,5 +80,6 @@ jobs:
        run: | 
         python e2e_ndvi.py
         ls && pwd
+        pytest -v e2e_ndvi.py -k 'test_count_fin'
         
 
