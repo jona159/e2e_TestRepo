@@ -27,6 +27,8 @@ jobs:
      
       - name: Docker Run
         run: |
+          cd /home/runner/work/TestRepo/TestRepo/  
+          ls && pwd
           docker-compose -f docker-compose_new.yml up -d 
           docker-compose -f docker-compose_new.yml logs
           docker ps -a
