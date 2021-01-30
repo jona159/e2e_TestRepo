@@ -50,6 +50,14 @@ als Testframework wird **pytest** verwendet
 
 
 
+# R Client
+
+Eine Anleitung um sich mit dem [openEO R-Client](https://openeo.org/documentation/1.0/r/) mit unserem Backend zu verbinden befindet sich in diesem [Issue](https://github.com/GeoSoftII2020-21/TestRepo/issues/7). Das Ausführen dieses [Skripts](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/R-Client%20Script.R) ermöglicht eine lokale Verbindung zu unserem Backend und beinhaltet eine direkt ausführbare __Test Suite__ . Dafür sollte vorher das Backend über __docker-compose up__ gestartet sein. 
+
+## Testumgebung
+
+Als Testframework für den R-Client wird __testthat__ genutzt
+
 
 
 
