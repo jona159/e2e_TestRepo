@@ -193,8 +193,10 @@ jobs:
         pip install -r req.txt
     - name: Install plugin
       run: pip install pytest-github-actions-annotate-failures 
-    - name: Install and upgrade dask.distributed
-      run: python -m pip install "dask[distributed]" --upgrade 
+    #- name: Install and upgrade dask.distributed
+    #  run: python -m pip install "dask[distributed]" --upgrade 
+    - name: install dask
+      run: python -m pip install "dask[complete]"
     - name: Install netCDF4
       run: pip install netCDF4 
     - name: Install numpy
