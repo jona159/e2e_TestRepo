@@ -208,10 +208,10 @@ jobs:
       run: |
          cd GeoSoftII_DataServer
          pip install -r requirements.txt
-    - name: Install Requirements JobManagement
-      run: |
-         cd GeoSoftII_JobManagement
-         pip install -r requirements.txt                         
+    #- name: Install Requirements JobManagement
+     # run: |
+     #    cd GeoSoftII_JobManagement
+     #    pip install -r requirements.txt                         
         
         
     #- name: Checkout submodules
