@@ -42,7 +42,7 @@ jobs:
          docker ps -a
          docker ps -a
          docker images
-         curl -vv http://0.0.0.0/api/v1 
+         curl -vv http://0.0.0.0:80/api/v1 
             
       - name: Install R
         uses: r-lib/actions/setup-r@master
