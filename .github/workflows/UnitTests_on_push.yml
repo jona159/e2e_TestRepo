@@ -192,6 +192,26 @@ jobs:
       run: |
          cd GeoSoftII_NDVI_Process
          pip install -r requirements.txt
+    - name: Install Requirements Frontend
+      run: |
+         cd GeoSoftII_Frontend
+         pip install -r requirements.txt
+    - name: Install Requirements SST
+      run: |
+         cd GeoSoftII_SST_Process
+         pip install -r requirements.txt
+    - name: Install Requirements NDVI
+      run: |
+         cd GeoSoftII_NDVI_Process
+         pip install -r requirements.txt
+    - name: Install Requirements DataServer
+      run: |
+         cd GeoSoftII_DataServer
+         pip install -r requirements.txt
+    - name: Install Requirements JobManagement
+      run: |
+         cd GeoSoftII_JobManagement
+         pip install -r requirements.txt                         
         
         
     #- name: Checkout submodules
@@ -205,12 +225,12 @@ jobs:
       run: pip install pytest-github-actions-annotate-failures 
     #- name: Install and upgrade dask.distributed
     #  run: python -m pip install "dask[distributed]" --upgrade 
-    - name: install dask
-      run: python -m pip install "dask[complete]"
-    - name: Install netCDF4
-      run: pip install netCDF4 
-    - name: Install numpy
-      run: pip install numpy
+    #- name: install dask
+     # run: python -m pip install "dask[complete]"
+    #- name: Install netCDF4
+     # run: pip install netCDF4 
+    #- name: Install numpy
+     # run: pip install numpy
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
