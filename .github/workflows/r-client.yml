@@ -40,7 +40,7 @@ jobs:
       - name: Check endpoints
         run:  |
          docker ps -a
-         curl -vv http://0.0.0.0:8080/api/v1
+         curl -vv http://localhost:8080/api/v1
          docker ps -a
          docker images
           
@@ -61,7 +61,7 @@ jobs:
         run:  R -e 'remotes::install_github(repo="Open-EO/openeo-r-client",dependencies=TRUE,force=TRUE)'
         
       - name: Load openEO package
-        run:  R -e 'library(openeo); host_url="http://0.0.0.0:8080/"; api_versions(host_url); gee = connect(host = host_url, version="1.0.0"); processes=list_processes(); print(names(processes))'
+        run:  R -e 'library(openeo); host_url="http://localhost:8080/"; api_versions(host_url); gee = connect(host = host_url, version="1.0.0"); processes=list_processes(); print(names(processes))'
         
      
 
