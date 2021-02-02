@@ -14,14 +14,20 @@ on:
             
          
 jobs:
+        
   job1:
      name: Update Submodule NDVI
      runs-on: ubuntu-latest
+     
      steps:
          - name: Checkout reposistory
            uses: actions/checkout@master
          - name: Checkout submodules
            uses: srt32/git-actions@v0.0.3 # erlaubt Nutzung von git commands 
+         - name: Set up Python ${{ matrix.python-version }}
+           uses: actions/setup-python@v2
+           with:
+             python-version: 3.8  
          - run: |
              git config --global user.email "raabejonas@yahoo.de"
              git config --global user.name "jona159"
@@ -44,7 +50,9 @@ jobs:
            if: env.changes_exist == 'true'
            run: |
               git commit -m "Update NDVI_Process"
-              git push -u origin 
+              git push -u origin
+         - name: Install requirements
+           run: pip install -r requirements.txt      
   job2:
      name: Update Submodule SST
      runs-on: ubuntu-latest
