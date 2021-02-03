@@ -45,6 +45,7 @@ jobs:
     - name: Clone repository
       run: | 
        git clone https://github.com/Open-EO/openeo-backend-validator.git
+       git clone https://github.com/GeoSoftII2020-21/TestRepo.git
     - name: List Files
       run:  ls && pwd
      
