@@ -1,0 +1,6 @@
+# Requirements
+xarray==0.16.2
+urllib3==1.26.3
+netcdf4==1.5.4
+scipy==1.6.0
+
