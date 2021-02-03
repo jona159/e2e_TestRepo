@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   frontend:
-    image: felixgi1516/geosoft2_frontend:latest
+    image: gaffko/demo_frontend:demo_v
     depends_on:
      # - processManager
       - database
@@ -15,7 +15,7 @@ services:
       - data-volume:/data
       
   processManager:
-    image: felixgi1516/geosoft2_jobmanagement:latest
+    image: gaffko/demo_jobmanagement:demo_v
     environment:
       - DOCKER=True
       - ndvi=ndvi_0
@@ -31,7 +31,7 @@ services:
       - data-volume:/data
       
   database:
-    image: felixgi1516/geosoft2_dataserver:latest
+    image: gaffko/dataserver:demo_v
     environment:
       - DOCKER=True
   #  ports:
@@ -41,7 +41,7 @@ services:
       - data-intern:/dataintern
       
   ndvi_0:
-    image: felixgi1516/geosoft2_ndvi_process:latest
+    image: gaffko/demo_ndvi:demo_v
     environment:
       - DOCKER=True
     #depends_on:
@@ -52,7 +52,7 @@ services:
       - data-volume:/data
       
   sst_0:
-    image: felixgi1516/geosoft2_sst_process:latest
+    image: gaffko/demo_sst:demo_v
     environment:
       - DOCKER=True
     depends_on:
