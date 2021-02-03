@@ -1,4 +1,4 @@
-testjob = {
+{
   "title": "Example Title",
   "description": "Example Description",
   "process": {
@@ -28,7 +28,8 @@ testjob = {
                 },
                 "Format": "netcdf"
             }
-        }
+        
       }
       }
     }
+	}
