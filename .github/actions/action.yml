@@ -1,5 +1,5 @@
-name: Hello-World
-description: Example hello world running JavaScript Github Action
+name: Action to support the JS-Client Workflow
+description: This action allows the JS-Client Workflow to use the index.js in the root directory
 runs:
   using: node12 # Runtime Environment
   main: index.js # Script to run, path is relative
