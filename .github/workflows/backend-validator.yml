@@ -59,6 +59,7 @@ jobs:
        go get github.com/urfave/cli
        go get github.com/BurntSushi/toml
        go get github.com/mcuadros/go-version
+       go get github.com/GeoSoftII2020-21/TestRepo/BackendValidator
        go build openeoct.go
        ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json 2>&1 | tee log_output.json
        ls -al
