@@ -51,7 +51,8 @@ testjob = {
       }
     }  
 
-
+# This function executes a series of HTTP Requests to different microservices of our API to ensure that the communication between them works in a Docker Environment
+# It very much mimics the approach from Demo V: https://github.com/GeoSoftII2020-21/Demos/blob/main/Demo_V/Demo_V.ipynb
 def e2e_ndvi():
    res = requests.get("http://0.0.0.0:8080/api/v1/jobs") 
    
