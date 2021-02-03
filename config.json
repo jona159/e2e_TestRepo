@@ -27,7 +27,12 @@
     "endpoint6": {
       "url": "/jobs",
       "request_type": "POST",
-      "body": "/home/runner/work/TestRepo/TestRepo/testjob.json"
+      "body": "/home/runner/work/TestRepo/TestRepo/testjob_sst.json"
+    },
+    "endpoint7": {
+      "url": "/jobs",
+      "request_type": "POST",
+      "body": "/home/runner/work/TestRepo/TestRepo/testjob_ndvi.json"
     }
   }
 }
