@@ -10,7 +10,7 @@ import netCDF4
 import scipy.io.netcdf
 import pytest
 
-
+# Login Credentials for Copernicus Scihub
 username = os.getenv('username')
 pw = os.getenv('pw')
 
@@ -51,13 +51,16 @@ testjob = {
       }
     }  
 
+
 def e2e_ndvi():
    res = requests.get("http://0.0.0.0:8080/api/v1/jobs") 
-    
+   
+   # Post Test Data to /Jobs Endpoint
    print("\n JSON AN FRONTEND ÜBERGEBEN \n")
    x = requests.post("http://0.0.0.0:8080/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
    print(x)
 
+   # Get Job ID
    print("\n ID DES JOBS ERFRAGEN \n")
 
    j = requests.get("http://0.0.0.0:8080/api/v1/jobs")
@@ -66,16 +69,19 @@ def e2e_ndvi():
    print(rjson)
    print(job_id)
 
+   # Execute Job with a POST Request to /jobs/<job_id>/results Endpoint 
    print("\n DEN JOB AUSFÜHREN ÜBER EINE POST ANFRAGE AN DEN RESULTS ENDPOINT DES JOBS. \n")
 
    requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , json=None, headers={"Content-Type": "application/json"})
 
+   # Wait 5 minutes until server is ready
    print("\n WARTEN BIS DER SERVER BEREIT IST \n")
    time.sleep(300)
 
    print("\n JSON, leer?: \n")
    print(requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json())
 
+   # Get Downloadlink 
    print("\n Downloadlink: \n")
    json = requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json()
    newjson = json["assets"]
@@ -87,8 +93,10 @@ def e2e_ndvi():
    print(link)
    href = link.pop('href')
    print(href)
+   # rename localhost to 0.0.0.0 
    replacement = re.sub('localhost',  '0.0.0.0', href)
-   print(replacement) 
+   print(replacement)
+   # start download of netCDF file
    os.system('wget %s -O netcdf_ndvi.nc' %replacement)
    
    
@@ -99,6 +107,7 @@ e2e_ndvi()
 
 print("\n CONTENT OF NDVI NETCDF FILE \n")
 
+# Open the Xarray Dataset in the netcdf file, which is stored in our repository for the duration of the action
 fin = xr.open_dataset('netcdf_ndvi.nc')
 print(fin)
 
@@ -106,5 +115,6 @@ print(fin['__xarray_dataarray_variable__'][:])
 
 print(" \n END OF NDVI NETCDF FILE \n")
 
+# Test to assert that the xarray Dataset contains the correct number of values
 def test_count_fin():
   assert fin.count() == 2303604
