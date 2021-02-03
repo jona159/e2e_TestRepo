@@ -1,4 +1,4 @@
-name: Pytest Workflow on push
+name: Unittest on workflow_run
 
 on:
   workflow_run:
