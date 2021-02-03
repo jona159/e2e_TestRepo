@@ -27,7 +27,7 @@
     "endpoint6": {
       "url": "/jobs",
       "request_type": "POST",
-      "body": "body/send.json"
+      "body": "body/testjob.json"
     }
   }
 }
