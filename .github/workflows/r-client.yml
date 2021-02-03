@@ -2,7 +2,13 @@ on:
  push:
     branches:
       - main
-      
+###
+###
+### THIS WORKFLOW IS CURRENTLY UNAVAILABLE FOR USAGE !!! ###
+###
+###
+###
+ 
 name: Check R-Client
 
 jobs: 
@@ -15,7 +21,7 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          # use a different tic template type if you do not want to build on all listed platforms
+          # devel is more unstable but offers more features
           - { os: ubuntu-latest, r: "devel" }
           - { os: ubuntu-latest, r: "release" }
           
@@ -59,7 +65,7 @@ jobs:
       - name: Install R-Client module
         run:  R -e 'remotes::install_github(repo="Open-EO/openeo-r-client",dependencies=TRUE,force=TRUE)'
         
-      - name: Load openEO package
+      - name: Execute R Script
         run:  R -e 'library(openeo); host_url="http://0.0.0.0:80/"; api_versions(host_url); gee = openeo::connect(host = host_url, version="1.0.0"); processes=list_processes(); print(names(processes))'
         
      
