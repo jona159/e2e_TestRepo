@@ -2,11 +2,11 @@ name: Unittest on workflow_run
 
 on:
   workflow_run:
-    workflows: ["Update_submodules"]
+    workflows: ["Update submodules"]
     branches: [main]
     types: 
       - completed
-      #- requested
+      - requested
             
          
 jobs:
