@@ -27,7 +27,7 @@
     "endpoint6": {
       "url": "/jobs",
       "request_type": "POST",
-      "body": "/home/runner/work/TestRepo/TestRepo/config.json"
+      "body": "/home/runner/work/TestRepo/TestRepo/testjob.json"
     }
   }
 }
