@@ -1,5 +1,4 @@
-name: Pytest Workflow on push
-
+name: Update submodules
 on: 
    push:
      branches: 
