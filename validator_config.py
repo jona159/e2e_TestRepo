@@ -91,36 +91,50 @@ def create_json(job_id):
     "endpoint2": {
       "url": "/.well-known/openeo",
       "request_type": "GET"
-	},
-	"endpoint3": {
-      "url": "/udf_runtimes",
-      "request_type": "GET"
-	  },
-	"endpoint4": {
-      "url": "/service_types",
-      "request_type": "GET"
     },
-    "endpoint5": {
+    "endpoint3": {
       "url": "/collections",
       "request_type": "GET"
     },
-    "endpoint6": {
+    "endpoint4": {
       "url": "/processes",
       "request_type": "GET"
     },
-    "endpoint7": {
+    "endpoint5": {
       "url": "/jobs",
       "request_type": "GET"
     },
-    "endpoint8": {
+    "endpoint6": {
       "url": "/jobs",
       "request_type": "POST",
-      "body": "testjob.json"
-	},
-    "endpoint9": {
+      "body": "/home/runner/work/TestRepo/TestRepo/testjob_sst.json"
+    },
+    "endpoint7": {
       "url": "/jobs/" + job_id,
       "request_type": "GET"
-
+    },
+    "endpoint8": {
+      "url": "/jobs/" + job_id,
+      "request_type": "PATCH"
+    },
+    "endpoint9": {
+      "url": "/jobs/" + job_id,
+      "request_type": "DELETE"
+      "body": "/home/runner/work/TestRepo/TestRepo/validator_patch.json"
+    },
+    "endpoint10": {
+      "url": "/jobs/" + job_id + "/results"
+      "request_type": "GET"
+    },
+    "endpoint11": {
+      "url": "/jobs/" + job_id + "/results"
+      "request_type": "POST"
+    },
+    "endpoint12": {
+      "url": "/data"
+      "request_type": "POST"
+      "body": "/home/runner/work/TestRepo/TestRepo/testjob_ndvi.json"
+	    
     }
     }
   }
