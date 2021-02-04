@@ -39,8 +39,8 @@ The [OpenEO Backend-Validator](https://github.com/Open-EO/openeo-backend-validat
  * The test methods listed above are integrated in __Continuous Integration__ through Github Actions
  * As a Linting-Tool we use __flake8__ to check for correct Python Syntax
  * The [Unittest-Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/Unittest.yml) runs by schedule three times a day, as well as on certain events like pull-requests
-   * _The Unittest-Workflow depends on the [Update-Submodules Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/Update_submodules.yml), which ensures that all submodules are up to date and the latest requirements can be installed
-   * _The Unittest-Workflow also hands back a __coverage report__ regarding the __Testcoverage__ by using the pytest-plugin __pytest-cov__
+   * _The Unittest-Workflow depends on the [Update-Submodules Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/Update_submodules.yml), which ensures that all submodules are up to date and the latest requirements can be installed_
+   * _The Unittest-Workflow also hands back a __coverage report__ regarding the __Testcoverage__ by using the pytest-plugin **pytest-cov**_
    * _If the Unittest-Workflow fails, the responsible developer teams receive an email, so that they can fix the problem that occured_
  
  *  In the [Backend-Validator Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/backend-validator.yml) the openEO backend validator is installed and  tests for openEO Conformity
@@ -51,11 +51,18 @@ The [OpenEO Backend-Validator](https://github.com/Open-EO/openeo-backend-validat
 
 # R Client
 
-Eine Anleitung um sich mit dem [openEO R-Client](https://openeo.org/documentation/1.0/r/) mit unserem Backend zu verbinden befindet sich in diesem [Issue](https://github.com/GeoSoftII2020-21/TestRepo/issues/7). Das Ausführen dieses [Skripts](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/R-Client%20Script.R) ermöglicht eine lokale Verbindung zu unserem Backend und beinhaltet eine direkt ausführbare __Test Suite__ . Dafür sollte vorher das Backend über __docker-compose up__ gestartet sein. 
+### The connection to the latest version of our Backend cannot be currently established, the description below is a workaround which uses an outdated docker-compose.yml
+
+* To connect to our Backend with the [openEO R-Client](https://openeo.org/documentation/1.0/r/) please follow these Instructions: 
+  1. Execute the command `git clone https://github.com/GeoSoftII2020-21/Demos`
+  2. Navigate into the Demo_IV folder
+  3. Execute the command `docker-compose up`
+  4. In __RStudio__ or __RConsole__ execute this [Skript](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/R-Client%20Script.R), which also contains a __Test Suite__ 
+
 
 ## Testumgebung
 
-Als Testframework für den R-Client wird __testthat__ genutzt
+For the R-Client __testthat__ is used as a testing framework 
 
 
 
