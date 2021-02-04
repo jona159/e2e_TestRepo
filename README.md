@@ -1,6 +1,6 @@
 # TestRepo
 _test72
-# Testkonzeption
+# Testconception
 
 **Todo's:**
 
@@ -8,33 +8,31 @@ _test72
  * *Testdaten und -größen*
  * *Links hinzufügen*
  
-## Testumgebung:
+## Test Environment:
 
-als Testframework wird **pytest** verwendet
+**pytest** is used as a testing framework
    
-# Testklassen
+# Test Classes
 
 ## Unittests
 
-* In den Repositories der Microservices liegen Testordner mit Python-Files, die Unittests enthalten
-   * _Ausführen der Tests über den Befehl `pytest`_
-   * _Unittests werden von den Entwicklerteams geschrieben und von den Testern nur geprüft und ergänzt_
+* The repositories of the Microservices (__submodules__ of this repository) contain test folders with Python-Files, which include Unittests 
+   * _These commands can be executed using the command `pytest`_
+   * _Unittests are written by the responsible developerteams and are only checked and optimized by the testing team_   
 
-## Integrationtests
-
-* Integrationtests laufen über **docker-compose** und testen funktionsübergreifende Funktionalität und die API-Endpunkte
-  * _Integrationtests werden von den Testern angelegt und liegen im Testrepository_
 
 ## End-to-end Tests
 
-* End-to-end Tests laufen über **docker-compose** und testen die Kommunikation zwischen Microservices und alle HTTP-Methoden der API
-  * _e2e-Tests werden von den Testern angelegt und liegen im Testrepository_
+* End-to-end Tests run with **docker-compose** and test the communication between microservices by executing multiple HTTP-Request to different endpoints of multiple services
+  * _e2e-Tests are written by the testing team and are deployed in the TestRepo in [e2e_ndvi.py](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/e2e_ndvi.py) and [e2e_sst.py](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/e2e_sst.py)  
+  
   
   
 # OpenEO Backend-Validator
 
-Über den Open-EO Backend Validator kann über eine vorgefertigte config-JSON die Open-EO Konformität unseres Backends geprüft werden
-[OpenEO Backend-Validator](https://github.com/Open-EO/openeo-backend-validator)
+The [OpenEO Backend-Validator](https://github.com/Open-EO/openeo-backend-validator) can be used to assess the __Open-EO conformity__ of our Backend by referring to a prepared [config.json](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/config.json) 
+
+
 
 # Github Actions
 
