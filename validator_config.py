@@ -86,54 +86,66 @@ def create_json(job_id):
   "endpoints": {
     "endpoint1": {
       "url": "/",
-      "request_type": "GET"
+      "request_type": "GET",
+      "group": "OpenEO API endpoints"
     },
     "endpoint2": {
       "url": "/.well-known/openeo",
-      "request_type": "GET"
+      "request_type": "GET",
+      "group": "OpenEO API endpoints"
     },
     "endpoint3": {
       "url": "/collections",
-      "request_type": "GET"
+      "request_type": "GET",
+      "group": "OpenEO API endpoints"
     },
     "endpoint4": {
       "url": "/processes",
-      "request_type": "GET"
+      "request_type": "GET",
+      "group": "OpenEO API endpoints"
     },
     "endpoint5": {
       "url": "/jobs",
-      "request_type": "GET"
+      "request_type": "GET",
+      "group": "OpenEO API endpoints"
     },
     "endpoint6": {
       "url": "/jobs",
       "request_type": "POST",
-      "body": "/home/runner/work/TestRepo/TestRepo/testjob_sst.json"
+      "body": "/home/runner/work/TestRepo/TestRepo/testjob_sst.json",
+      "group": "OpenEO API endpoints"
     },
     "endpoint7": {
       "url": "/jobs/" + job_id,
-      "request_type": "GET"
+      "request_type": "GET",
+      "group": "OpenEO API endpoints"
     },
     "endpoint8": {
       "url": "/jobs/" + job_id,
-      "request_type": "PATCH"
+      "request_type": "PATCH",
+      "group": "OpenEO API endpoints"
     },
     "endpoint9": {
       "url": "/jobs/" + job_id,
       "request_type": "DELETE",
-      "body": "/home/runner/work/TestRepo/TestRepo/validator_patch.json"
+      "body": "/home/runner/work/TestRepo/TestRepo/validator_patch.json",
+      "group": "OpenEO API endpoints"
     },
     "endpoint10": {
       "url": "/jobs/" + job_id + "/results",
-      "request_type": "GET"
+      "request_type": "GET",
+      "group": "OpenEO API endpoints"
     },
     "endpoint11": {
       "url": "/jobs/" + job_id + "/results",
-      "request_type": "POST"
+      "request_type": "POST",
+      "group": "OpenEO API endpoints"
     },
     "endpoint12": {
       "url": "/data",
       "request_type": "POST",
-      "body": "/home/runner/work/TestRepo/TestRepo/testjob_ndvi.json"
+      "body": "/home/runner/work/TestRepo/TestRepo/testjob_ndvi.json",
+      "group": "Own endpoints"
 	    
     }
     }
