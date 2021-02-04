@@ -57,7 +57,8 @@ testjob = {
 # This function executes a series of HTTP Requests to different microservices of our API to ensure that the communication between them works in a Docker Environment
 # It very much mimics the approach from Demo IV: https://github.com/GeoSoftII2020-21/Demos/blob/main/Demo_IV/Demo_IV.ipynb
 def getJobID():
-   sleep(300)
+   # wait until server has downloaded files
+   time.sleep(300)
    res = requests.get("http://0.0.0.0:8080/api/v1/jobs") 
    
    # Post Test Data to /jobs Endpoint
@@ -124,6 +125,7 @@ def create_json(job_id):
   
   json_dump = json.dumps(data_set)
   print(json_dump)
+  print(os.getcwd())
   
 getJobID()
   
