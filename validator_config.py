@@ -119,20 +119,20 @@ def create_json(job_id):
     },
     "endpoint9": {
       "url": "/jobs/" + job_id,
-      "request_type": "DELETE"
+      "request_type": "DELETE",
       "body": "/home/runner/work/TestRepo/TestRepo/validator_patch.json"
     },
     "endpoint10": {
-      "url": "/jobs/" + job_id + "/results"
+      "url": "/jobs/" + job_id + "/results",
       "request_type": "GET"
     },
     "endpoint11": {
-      "url": "/jobs/" + job_id + "/results"
+      "url": "/jobs/" + job_id + "/results",
       "request_type": "POST"
     },
     "endpoint12": {
-      "url": "/data"
-      "request_type": "POST"
+      "url": "/data",
+      "request_type": "POST",
       "body": "/home/runner/work/TestRepo/TestRepo/testjob_ndvi.json"
 	    
     }
