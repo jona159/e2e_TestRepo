@@ -128,7 +128,7 @@ def create_json(job_id):
   json_dump = json.dumps(data_set)
   print(json_dump)
   with open('validator.json', 'w') as f:
-    json.dump(data, f)
+    json.dump(data_set, f)
 
   print(os.getcwd())
   
