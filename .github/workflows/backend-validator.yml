@@ -34,6 +34,10 @@ jobs:
    #   docker run --name frontend -d -p 80:80 felixgi1516/geosoft2_frontend  
     
     
+    - name: Install Requirements
+      run: |
+         pip install -r requirements.txt
+    
     - name: Create config
       run: | 
         python validator_config.py
