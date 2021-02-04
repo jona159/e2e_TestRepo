@@ -15,46 +15,47 @@ import pytest
 #import testjob.json
 
 # Login Credentials for Copernicus Scihub
-username = os.getenv('username')
-pw = os.getenv('pw')
+#username = os.getenv('username')
+#pw = os.getenv('pw')
 
 
 
 # Test Data
 testjob = {
-  "title": "Lame Title",
+  "title": "Cool Title",
   "description": "Example Description",
   "process": {
     "process_graph": {
       "loadcollection1": {
         "process_id": "load_collection",
         "arguments": {
-          "timeframe" : ["01-06-2020 00:00:00","10-06-2020 00:00:00","%d-%m-%Y %H:%M:%S"],
-          "DataType": "Sentinel2",
-          "cloudcoverage":[0,30],
-          "Login":['username', 'pw']
+          "timeframe" : ["01-12-1981 00:00:00","30-12-1981 00:00:00","%d-%m-%Y %H:%M:%S"],
+          "DataType": "SST"
         }
         },
-        "ndvi": {
-        "process_id": "ndvi",
+        "SST": {
+        "process_id": "mean_sst",
         "arguments": {
           "data":{
               "from_node": "loadcollection1"
+          },
+          "timeframe":["1981-12-01","1981-12-17"],
+          "bbox":[-999,-999,-999,-999]
           }
-        }
         },
         "save":{
             "process_id": "save_result",
             "arguments":{
                 "SaveData":{
-                    "from_node":"ndvi"
+                    "from_node":"SST"
                 },
                 "Format": "netcdf"
             }
-        }
+        
       }
       }
-    } 
+    }
+	}
 
 # This function executes a series of HTTP Requests to different microservices of our API to ensure that the communication between them works in a Docker Environment
 # It very much mimics the approach from Demo IV: https://github.com/GeoSoftII2020-21/Demos/blob/main/Demo_IV/Demo_IV.ipynb
