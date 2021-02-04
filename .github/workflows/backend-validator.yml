@@ -44,6 +44,9 @@ jobs:
 
     
     - name: Create config
+      env:
+        username: ${{ secrets.SCIHUB_USERNAME }}
+        pw: ${{ secrets.SCIHUB_PASSWORD }}
       run: | 
         python validator_config.py
         ls && pwd
