@@ -81,7 +81,7 @@ jobs:
        go get github.com/BurntSushi/toml
        go get github.com/mcuadros/go-version
        go build openeoct.go
-       ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json 2>&1 | tee log_output.json
+       ./openeoct config /home/runner/work/TestRepo/TestRepo/validator.json 2>&1 | tee log_output.json
        ls -al
        grep -q 'Error' log_output.json && echo "Error found" && exit 1 || echo "No error!" && exit 0
      #< log_output.json | grep -v "Error"
