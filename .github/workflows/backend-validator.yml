@@ -23,6 +23,15 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2  
     
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+     
+    - name: Install Requirements
+      run: |
+         pip install -r requirements.txt
+    
     
     - name: Docker Run
       run: |
@@ -32,11 +41,7 @@ jobs:
        docker-compose -f docker-compose_validator.yml logs
      #  docker-compose up -d
    #   docker run --name frontend -d -p 80:80 felixgi1516/geosoft2_frontend  
-    
-    
-    - name: Install Requirements
-      run: |
-         pip install -r requirements.txt
+
     
     - name: Create config
       run: | 
