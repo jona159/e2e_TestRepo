@@ -84,64 +84,64 @@ def create_json(job_id):
   "openapi": "https://raw.githubusercontent.com/Open-EO/openeo-api/1.0.0/openapi.yaml",
   "variables": { },
   "endpoints": {
-    "endpoint1": {
+    "endpoint.default": {
       "url": "/",
       "request_type": "GET",
       "group": "OpenEO API endpoints"
     },
-    "endpoint2": {
+    "endpoint.well-known.openeo": {
       "url": "/.well-known/openeo",
       "request_type": "GET",
       "group": "OpenEO API endpoints"
     },
-    "endpoint3": {
+    "endpoint.collections": {
       "url": "/collections",
       "request_type": "GET",
       "group": "OpenEO API endpoints"
     },
-    "endpoint4": {
+    "endpoint.processes": {
       "url": "/processes",
       "request_type": "GET",
       "group": "OpenEO API endpoints"
     },
-    "endpoint5": {
+    "endpoint.jobs": {
       "url": "/jobs",
       "request_type": "GET",
       "group": "OpenEO API endpoints"
     },
-    "endpoint6": {
+    "endpoint.jobs_post": {
       "url": "/jobs",
       "request_type": "POST",
       "body": "/home/runner/work/TestRepo/TestRepo/testjob_sst.json",
       "group": "OpenEO API endpoints"
     },
-    "endpoint7": {
+    "endpoint.jobs_get": {
       "url": "/jobs/" + job_id,
       "request_type": "GET",
       "group": "OpenEO API endpoints"
     },
-    "endpoint8": {
-      "url": "/jobs/" + job_id,
-      "request_type": "PATCH",
-      "group": "OpenEO API endpoints"
-    },
-    "endpoint9": {
+    "endpoint.jobs_delete": {
       "url": "/jobs/" + job_id,
       "request_type": "DELETE",
+      "group": "OpenEO API endpoints"
+    },
+    "endpoint.jobs_patch": {
+      "url": "/jobs/" + job_id,
+      "request_type": "PATCH",
       "body": "/home/runner/work/TestRepo/TestRepo/validator_patch.json",
       "group": "OpenEO API endpoints"
     },
-    "endpoint10": {
+    "endpoint.jobs_results_get": {
       "url": "/jobs/" + job_id + "/results",
       "request_type": "GET",
       "group": "OpenEO API endpoints"
     },
-    "endpoint11": {
+    "endpoint.jobs_results_post": {
       "url": "/jobs/" + job_id + "/results",
       "request_type": "POST",
       "group": "OpenEO API endpoints"
     },
-    "endpoint12": {
+    "endpoint.data": {
       "url": "/data",
       "request_type": "POST",
       "body": "/home/runner/work/TestRepo/TestRepo/testjob_ndvi.json",
