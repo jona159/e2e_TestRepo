@@ -15,7 +15,7 @@ import pytest
 #import testjob.json
 
 # wait until server has downloaded files
-sleep(600)
+
 
 
 # Test Data
@@ -57,6 +57,7 @@ testjob = {
 # This function executes a series of HTTP Requests to different microservices of our API to ensure that the communication between them works in a Docker Environment
 # It very much mimics the approach from Demo IV: https://github.com/GeoSoftII2020-21/Demos/blob/main/Demo_IV/Demo_IV.ipynb
 def getJobID():
+   #sleep(600)
    res = requests.get("http://0.0.0.0:8080/api/v1/jobs") 
    
    # Post Test Data to /jobs Endpoint
@@ -79,7 +80,6 @@ def create_json(job_id):
   "url": "http://0.0.0.0:8080/api/v1",
   "openapi": "https://raw.githubusercontent.com/Open-EO/openeo-api/1.0.0/openapi.yaml",
   "variables": { },
-  "output": "config.json",
   "endpoints": {
     "endpoint1": {
       "url": "/",
