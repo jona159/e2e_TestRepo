@@ -23,7 +23,7 @@ _test72
 
 ## End-to-end Tests
 
-* End-to-end Tests run with **docker-compose** and test the communication between microservices by executing multiple HTTP-Request to different endpoints of multiple services
+* End-to-end Tests run with **docker-compose** and test the communication between microservices by executing multiple HTTP-Requests to different endpoints of multiple services
   * _e2e-Tests are written by the testing team and are deployed in the TestRepo in [e2e_ndvi.py](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/e2e_ndvi.py) and [e2e_sst.py](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/e2e_sst.py)  
   
   
@@ -36,15 +36,16 @@ The [OpenEO Backend-Validator](https://github.com/Open-EO/openeo-backend-validat
 
 # Github Actions
 
- * Über Github Actions werden die oben aufgeführten Testmethoden automatisiert und über einen festen Zeitplan um 6, 12 und 20 Uhr (UTC) jeden Tag ausgeführt
- * Zusätzlich laufen sämtliche Tests auch bei bestimmten Events wie beispielsweise Pull-Requests.
- * In den Github Actions passiert konkret Folgendes: 
-   * Submodules werden bei Bedarf geupdatet
-   * Requirements werden installiert
-   * Über das Linting-Tool flake8 wird der Code auf korrekte Python Syntax überprüft
-   * Der Open EO-Backend Validator wird installiert und testet das Backend auf Open EO Konformität
-   * Über Docker-compose werden die Container mit den Microservices gestartet sodass Letztere untereinander kommunizieren und e2e Tests ausgefürt werden können
-   * Über Pytest werden Unit- und Integrationtests ausgeführt und ein Coverage-Report zurückgegeben 
+ * The test methods listed above are integrated in __Continuous Integration__ through Github Actions
+ * As a Linting-Tool we use __flake8__ to check for correct Python Syntax
+ * The [Unittest-Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/Unittest.yml) runs by schedule three times a day, as well as on certain events like pull-requests
+   * _The Unittest-Workflow depends on the [Update-Submodules Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/Update_submodules.yml), which ensures that all submodules are up to date and the latest requirements can be installed
+   * _The Unittest-Workflow also hands back a __coverage report__ regarding the __Testcoverage__ by using the pytest-plugin __pytest-cov__
+   * _If the Unittest-Workflow fails, the responsible developer teams receive an email, so that they can fix the problem that occured_
+ 
+ *  In the [Backend-Validator Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/backend-validator.yml) the openEO backend validator is installed and  tests for openEO Conformity
+   * In the [End to End Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/EndToEnd.yml) __End-to-End Tests are executed__
+    
 
 
 
