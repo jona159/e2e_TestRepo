@@ -105,11 +105,6 @@ def create_json(job_id):
       "request_type": "GET",
       "group": "OpenEO API endpoints"
     },
-    "endpoint.jobs": {
-      "url": "/jobs",
-      "request_type": "GET",
-      "group": "OpenEO API endpoints"
-    },
     "endpoint.jobs_post": {
       "url": "/jobs",
       "request_type": "POST",
