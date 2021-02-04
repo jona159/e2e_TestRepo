@@ -14,7 +14,9 @@ import scipy.io.netcdf
 import pytest
 #import testjob.json
 
-# wait until server has downloaded files
+# Login Credentials for Copernicus Scihub
+username = os.getenv('username')
+pw = os.getenv('pw')
 
 
 
