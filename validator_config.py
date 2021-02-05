@@ -64,14 +64,14 @@ def getJobID():
    # wait until server has downloaded files 
 	
    time.sleep(60)
-   res = requests.get("http://0.0.0.0:8080/api/v1/jobs") 
+   res = requests.get("http://0.0.0.0:80/api/v1/jobs") 
    
    # Post test data to /jobs endpoint
-   x = requests.post("http://0.0.0.0:8080/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
+   x = requests.post("http://0.0.0.0:80/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
    print(x)
 
    # Get Job ID 
-   j = requests.get("http://0.0.0.0:8080/api/v1/jobs")
+   j = requests.get("http://0.0.0.0:80/api/v1/jobs")
    rjson = j.json()
    job_id = rjson['jobs'][-1]['id']
    print(rjson)
@@ -86,7 +86,7 @@ def create_json(job_id):
   '''
 
   data_set = {
-  "url": "http://0.0.0.0:8080/api/v1",
+  "url": "http://0.0.0.0:80/api/v1",
   "openapi": "https://raw.githubusercontent.com/Open-EO/openeo-api/1.0.0/openapi.yaml",
   "variables": { },
   "endpoints": {
