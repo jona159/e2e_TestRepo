@@ -47,7 +47,13 @@ jobs:
        run: | 
         python e2e_sst_test.py
         ls && pwd
-        pytest -v e2e_sst.py -k 'test_length_fin'
+       # pytest -v e2e_sst.py -k 'test_length_fin'
+    
+     - name: docker check for SST file
+       run: |
+          docker exec -it testrepo_database_1 bash
+          cd SST
+          ls && pwd
         
         
      #- name: Run NDVI script and execute Test
