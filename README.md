@@ -43,8 +43,8 @@ The [OpenEO Backend-Validator](https://github.com/Open-EO/openeo-backend-validat
    * _If the Unittest-Workflow fails, the responsible developer teams receive an email, so that they can fix the problem that occured_
  
  *  In the [Backend-Validator Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/backend-validator.yml) the openEO backend validator is installed and  tests for openEO Conformity
- * _If the Backend-Validator workflow fails, the responsible developer teams receive an email, so that they can fix the problem that occured_
-   * In the [End to End Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/EndToEnd.yml) __End-to-End Tests are executed__
+   * _If the Backend-Validator workflow fails, the responsible developer teams receive an email, so that they can fix the problem that occured_
+ * In the [End to End Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/EndToEnd.yml) __End-to-End Tests are executed__
     
 
 
