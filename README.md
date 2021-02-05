@@ -68,11 +68,12 @@ The [OpenEO Backend-Validator](https://github.com/Open-EO/openeo-backend-validat
   1. Execute the command `git clone https://github.com/GeoSoftII2020-21/TestRepo`
   2. Execute the command `docker-compose up`
   3. Navigate into the js-client folder
-  4. Open the html file. After 5 seconds you will be able to see the test results evaluated by QUnit.
+  4. Open the html file. After 5 seconds you will be able to see the evaluated test results.
 
-## Testumgebung
+## Test environment
 
-For the R-Client __testthat__ is used as a testing framework 
+For the R-Client __testthat__ is used as a testing framework
+For the JS-Client __QUnit__ is used as a testing framework
 
 
 
