@@ -23,7 +23,7 @@ testjob = {
       "loadcollection1": {
         "process_id": "load_collection",
         "arguments": {
-          "timeframe" : ["01-12-2015 00:00:00","30-12-2015 00:00:00","%d-%m-%Y %H:%M:%S"],
+          "timeframe" : ["01-12-1981 00:00:00","30-12-1981 00:00:00","%d-%m-%Y %H:%M:%S"],
           "DataType": "SST"
         }
         },
@@ -33,7 +33,7 @@ testjob = {
           "data":{
               "from_node": "loadcollection1"
           },
-          "timeframe":["2015-12-01","2015-12-17"],
+          "timeframe":["1981-12-01","1981-12-17"],
           "bbox":[-999,-999,-999,-999]
           }
         },
