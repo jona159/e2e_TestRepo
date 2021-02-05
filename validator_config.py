@@ -60,15 +60,16 @@ def getJobID():
  This funktion gets the id of the last job that has been send to the server.
  The ID is then used in the create_json function
  '''
-   ''' wait until server has downloaded files '''
+
+   # wait until server has downloaded files 
    time.sleep(300)
    res = requests.get("http://0.0.0.0:8080/api/v1/jobs") 
    
-   ''' Post test data to /jobs endpoint '''
+   # Post test data to /jobs endpoint
    x = requests.post("http://0.0.0.0:8080/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
    print(x)
 
-   ''' Get Job ID '''
+   # Get Job ID 
    j = requests.get("http://0.0.0.0:8080/api/v1/jobs")
    rjson = j.json()
    job_id = rjson['jobs'][-1]['id']
@@ -150,7 +151,7 @@ def create_json(job_id):
     }
   }
 
-  ''' save json locally '''	
+  # save json locally
   with open('validator.json', 'w') as f:
     json.dump(data_set, f)
 
