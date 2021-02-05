@@ -66,7 +66,7 @@ jobs:
         run:  R -e 'remotes::install_github(repo="Open-EO/openeo-r-client",dependencies=TRUE,force=TRUE)'
         
       - name: Execute R Script
-        run:  R -e 'library(openeo); host_url="http://localhost:80/"; api_versions(host_url); gee = openeo::connect(host = host_url, version="1.0.0"); processes=list_processes(); print(names(processes))'
+        run:  R -e 'library(openeo); host_url="http://localhost:80/"; api_versions(host_url); gee = openeo::connect(host = host_url, version="1.0.0"); processes=list_processes(); print(names(processes)); install.packages("rlang"); library(rlang); install.packages("testthat"); library(testthat); test_that("check description of save_result", {expect_equal(processes$save_result$returns$description, "Returns a boolean which indicates if the save was successfull")})'
         
      
 
