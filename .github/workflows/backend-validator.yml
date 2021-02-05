@@ -1,7 +1,7 @@
 on: 
-   push:
-    branches: 
-      - main
+  # push:
+  #  branches: 
+   #   - main
    pull_request:
      branches: 
       - main
@@ -112,7 +112,7 @@ jobs:
     # email body as text
          body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
     #   comma-separated string, send email to
-        # to: j_beck60@wwu.de, raabejonas@yahoo.de, s_buse01@uni-muenster.de, m_ster15@uni-muenster.de
+         to: j_beck60@wwu.de, raabejonas@yahoo.de, s_buse01@uni-muenster.de, m_ster15@uni-muenster.de
     # from email name
          from: Github Action         
     
