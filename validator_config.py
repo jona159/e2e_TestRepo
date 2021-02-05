@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
 
+''' import packages'''
 import requests
 import json
 import time
@@ -12,15 +13,8 @@ import xarray as xr
 import netCDF4
 import scipy.io.netcdf
 import pytest
-#import testjob.json
 
-# Login Credentials for Copernicus Scihub
-#username = os.getenv('username')
-#pw = os.getenv('pw')
-
-
-
-# Test Data
+''' Test Data '''
 testjob = {
   "title": "Cool Title",
   "description": "Example Description",
@@ -55,31 +49,36 @@ testjob = {
       }
       }
     }
-	}
+}
 
-# This function executes a series of HTTP Requests to different microservices of our API to ensure that the communication between them works in a Docker Environment
-# It very much mimics the approach from Demo IV: https://github.com/GeoSoftII2020-21/Demos/blob/main/Demo_IV/Demo_IV.ipynb
 def getJobID():
-   # wait until server has downloaded files
+ '''
+ This funktion gets the id of the last job that has been send to the server.
+ The ID is then used in the create_json function
+ '''
+   ''' wait until server has downloaded files '''
    time.sleep(300)
    res = requests.get("http://0.0.0.0:8080/api/v1/jobs") 
    
-   # Post Test Data to /jobs Endpoint
-   #print("\n JSON AN FRONTEND ÜBERGEBEN \n")
+   ''' Post test data to /jobs endpoint '''
    x = requests.post("http://0.0.0.0:8080/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
    print(x)
 
-   # Get Job ID
-   print("\n ID DES JOBS ERFRAGEN \n")
-
+   ''' Get Job ID '''
    j = requests.get("http://0.0.0.0:8080/api/v1/jobs")
    rjson = j.json()
    job_id = rjson['jobs'][-1]['id']
    print(rjson)
    print(job_id)
+   ''' call create_json function '''
    create_json(job_id)
 
 def create_json(job_id):
+  '''
+  This function creates the config file for the backend validator in json format.
+  It uses the dynamically created job ID
+  '''
+
   data_set = {
   "url": "http://0.0.0.0:8080/api/v1",
   "openapi": "https://raw.githubusercontent.com/Open-EO/openeo-api/1.0.0/openapi.yaml",
@@ -146,13 +145,11 @@ def create_json(job_id):
     }
     }
   }
-  
-  json_dump = json.dumps(data_set)
-  print(json_dump)
+
+  ''' save json locally '''	
   with open('validator.json', 'w') as f:
     json.dump(data_set, f)
 
-  print(os.getcwd())
   
 getJobID()
   
