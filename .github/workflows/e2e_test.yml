@@ -53,8 +53,8 @@ jobs:
     runs-on: ubuntu-latest
     container: testrepo_database_1
     steps:
-        - name: Checkout Project
-          uses: actions/checkout@v1
+        #- name: Checkout Project
+         # uses: actions/checkout@v1
          
       
 
@@ -62,7 +62,7 @@ jobs:
     
         - name: docker check for SST file
           run: |
-              ls && pwd
+              ls 
         
         
      #- name: Run NDVI script and execute Test
