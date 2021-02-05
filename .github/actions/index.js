@@ -38,7 +38,7 @@ function wait(){
 	Data();
 	setTimeout(() => {
 	if (coll < 0) {
-	   throw new Error('Number of collections must be at least 1);
+	   throw new Error('Number of collections must be at least 1');
 			   }
 	else if (proc != 4){
 		   throw new Error('Given number of processes does not match the expected number');
