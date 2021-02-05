@@ -72,8 +72,8 @@ The [OpenEO Backend-Validator](https://github.com/Open-EO/openeo-backend-validat
 
 ## Test environment
 
-For the R-Client __testthat__ is used as a testing framework
-For the JS-Client __QUnit__ is used as a testing framework
+* For the R-Client __testthat__ is used as a testing framework
+* For the JS-Client __QUnit__ is used as a testing framework
 
 
 
