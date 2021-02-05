@@ -36,8 +36,8 @@ services:
       - Password=bugmenot
       - load_sst=True
       - load_sentinel=False
-      - SST_Start=2015
-      - SST_End=2016
+      - SST_Start=1981
+      - SST_End=1982
       - Sentinel_Start=2020-06-01T00:00:00Z
       - Sentinel_End=2020-07-01T00:00:00Z
       - FTP_User=dummy
