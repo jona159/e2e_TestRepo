@@ -4,7 +4,6 @@ _test72
 
 **Todo's:**
 
- * *Noch R- und JS-Client Tests in der Readme ergänzen*
  * *Testdaten und -größen*
  * *Links hinzufügen*
  
@@ -30,7 +29,7 @@ _test72
   
 # OpenEO Backend-Validator
 
-The [OpenEO Backend-Validator](https://github.com/Open-EO/openeo-backend-validator) can be used to assess the __Open-EO conformity__ of our Backend by referring to a prepared [config.json](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/config.json) 
+The [OpenEO Backend-Validator](https://github.com/Open-EO/openeo-backend-validator) can be used to assess the __Open-EO conformity__ of our Backend by referring to a dynamically by the action created config.json.
 
 
 
