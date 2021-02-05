@@ -44,10 +44,9 @@ jobs:
       run: |
        ls && pwd
        cd /home/runner/work/TestRepo/TestRepo/
-       docker-compose -f docker-compose_validator.yml up -d 
-       docker-compose -f docker-compose_validator.yml logs
-     #  docker-compose up -d
-   #   docker run --name frontend -d -p 80:80 felixgi1516/geosoft2_frontend  
+       docker-compose up -d 
+       docker-compose logs
+
 
     
     - name: Create config
@@ -91,10 +90,7 @@ jobs:
        ./openeoct config /home/runner/work/TestRepo/TestRepo/validator.json 2>&1 | tee log_output.json
        ls -al
        grep -q 'Error' log_output.json && echo "Error found" && exit 1 || echo "No error!" && exit 0
-     #< log_output.json | grep -v "Error"
-        
-     # < log_output.txt | grep -v "Geosoft"
-     # ./openeoct config /home/runner/work/TestRepo/TestRepo/config.json | tee validator_log.txt
+
 
     - name: Docker Stop   
       run: |
