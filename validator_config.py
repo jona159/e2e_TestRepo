@@ -62,6 +62,7 @@ def getJobID():
  '''
 
    # wait until server has downloaded files 
+	
    time.sleep(300)
    res = requests.get("http://0.0.0.0:8080/api/v1/jobs") 
    
