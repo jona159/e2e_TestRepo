@@ -52,7 +52,7 @@ jobs:
      - name: docker check for SST file
        run: |
           docker exec testrepo_database_1 bash
-          ls && pwd
+          ls
         
         
      #- name: Run NDVI script and execute Test
