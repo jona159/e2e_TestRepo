@@ -44,8 +44,8 @@ jobs:
       run: |
        ls && pwd
        cd /home/runner/work/TestRepo/TestRepo/
-       docker-compose up -d 
-       docker-compose logs
+       docker-compose -f docker-compose_80.yml up -d 
+       docker-compose -f docker-compose_80.yml logs
 
 
     
