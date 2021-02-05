@@ -1,6 +1,10 @@
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
 
+#@author Judith Becka, https://github.com/a2beckj
+#@author Jonas Raabe, https://github.com/jona159
+
+
 ''' import packages'''
 import requests
 import json
