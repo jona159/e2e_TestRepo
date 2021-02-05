@@ -56,14 +56,14 @@ testjob = {
 }
 
 def getJobID():
- '''
- This funktion gets the id of the last job that has been send to the server.
- The ID is then used in the create_json function
- '''
+ 
+ #This funktion gets the id of the last job that has been send to the server.
+ #The ID is then used in the create_json function
+ 
 
    # wait until server has downloaded files 
 	
-   time.sleep(300)
+   time.sleep(60)
    res = requests.get("http://0.0.0.0:8080/api/v1/jobs") 
    
    # Post test data to /jobs endpoint
