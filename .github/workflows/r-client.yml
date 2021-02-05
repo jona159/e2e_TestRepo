@@ -39,8 +39,8 @@ jobs:
         run: |
           ls && pwd
           cd /home/runner/work/TestRepo/TestRepo/
-          docker-compose -f docker-compose_r.yml up -d 
-          docker-compose -f docker-compose_r.yml logs
+          docker-compose -f docker-compose.yml up -d 
+          docker-compose -f docker-compose.yml logs
                     
           
       - name: Check endpoints
@@ -48,7 +48,7 @@ jobs:
          docker ps -a
          docker ps -a
          docker images
-         curl -vv http://0.0.0.0:80/api/v1 
+       # curl -vv http://localhost:80/api/v1 
             
       - name: Install R
         uses: r-lib/actions/setup-r@master
@@ -66,7 +66,7 @@ jobs:
         run:  R -e 'remotes::install_github(repo="Open-EO/openeo-r-client",dependencies=TRUE,force=TRUE)'
         
       - name: Execute R Script
-        run:  R -e 'library(openeo); host_url="http://0.0.0.0:80/"; api_versions(host_url); gee = openeo::connect(host = host_url, version="1.0.0"); processes=list_processes(); print(names(processes))'
+        run:  R -e 'library(openeo); host_url="http://localhost:80/"; api_versions(host_url); gee = openeo::connect(host = host_url, version="1.0.0"); processes=list_processes(); print(names(processes))'
         
      
 
