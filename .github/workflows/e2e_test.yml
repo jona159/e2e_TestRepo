@@ -49,6 +49,7 @@ jobs:
         
         
   job2:
+    needs: [job1]
     runs-on: ubuntu-latest
     container: testrepo_database_1
     steps:
