@@ -56,7 +56,7 @@ def e2e_sst():
    # wait for download
    time.sleep(300)
    # post json to jobs endpoint so file can be created
-   rq.post("http://localhost:80/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
+   requests.post("http://localhost:80/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
   
 e2e_sst()
 
