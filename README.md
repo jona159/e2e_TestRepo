@@ -56,10 +56,9 @@ The [OpenEO Backend-Validator](https://github.com/Open-EO/openeo-backend-validat
 ### The connection to the latest version of our Backend cannot be currently established, the description below is a workaround which uses an outdated docker-compose.yml
 
 * To connect to our Backend with the [openEO R-Client](https://openeo.org/documentation/1.0/r/) please follow these Instructions: 
-  1. Execute the command `git clone https://github.com/GeoSoftII2020-21/Demos`
-  2. Navigate into the Demo_IV folder
-  3. Execute the command `docker-compose up`
-  4. In __RStudio__ or __RConsole__ execute this [Skript](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/R-Client%20Script.R), which also contains a __Test Suite__ 
+  1. Execute the command `git clone https://github.com/GeoSoftII2020-21/TestRepo`
+  2. Execute the command `docker-compose up`
+  3. In __RStudio__ or __RConsole__ execute this [Skript](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/R-Client%20Script.R), which also contains a __Test Suite__ 
 
 
 # JS Client
