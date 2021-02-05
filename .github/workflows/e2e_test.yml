@@ -52,7 +52,6 @@ jobs:
      - name: docker check for SST file
        run: |
           docker exec testrepo_database_1 bash
-          cd SST
           ls && pwd
         
         
