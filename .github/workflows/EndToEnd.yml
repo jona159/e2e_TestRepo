@@ -26,33 +26,6 @@ jobs:
      - name: Install Requirements
        run: |
          pip install -r requirements.txt
-         
-     #- name: install xarray
-     #  run: pip install xarray
-       
-     #- name: install urllib3
-     #  run: pip install urllib3  
-        
-    # - name: install requests
-     #  run: |
-       #   pip install requests
-      #    ls && pwd
-       #   ls -a
-          
-     #- name: install netcdfF and scipy
-     #  run: |
-      #    pip install netCDF4
-      #    pip install scipy     
-          
-   #  - name: install pytest
-      # run: pip install pytest
-    
-                  
-    # - name: read json
-    #   id: package
-    #   uses: juliangruber/read-file-action@v1
-    #   with:
-     #    path: /home/runner/work/TestRepo/TestRepo/testjob.json
        
      - name: Docker-Compose Up
        run: |
