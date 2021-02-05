@@ -46,14 +46,14 @@ The [OpenEO Backend-Validator](https://github.com/Open-EO/openeo-backend-validat
  * In the [End to End Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/EndToEnd.yml) __End-to-End Tests are executed__
  *  In the [Backend-Validator Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/backend-validator.yml) the openEO backend validator is installed and tests for openEO Conformity
     * _If the Backend-Validator workflow fails, the responsible developer teams receive an email, so that they can fix the problem that occured_
+    
+ * In the [R-Client Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/r-client.yml) a connection to our Backend is established using the openEO R-Client. Additionally a _test suite_ is executed.    
 
     
 
 
 
 # R Client
-
-### The connection to the latest version of our Backend cannot be currently established, the description below is a workaround which uses an outdated docker-compose.yml
 
 * To connect to our Backend with the [openEO R-Client](https://openeo.org/documentation/1.0/r/) please follow these Instructions: 
   1. Execute the command `git clone https://github.com/GeoSoftII2020-21/TestRepo`
@@ -62,8 +62,6 @@ The [OpenEO Backend-Validator](https://github.com/Open-EO/openeo-backend-validat
 
 
 # JS Client
-
-### The connection to the latest version of our Backend cannot be currently established, the description below is a workaround which uses an outdated docker-compose.yml
 
 * To connect to our Backend with the [openEO JS-Client](https://openeo.org/documentation/1.0/javascript/) please follow these Instructions: 
   1. Execute the command `git clone https://github.com/GeoSoftII2020-21/TestRepo`
