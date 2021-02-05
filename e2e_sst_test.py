@@ -54,7 +54,7 @@ testjob = {
 # It very much mimics the approach from Demo IV: https://github.com/GeoSoftII2020-21/Demos/blob/main/Demo_IV/Demo_IV.ipynb
 def e2e_sst():
    # wait for download
-   time.sleep(300)
+   time.sleep(60)
    # post json to jobs endpoint so file can be created
    requests.post("http://localhost:80/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
   
