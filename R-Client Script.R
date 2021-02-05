@@ -50,7 +50,7 @@ test_that("check for correct number of collections", {expect_length(collections,
 
 test_that("check spatial and temporal extent Sentinel", {expect_equal(collections$`Sentinel2-Geosoft2`$extent$spatial, c(7.531529, 51.363158 , 9.143291, 52.350386))})
 
-test_that("check spatial and temporal extent Sentinel", {expect_equal(collections$`Sentinel2-Geosoft2`$extent$temporal[[1]][[1]], "2017-01-01T00:00:00Z")})
+test_that("check spatial and temporal extent Sentinel", {expect_equal(collections$`Sentinel2-Geosoft2`$extent$temporal[[1]][[1]], "2020-01-01T00:00:00Z")})
 
 test_that("check spatial and temporal extent Sentinel", {expect_equal(collections$`Sentinel2-Geosoft2`$extent$temporal[[1]][[2]], "2020-12-31T23:59:59Z")})
 
