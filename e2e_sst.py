@@ -53,17 +53,17 @@ testjob = {
 # This function executes a series of HTTP Requests to different microservices of our API to ensure that the communication between them works in a Docker Environment
 # It very much mimics the approach from Demo IV: https://github.com/GeoSoftII2020-21/Demos/blob/main/Demo_IV/Demo_IV.ipynb
 def e2e_sst():
-   res = requests.get("http://0.0.0.0:8080/api/v1/jobs") 
+   res = requests.get("http://0.0.0.0:80/api/v1/jobs") 
    
    # Post Test Data to /jobs Endpoint
    print("\n JSON AN FRONTEND ÜBERGEBEN \n")
-   x = requests.post("http://0.0.0.0:8080/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
+   x = requests.post("http://0.0.0.0:80/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
    print(x)
 
    # Get Job ID
    print("\n ID DES JOBS ERFRAGEN \n")
 
-   j = requests.get("http://0.0.0.0:8080/api/v1/jobs")
+   j = requests.get("http://0.0.0.0:80/api/v1/jobs")
    rjson = j.json()
    job_id = rjson['jobs'][-1]['id']
    print(rjson)
@@ -72,18 +72,18 @@ def e2e_sst():
    # Execute Job with a Post Request to jobs/<job_id>/results Endpoint 
    print("\n DEN JOB AUSFÜHREN ÜBER EINE POST ANFRAGE AN DEN RESULTS ENDPOINT DES JOBS. \n")
 
-   requests.post("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" , json=None, headers={"Content-Type": "application/json"})
+   requests.post("http://0.0.0.0:80/api/v1/jobs/" + job_id + "/results" , json=None, headers={"Content-Type": "application/json"})
 
    # Wait 5 minutes until Server is ready
    print("\n WARTEN BIS DER SERVER BEREIT IST \n")
    time.sleep(300)
  
    print("\n JSON, leer?: \n")
-   print(requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json())
+   print(requests.get("http://0.0.0.0:80/api/v1/jobs/" + job_id + "/results" ).json())
 
    # Get Downloadlink 
    print("\n Downloadlink: \n")
-   json = requests.get("http://0.0.0.0:8080/api/v1/jobs/" + job_id + "/results" ).json()
+   json = requests.get("http://0.0.0.0:80/api/v1/jobs/" + job_id + "/results" ).json()
    newjson = json["assets"]
    print(newjson)
    key = list(newjson.items())[0]
