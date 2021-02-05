@@ -108,7 +108,7 @@ def create_json(job_id):
     "endpoint.jobs_post": {
       "url": "/jobs",
       "request_type": "POST",
-      "body": "/home/runner/work/TestRepo/TestRepo/testjob_sst.json",
+      "body": "/home/runner/work/TestRepo/TestRepo/BackendValidator/testjob_sst.json",
       "group": "OpenEO API endpoints"
     },
     "endpoint.jobs_get": {
@@ -124,7 +124,7 @@ def create_json(job_id):
     "endpoint.jobs_patch": {
       "url": "/jobs/" + job_id,
       "request_type": "PATCH",
-      "body": "/home/runner/work/TestRepo/TestRepo/validator_patch.json",
+      "body": "/home/runner/work/TestRepo/TestRepo/BackendValidator/validator_patch.json",
       "group": "OpenEO API endpoints"
     },
     "endpoint.jobs_results_get": {
@@ -140,7 +140,7 @@ def create_json(job_id):
     "endpoint.data": {
       "url": "/data",
       "request_type": "POST",
-      "body": "/home/runner/work/TestRepo/TestRepo/testjob_ndvi.json",
+      "body": "/home/runner/work/TestRepo/TestRepo/BackendValidator/testjob_ndvi.json",
       "group": "Own endpoints"
 	    
     }
