@@ -1,4 +1,4 @@
 import xarray as xr
 
-fin = xr.open_dataset('netCDF_sst.nc')
+fin = xr.open_dataset('SST_datacube.nc')
 print(fin)
