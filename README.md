@@ -28,7 +28,7 @@ _test82
   
   
   
-# OpenEO Backend-Validator
+## OpenEO Backend-Validator
 
 The [OpenEO Backend-Validator](https://github.com/Open-EO/openeo-backend-validator) can be used to assess the __Open-EO conformity__ of our Backend by referring to a dynamically by the action created config.json.
 
@@ -47,7 +47,9 @@ The [OpenEO Backend-Validator](https://github.com/Open-EO/openeo-backend-validat
  *  In the [Backend-Validator Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/backend-validator.yml) the openEO backend validator is installed and tests for openEO Conformity
     * _If the Backend-Validator workflow fails, the responsible developer teams receive an email, so that they can fix the problem that occured_
     
- * In the [R-Client Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/r-client.yml) a connection to our Backend is established using the openEO R-Client. Additionally a _test suite_ is executed.    
+ * In the [R-Client Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/r-client.yml) a connection to our backend is established using the openEO R-Client. Additionally a _test suite_ is executed. 
+ 
+ * In the [JS-Client Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/js-client.yml) a connection to our backend is established using the [openEO JS-Client](https://openeo.org/documentation/1.0/javascript/). A [js-script](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/actions/index.js) checks for the correct number of collections and processes provided by the backend.
 
     
 
