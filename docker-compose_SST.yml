@@ -5,8 +5,8 @@ services:
     depends_on:
       - processManager
       - database
-      - ndvi_0
-      - sst_0
+      #- ndvi_0
+      #- sst_0
     ports:
       - 80:80
     environment:
@@ -22,8 +22,8 @@ services:
       - load_collection=database
     depends_on:
       - database
-      - ndvi_0
-      - sst_0
+      #- ndvi_0
+      #- sst_0
     ports:
       - 80
     volumes:
@@ -53,6 +53,8 @@ services:
     image: felixgi1516/geosoft2_ndvi_process:latest
     environment:
       - DOCKER=True
+    depends_on:
+      - frontend
     ports:
       - 80
     volumes:
@@ -61,6 +63,8 @@ services:
     image: felixgi1516/geosoft2_sst_process:latest
     environment:
       - DOCKER=True
+    depends_on:
+      - frontend
     ports:
       - 80
     volumes:
