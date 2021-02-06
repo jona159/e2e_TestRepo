@@ -15,5 +15,9 @@ import h5py
 fin = xr.open_dataset('SST_datacube.nc')
 print(fin)
 
+sst_values = fin['sst'][0]
+print(sst_values)
+
+
 def test_length_fin():
    assert fin.count() == 1036800
