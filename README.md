@@ -11,6 +11,12 @@ _test83
 ## Test Environment:
 
 **pytest** is used as a testing framework
+
+## Test data:
+
+* Testdata for the **unittests** were provided by the development teams that wrote the tests
+* Testdata for the **end-to-end tests** is located within the python scripts for checking [SST](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/e2e_sst.py) and [NDVI/SENTINEL](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/e2e_ndvi.py) processes.
+* Testdata for the **backend-validator** is located in the [BackendValidator directory](https://github.com/GeoSoftII2020-21/TestRepo/tree/main/BackendValidator) in this repository in json-format.
    
 # Test Classes
 
