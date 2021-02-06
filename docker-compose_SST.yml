@@ -22,8 +22,8 @@ services:
       - load_collection=database
     depends_on:
       - database
-      - ndvi_0
-      - sst_0
+    #  - ndvi_0
+     # - sst_0
     ports:
       - 80
     volumes:
