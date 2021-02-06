@@ -48,8 +48,8 @@ jobs:
         ls && pwd
         docker ps -a
         docker images
-        docker exec -it testrepo_database_1 bash 
-        docker exec -it testrepo_database_1 ls
+        docker exec -t testrepo_database_1 bash 
+        docker exec -t testrepo_database_1 ls
         
         
   job2:
