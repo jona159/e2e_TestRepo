@@ -21,7 +21,7 @@ _test83
    * _Unittests are written by the responsible developerteams and are only checked and optimized by the testing team_   
 
 
-## End-to-end Tests
+## End-to-end tests
 
 * End-to-end Tests run with **docker-compose** and test the communication between microservices by executing multiple HTTP-Requests to different endpoints of multiple services
   * _e2e-Tests are written by the testing team and are deployed in the TestRepo in [e2e_ndvi.py](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/e2e_ndvi.py) and [e2e_sst.py](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/e2e_sst.py)  
@@ -32,6 +32,9 @@ _test83
 
 The [OpenEO Backend-Validator](https://github.com/Open-EO/openeo-backend-validator) can be used to assess the __Open-EO conformity__ of our Backend by referring to a dynamically by the action created config.json.
 
+
+## JS- and R-Client tests
+In order to check, if the backend is able to communicate with JS- and R-environments, the [openEO JS-Client](https://openeo.org/documentation/1.0/javascript/) and the [openEO R-Client](https://openeo.org/documentation/1.0/r/) have been developed. These have been included into our test-environment.
 
 
 # Github Actions
