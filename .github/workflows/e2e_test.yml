@@ -35,16 +35,16 @@ jobs:
           docker-compose -f docker-compose_SST.yml logs
                     
     
-     #- name: Curl Servercheck
-      # run:  |
-      #  docker ps -a
-      #  curl -vv http://0.0.0.0:8080/api/v1
-       # docker ps -a
-       # docker images
+     - name: Curl Servercheck
+       run:  |
+        docker ps -a
+        curl -vv http://0.0.0.0:80/api/v1
+        docker ps -a
+        docker images
           
      - name: Run SST script and execute Test
        run: | 
-        python e2e_sst_test.py
+        python e2e_sst_new.py
         ls && pwd
         docker ps -a
         docker images
