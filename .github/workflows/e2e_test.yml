@@ -49,7 +49,7 @@ jobs:
         docker ps -a
         docker images
         docker exec testrepo_database_1 bash 
-        docker exec -t testrepo_database_1 ls; cd SST; ls
+        docker exec -t testrepo_database_1/SST ls
      #cd SST
      #docker exec -t testrepo_database_1 ls
         
