@@ -13,7 +13,7 @@ from netCDF4 import Dataset
 import h5py
 
 fin_sst = xr.open_dataset('SST_datacube.nc')
-print(fin)
+print(fin_sst)
 
 sst_values = fin_sst['sst'][0]
 print(sst_values)
