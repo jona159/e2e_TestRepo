@@ -1,3 +1,10 @@
+import requests
+import json
+import time
+import sys
+import re
+import urllib.request
+import os
 import xarray as xr
 import netCDF4
 import scipy.io.netcdf
