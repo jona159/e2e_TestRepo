@@ -49,8 +49,8 @@ jobs:
         docker ps -a
         docker images
         docker exec testrepo_database_1 bash 
-        ls
-       # docker exec -t testrepo_database_1 ls
+        docker exec -t testrepo_database_1 ls
+
         
         
   job2:
