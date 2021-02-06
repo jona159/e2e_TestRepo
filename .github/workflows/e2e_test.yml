@@ -46,6 +46,7 @@ jobs:
        run: | 
         python e2e_sst_test.py
         ls && pwd
+        docker images
         
         
   job2:
