@@ -50,7 +50,7 @@ jobs:
         docker cp testrepo_database_1:/SST/SST_datacube.nc /home/runner/work/TestRepo/TestRepo/
         ls
         python xr.py 
-        pytest -v xr.py -k 'test_count_fin'
+        pytest -v xr.py 
       #  docker exec testrepo_database_1 bash 
        # docker exec -t testrepo_database_1 bash -c "ls && cd SST && ls && cp SST_datacube.nc /SST_datacube.nc "
          
