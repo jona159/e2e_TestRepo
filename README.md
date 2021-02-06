@@ -5,6 +5,7 @@ _test83
 
 The listed tests have only been developed by using github actions. 
 A local execution of single test classes only took place on a limited scale, so just the correct execution of tests via the github actions can be guaranteed.
+Although there should not be a general problem, when trying to set up these test scenarios locally with the given data of the different test classes listed below.
 
 **Todo's:**
 
@@ -70,7 +71,7 @@ In order to check, if the backend is able to communicate with JS- and R-environm
 
 # R Client
 
-* To connect to our Backend with the [openEO R-Client](https://openeo.org/documentation/1.0/r/) please follow these Instructions: 
+* In order to connect to our Backend with the [openEO R-Client](https://openeo.org/documentation/1.0/r/) locally, please follow these Instructions: 
   1. Execute the command `git clone https://github.com/GeoSoftII2020-21/TestRepo`
   2. Execute the command `docker-compose up`
   3. In __RStudio__ or __RConsole__ execute this [Skript](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/R-Client%20Script.R), which also contains a __Test Suite__ 
@@ -78,7 +79,7 @@ In order to check, if the backend is able to communicate with JS- and R-environm
 
 # JS Client
 
-* To connect to our Backend with the [openEO JS-Client](https://openeo.org/documentation/1.0/javascript/) please follow these Instructions: 
+* In order to connect to our Backend with the [openEO JS-Client](https://openeo.org/documentation/1.0/javascript/) locally, please follow these Instructions: 
   1. Execute the command `git clone https://github.com/GeoSoftII2020-21/TestRepo`
   2. Execute the command `docker-compose up`
   3. Navigate into the js-client folder
