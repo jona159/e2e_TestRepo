@@ -49,8 +49,8 @@ jobs:
         docker images
         docker cp testrepo_database_1:/SST/SST_datacube.nc /home/runner/work/TestRepo/TestRepo/
         ls
-        python xr.py 
-        pytest -v xr.py -k 'test_length_fin_sst' 
+        python xr_sst.py 
+        pytest -v xr_sst.py -k 'test_length_fin_sst' 
       #  docker exec testrepo_database_1 bash 
        # docker exec -t testrepo_database_1 bash -c "ls && cd SST && ls && cp SST_datacube.nc /SST_datacube.nc "
          
@@ -75,6 +75,5 @@ jobs:
         docker images
         docker cp testrepo_database_1:/Sentinel/Sentinel_datacube.nc /home/runner/work/TestRepo/TestRepo/
         ls
-        python xr.py 
-        pytest -v xr.py 
-        pytest -v xr.py -k 'test_length_fin_ndvi'
+        python xr_ndvi.py 
+        pytest -v xr_ndvi.py -k 'test_length_fin_ndvi'
