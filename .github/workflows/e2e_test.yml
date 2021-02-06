@@ -69,7 +69,7 @@ jobs:
         username: ${{ secrets.SCIHUB_USERNAME }}
         pw: ${{ secrets.SCIHUB_PASSWORD }}
        run: | 
-        python e2e_ndvi.py
+        python e2e_ndvi_new.py
         ls && pwd
         docker ps -a
         docker images
