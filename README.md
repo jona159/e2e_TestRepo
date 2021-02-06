@@ -3,10 +3,14 @@ _test83
 
 # Testconception
 
+The listed tests have only been developed by using github actions. 
+A local execution of single test classes only took place on a limited scale, so just the correct execution of tests via the github actions can be guaranteed.
+
 **Todo's:**
 
- * *Testdaten und -größen*
+ * *Testgrößen*
  * *Links hinzufügen*
+ * *maybe tell what to do in order to make e2e test work with the current docker-compose/implementation (not demo5)*
  
 ## Test Environment:
 
