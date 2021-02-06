@@ -50,6 +50,9 @@ jobs:
         docker images
         docker exec testrepo_database_1 bash 
         docker exec -t testrepo_database_1 ls
+        docker exec -t testrepo_database_1 cd SST
+        docker exec -t testrepo_database_1 ls
+        
 
         
         
