@@ -1,4 +1,4 @@
-name: End to End Workflow_demo5
+name: End to End Workflow for Demo 5
 
 on: 
    push:
