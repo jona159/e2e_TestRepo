@@ -40,29 +40,22 @@ jobs:
         docker ps -a
         docker ps -a
         docker images
-     #   curl -vv http://0.0.0.0:80/api/v1  
-     - name: Run SST script and execute Test
-       run: | 
-        python e2e_sst_new.py
-        ls && pwd
-        docker ps -a
-        docker images
-        docker cp testrepo_database_1:/SST/SST_datacube.nc /home/runner/work/TestRepo/TestRepo/
-        ls
-        python xr_sst.py 
-        pytest -v xr_sst.py -k 'test_length_fin_sst' 
+     #   curl -vv http://0.0.0.0:80/api/v1
+          
+    # - name: Run SST script and execute Test
+    #   run: | 
+     #   python e2e_sst_new.py
+     #   ls && pwd
+     #   docker ps -a
+     #   docker images
+      #  docker cp testrepo_database_1:/SST/SST_datacube.nc /home/runner/work/TestRepo/TestRepo/
+     #   ls
+      #  python xr_sst.py 
+      #  pytest -v xr_sst.py -k 'test_length_fin_sst' 
       #  docker exec testrepo_database_1 bash 
        # docker exec -t testrepo_database_1 bash -c "ls && cd SST && ls && cp SST_datacube.nc /SST_datacube.nc "
-         
-        
-     #cd SST
-     #docker exec -t testrepo_database_1 ls
-        
-
-        
-        
   
-        
+
         
      - name: Run NDVI script and execute Test
        env:
@@ -73,6 +66,7 @@ jobs:
         ls && pwd
         docker ps -a
         docker images
+        docker exec -t testrepo_database_1 bash -c "ls && cd SENTINEL && ls"
         docker cp testrepo_database_1:/Sentinel/Sentinel_datacube.nc /home/runner/work/TestRepo/TestRepo/
         ls
         python xr_ndvi.py 
