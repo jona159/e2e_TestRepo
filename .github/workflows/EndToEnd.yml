@@ -1,4 +1,4 @@
-name: End to End Test Workflow
+name: End to End Workflow
 
 on: 
    push:
@@ -44,7 +44,7 @@ jobs:
           
      - name: Run SST script and execute Test
        run: | 
-        python e2e_sst_new.py
+        python e2e_sst.py
         ls && pwd
         docker ps -a
         docker images
@@ -62,7 +62,7 @@ jobs:
         username: ${{ secrets.SCIHUB_USERNAME }}
         pw: ${{ secrets.SCIHUB_PASSWORD }}
        run: | 
-        python e2e_ndvi_new.py
+        python e2e_ndvi.py
         ls && pwd
         docker ps -a
         docker images
