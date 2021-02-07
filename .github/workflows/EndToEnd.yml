@@ -31,8 +31,8 @@ jobs:
        run: |
           ls && pwd
           cd /home/runner/work/TestRepo/TestRepo/
-          docker-compose -f docker-compose_SST.yml up -d 
-          docker-compose -f docker-compose_SST.yml logs
+          docker-compose up -d 
+          docker-compose logs
                     
     
      - name: Curl Servercheck
