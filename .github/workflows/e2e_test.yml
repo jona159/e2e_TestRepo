@@ -67,7 +67,7 @@ jobs:
         docker ps -a
         docker images
         docker exec -t testrepo_database_1 bash -c "ls && cd SENTINEL && ls"
-        docker cp testrepo_database_1:Sentinel_datacube.nc /home/runner/work/TestRepo/TestRepo/
+        docker cp testrepo_database_1:/SENTINEL/Sentinel_datacube.nc /home/runner/work/TestRepo/TestRepo/
         ls
         python xr_ndvi.py 
         pytest -v xr_ndvi.py -k 'test_length_fin_ndvi'
