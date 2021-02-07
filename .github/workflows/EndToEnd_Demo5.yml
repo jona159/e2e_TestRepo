@@ -1,4 +1,4 @@
-name: End to End Workflow
+name: End to End Workflow_demo5
 
 on: 
    push:
@@ -45,9 +45,9 @@ jobs:
       
      - name: Run SST script and execute Test
        run: | 
-        python e2e_sst.py
+        python e2e_sst_demo5.py
         ls && pwd
-        pytest -v e2e_sst.py -k 'test_length_fin'
+        pytest -v e2e_sst_demo5.py -k 'test_length_fin'
         
         
      - name: Run NDVI script and execute Test
@@ -55,8 +55,8 @@ jobs:
         username: ${{ secrets.SCIHUB_USERNAME }}
         pw: ${{ secrets.SCIHUB_PASSWORD }}
        run: | 
-        python e2e_ndvi.py
+        python e2e_ndvi_demo5.py
         ls && pwd
-        pytest -v e2e_ndvi.py -k 'test_count_fin'
+        pytest -v e2e_ndvi_demo5.py -k 'test_count_fin'
         
 
