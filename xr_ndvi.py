@@ -16,7 +16,7 @@ import h5py
 fin_ndvi = xr.open_dataset('Sentinel_datacube.nc')
 print(fin_ndvi)   
    
-print(fin_ndvi['__xarray_dataarray_variable__'][:])
+#print(fin_ndvi['__xarray_dataarray_variable__'][:])
 
 print(" \n END OF NDVI NETCDF FILE \n")
 
