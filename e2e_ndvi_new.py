@@ -63,7 +63,7 @@ def e2e_ndvi():
    #time.sleep(180)
    # post json to jobs endpoint so file can be created
    requests.post("http://localhost:80/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
-   time.sleep(300)
+   time.sleep(600)
   
 e2e_ndvi()
 
