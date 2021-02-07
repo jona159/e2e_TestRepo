@@ -3,9 +3,9 @@ _test85
 
 # Testconception
 
-The listed tests have only been developed by using github actions. 
+The listed tests, except for JS- and R-Client, have only been developed by using github actions. 
 A local execution of single test classes only took place on a limited scale, so just the correct execution of tests via the github actions can be guaranteed.
-Although there should not be a general problem, when trying to set up these test scenarios locally with the given data of the different test classes listed below.
+Although there should not be a general problem, when trying to set up these test scenarios locally with the given data in this repository or dynamically generated data within the actions. For setting up JS- and R-Client testscenarios locally, see instructions below.
 
 **Todo's:**
 
@@ -36,6 +36,7 @@ Although there should not be a general problem, when trying to set up these test
 
 * End-to-end Tests run with **docker-compose** and test the communication between microservices by executing multiple HTTP-Requests to different endpoints of multiple services
   * _e2e-Tests are written by the testing team and are deployed in the TestRepo in [e2e_ndvi.py](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/e2e_ndvi.py) and [e2e_sst.py](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/e2e_sst.py)  
+  * Downloaded files, for both NDVI and SST cases, are copied from the database containers subdirectories to the actions running machine. Then, two test files, [xr_ndvi](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/xr_ndvi.py) and [xr_sst](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/xr_sst.py) are executed that check  the downloaded files for correctness.
   
   
   
