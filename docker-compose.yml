@@ -5,8 +5,8 @@ services:
     depends_on:
       - processManager
       - database
-      - ndvi_0
-      - sst_0
+      #- ndvi_0
+      #- sst_0
     ports:
       - 80:80
     environment:
@@ -22,8 +22,8 @@ services:
       - load_collection=database
     depends_on:
       - database
-      - ndvi_0
-      - sst_0
+      #- ndvi_0
+      #- sst_0
     ports:
       - 80
     volumes:
@@ -34,10 +34,10 @@ services:
       - DOCKER=True
       - Username=bugmenot
       - Password=bugmenot
-      - load_sst=False
-      - load_sentinel=False
-      - SST_Start=2012
-      - SST_End=2015
+      - load_sst=True
+      - load_sentinel=True
+      - SST_Start=1981
+      - SST_End=1982
       - Sentinel_Start=2020-06-01T00:00:00Z
       - Sentinel_End=2020-07-01T00:00:00Z
       - process_name=processManager
@@ -53,6 +53,8 @@ services:
     image: felixgi1516/geosoft2_ndvi_process:latest
     environment:
       - DOCKER=True
+    depends_on:
+      - frontend
     ports:
       - 80
     volumes:
@@ -61,6 +63,8 @@ services:
     image: felixgi1516/geosoft2_sst_process:latest
     environment:
       - DOCKER=True
+    depends_on:
+      - frontend
     ports:
       - 80
     volumes:
