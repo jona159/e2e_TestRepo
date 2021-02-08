@@ -1,3 +1,6 @@
+#@author Judith Becka, https://github.com/a2beckj
+#@author Jonas Raabe, https://github.com/jona159
+
 name: Unittests - Pytest Workflow
 
 on:
@@ -80,6 +83,6 @@ jobs:
          body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
     #   comma-separated string, send email to
          to: m_busc15@uni-muenster.de , s_buse01@uni-muenster.de, m_fisc39@uni-muenster.de, a_pago03@uni-muenster.de, adrian.spork@uni-muenster.de, m_ster15@uni-muenster.de, t_walt08@uni-muenster.de, czerwas@uni-muenster.de, j_raab02@uni-muenster.de
-         #to: j_beck60@uni-muenster.de
+        
     # from email name
          from: Github Action  
