@@ -39,10 +39,6 @@ jobs:
       run: |
          cd GeoSoftII_SST_Process
          pip install -r requirements.txt
-    - name: Install Requirements NDVI
-      run: |
-         cd GeoSoftII_NDVI_Process
-         pip install -r requirements.txt
     - name: Install Requirements DataServer
       run: |
          cd GeoSoftII_DataServer
