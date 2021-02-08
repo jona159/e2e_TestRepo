@@ -56,38 +56,11 @@ testjob = {
     }  
  
 
-# This function executes a series of HTTP Requests to different microservices of our API to ensure that the communication between them works in a Docker Environment
-# It very much mimics the approach from Demo IV: https://github.com/GeoSoftII2020-21/Demos/blob/main/Demo_IV/Demo_IV.ipynb
+# This function executes a POST HTTP Request to the job endpoint of the frontend microservice
 def e2e_ndvi():
-   # wait for download
-   #time.sleep(180)
-   # post json to jobs endpoint so file can be created
    requests.post("http://localhost:80/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
    time.sleep(720)
   
 e2e_ndvi()
 
-#print("\n CONTENT OF SST NETCDF FILE \n")
 
-# Open the Xarray Dataset in the netcdf file, which is stored in our repository for the duration of the action
-#fin = xr.open_dataset('netCDF_sst.nc')
-#print(fin)
-
-#print("\n DIMENSIONS \n")
-
-#sst_values = fin['sst'][0]
-#print(sst_values)
-
-#print(" \n EMPTY LINE \n ")
-
-#print(fin['__xarray_dataarray_variable__'][:])
-
-#print(" \n END OF SST NETCDF FILE \n")
-
-# Test to assert that the xarray Dataset contains the correct number of values
-#def test_length_fin():
-#  assert fin.count() == 1036800
-
-#time.sleep(180)
-#stats = os.stat('netCDF_sst.nc')
-#print(stats)
