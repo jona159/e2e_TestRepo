@@ -1,11 +1,13 @@
+#@author Judith Becka, https://github.com/a2beckj
+#@author Jonas Raabe, https://github.com/jona159
+
+name: Check R-Client
 on:
  push:
     branches:
       - main
 
  
-name: Check R-Client
-
 jobs: 
   Check-R-Client:
     runs-on:  ${{ matrix.config.os }}
