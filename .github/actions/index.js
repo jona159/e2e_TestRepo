@@ -1,7 +1,10 @@
+//@author Judith Becka, https://github.com/a2beckj
+//@author Jonas Raabe, https://github.com/jona159
+
 // Import the JS client
 const { OpenEO } = require('@openeo/js-client');
 
-//const url = "https://earthengine.openeo.org"; // Insert the openEO server URL here
+
 const url = "http://0.0.0.0:80/api/v1"
 let connection = null;
 
