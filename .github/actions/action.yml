@@ -1,3 +1,6 @@
+#@author Judith Becka, https://github.com/a2beckj
+#@author Jonas Raabe, https://github.com/jona159
+
 name: Action to support the JS-Client Workflow
 description: This action allows the JS-Client Workflow to use the index.js in the root directory
 runs:
