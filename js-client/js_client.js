@@ -1,3 +1,6 @@
+//@author Judith Becka, https://github.com/a2beckj
+//@author Jonas Raabe, https://github.com/jona159
+
 // Set QUnit config autostart to false so that QUnit doesn't
 // run on window load
 QUnit.config.autostart = false;
