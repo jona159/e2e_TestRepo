@@ -1,5 +1,5 @@
 # TestRepo
-_test85
+
 
 # Testconception
 
@@ -7,12 +7,6 @@ The listed tests, except for JS- and R-Client, have only been developed by using
 A local execution of single test classes only took place on a limited scale, so just the correct execution of tests via the github actions can be guaranteed.
 Although there should not be a general problem, when trying to set up these test scenarios locally with the given data in this repository or with dynamically generated data within the actions. For setting up JS- and R-Client testscenarios locally, see instructions below.
 
-**Todo's:**
-
- * *Testgrößen*
- * *Links hinzufügen*
- * *maybe tell what to do in order to make e2e test work with the current docker-compose/implementation (not demo5)*
- 
 ## Test Environment:
 
 **pytest** is used as a testing framework
@@ -56,12 +50,12 @@ In order to check, if the backend is able to communicate with JS- and R-environm
  * The [Unittest-Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/Unittest.yml) runs by schedule three times a day, as well as on certain events like pull-requests
    * _The Unittest-Workflow depends on the [Update-Submodules Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/Update_submodules.yml), which ensures that all submodules are up to date and the latest requirements can be installed_
    * _The Unittest-Workflow also hands back a __coverage report__ regarding the __Testcoverage__ by using the pytest-plugin **pytest-cov**_
-   * _If the Unittest-Workflow fails, the responsible developer teams receive an email, so that they can fix the problem that occured_
+   * _If the Unittest-Workflow fails, the responsible development teams receive an email, so that they can fix the problem that occured_
  
  * In the [End to End Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/EndToEnd.yml) __End-to-End Tests are executed__
     * _In addition to the end to end tests that cover the final implementation, we also provided end to end tests based on the implementation of demo 5
     
- *  In the [Backend-Validator Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/backend-validator.yml) the openEO backend validator is installed and tests for openEO Conformity
+ *  In the [Backend-Validator Workflow](https://github.com/GeoSoftII2020-21/TestRepo/blob/main/.github/workflows/backend-validator.yml) the openEO backend validator is installed and tests for openEO Conformity by schedule three times a day as well
     * _If the Backend-Validator workflow fails, the responsible developer teams receive an email, so that they can fix the problem that occured_
     
     
