@@ -3,9 +3,9 @@
 
 name: Backend-Validator
 on: 
-  # push:
-  #  branches: 
-   #   - main
+   push:
+    branches: 
+      - main
    pull_request:
      branches: 
       - main
