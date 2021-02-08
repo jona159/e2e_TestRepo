@@ -1,3 +1,6 @@
+#@author Judith Becka, https://github.com/a2beckj
+#@author Jonas Raabe, https://github.com/jona159
+
 name: End to End Workflow for Demo 5
 
 on: 
@@ -35,13 +38,7 @@ jobs:
           docker-compose -f docker-compose_demo5.yml logs
                     
           
-     #- name: Curl Servercheck
-      # run:  |
-      #  docker ps -a
-      #  curl -vv http://0.0.0.0:8080/api/v1
-       # docker ps -a
-       # docker images
-         
+        
       
      - name: Run SST script and execute Test
        run: | 
