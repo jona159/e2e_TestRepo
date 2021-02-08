@@ -1,3 +1,6 @@
+#@author Judith Becka, https://github.com/a2beckj
+#@author Jonas Raabe, https://github.com/jona159
+
 # clean up environment
 
 rm(list=ls())
