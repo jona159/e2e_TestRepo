@@ -1,3 +1,7 @@
+#@author Judith Becka, https://github.com/a2beckj
+#@author Jonas Raabe, https://github.com/jona159
+
+name: Backend-Validator
 on: 
   # push:
   #  branches: 
@@ -9,8 +13,6 @@ on:
       - cron: '0 18 * * *' 
       - cron: '0 6 * * *'
       - cron: '0 12 * * *' 
-
-name: Backend-Validator
 
 jobs:
   build:
@@ -50,9 +52,6 @@ jobs:
 
     
     - name: Create config
-      #env:
-        #username: ${{ secrets.SCIHUB_USERNAME }}
-       # pw: ${{ secrets.SCIHUB_PASSWORD }}
       run: | 
         python validator_config.py
         ls && pwd
