@@ -1,3 +1,6 @@
+#@author Judith Becka, https://github.com/a2beckj
+#@author Jonas Raabe, https://github.com/jona159
+
 import requests
 import json
 import time
@@ -12,11 +15,10 @@ import pytest
 from netCDF4 import Dataset
 import h5py
 
-   
+ # open xarray dataset  
 fin_ndvi = xr.open_dataset('Sentinel_datacube.nc')
 print(fin_ndvi)   
    
-#print(fin_ndvi['__xarray_dataarray_variable__'][:])
 
 print(" \n END OF NDVI NETCDF FILE \n")
 
