@@ -69,6 +69,8 @@ def getJobID():
    # Post test data to /jobs endpoint
    x = requests.post("http://0.0.0.0:80/api/v1/jobs", json=testjob, headers={"Content-Type": "application/json"})
    print(x)
+	
+   time.sleep (180)
 
    # Get Job ID 
    j = requests.get("http://0.0.0.0:80/api/v1/jobs")
