@@ -5,7 +5,7 @@
 
 The listed tests, except for JS- and R-Client, have only been developed by using github actions. 
 A local execution of single test classes only took place on a limited scale, so just the correct execution of tests via the github actions can be guaranteed.
-Although there should not be a general problem, when trying to set up these test scenarios locally with the given data in this repository or with dynamically generated data within the actions. For setting up JS- and R-Client testscenarios locally, follow instructions below.
+Although there should not be a general problem, when trying to set up these test scenarios locally with the given data in this repository or with dynamically generated data within the actions. For setting up JS- and R-Client testscenarios locally, follow instructions below..
 
 ## Test Environment:
 
